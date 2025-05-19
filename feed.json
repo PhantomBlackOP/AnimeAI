@@ -1,0 +1,23 @@
+{
+  "feed": {
+    "name": "AnimeAI",
+    "description": "This feed features AI-assisted anime artwork, news, and community posts curated under tags like #AIArt, #AI, #Aianime, and more.",
+    "author": {
+      "handle": "@trevorion.io",
+      "displayName": "Trevorion"
+    },
+    "match": {
+      "anyTags": [
+        "ai",
+        "aiart",
+        "aianime",
+        "generativeai",
+        "aicommunity",
+        "chatgpt",
+        "aines",
+        "animenews",
+        "animecommunity"
+      ]
+    }
+  }
+}
