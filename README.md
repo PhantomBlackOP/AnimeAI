@@ -31,10 +31,6 @@ To showcase creators and moments that bridge anime style, AI generation, digital
 ## 📄 License
 
 MIT License — use freely with attribution.  
-© 2025  
-👽 PhantomBlackOP
-🧑 Trevor Grech  
-🌐 [www.trevorion.io](https://www.trevorion.io)  
-✉️ [info@trevorion.io](mailto:info@trevorion.io)
-🐦 [@trevorion](https://twitter.com/trevorion)  
-🦋 [@trevorion.io](https://bsky.app/profile/trevorion.io)
+© 2025  👽 PhantomBlackOP  🧑 Trevor Grech  
+🌐 [www.trevorion.io](https://www.trevorion.io)  ✉️ [info@trevorion.io](mailto:info@trevorion.io)
+🐦 [@trevorion](https://twitter.com/trevorion)  🦋 [@trevorion.io](https://bsky.app/profile/trevorion.io)
