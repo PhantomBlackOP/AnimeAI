@@ -1,0 +1,20 @@
+# macOS system files
+.DS_Store
+
+# VSCode editor settings
+.vscode/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.log
+
+# Node modules (in case you script feed generation later)
+node_modules/
+
+# Environment variables / secrets
+.env
+
+# Build artifacts
+dist/
+build/
