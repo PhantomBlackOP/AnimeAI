@@ -1,0 +1,36 @@
+name: Discover Handles
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # Runs daily at 03:00 UTC
+  workflow_dispatch:     # Optional: allow manual trigger
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    env:
+      BSKY_APP_USERNAME: ${{ secrets.BSKY_APP_USERNAME }}
+      BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run discovery script
+        run: python scripts/discover_handles.py
+
+      - name: Commit updated handles.json
+        run: |
+          git config user.name "AnimeAI Bot"
+          git config user.email "bot@animeai.trevorion.io"
+          git add handles.json
+          git commit -m "🔄 Update handles.json via scheduled discovery" || echo "No changes to commit"
+          git push
