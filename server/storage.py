@@ -1,9 +1,26 @@
 # server/storage.py
+from atproto import Client
 from common.types import Post
+import os
 
 def get_all_posts() -> list[Post]:
-    # Placeholder stub — replace with real logic
-    return [
-        Post(uri="at://example.com/post1", cid="cid123", text="Post one text"),
-        Post(uri="at://example.com/post2", cid="cid456", text="Post two text"),
-    ]
+    # 🔐 Login credentials from environment variables
+    client = Client()
+    client.login(os.getenv("BSKY_USERNAME"), os.getenv("BSKY_PASSWORD"))
+
+    # 📡 Fetch recent posts from a specific handle
+    handle = "anime.bsky.social"  # You can change this to any valid Bluesky username
+    profile = client.app.bsky.actor.get_profile(handle)
+    feed = client.app.bsky.feed.get_author_feed(profile.did, limit=50)
+
+    posts = []
+    for item in feed.feed:
+        record = item.post.record
+        posts.append(Post(
+            uri=item.post.uri,
+            cid=item.post.cid,
+            text=record.get("text", "")
+        ))
+
+    print(f"Retrieved {len(posts)} live posts from {handle}")
+    return posts
