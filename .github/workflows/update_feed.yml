@@ -31,8 +31,14 @@ jobs:
 
       - name: 🔮 Generate feed.json
         run: python scripts/generate_feed.py
+        
+      - name: 🚧 Check if feed.json changed
+        id: check_diff
+        run: |
+          git diff --exit-code feed.json || echo "has_changes=true" >> $GITHUB_ENV
 
-      - name: 🧾 Commit updated feed
+      - name: 🤖 Commit & Push if feed.json changed
+        if: env.has_changes == 'true'
         run: |
           git config user.name "AnimeAI Bot"
           git config user.email "bot@trevorion.io"
