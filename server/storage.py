@@ -6,7 +6,10 @@ import os
 def get_all_posts() -> list[Post]:
     # 🔐 Login credentials from environment variables
     client = Client()
-    client.login(os.getenv("BSKY_USERNAME"), os.getenv("BSKY_PASSWORD"))
+    client.login(
+        os.getenv("BSKY_APP_USERNAME"),
+        os.getenv("BSKY_APP_PASSWORD")
+    )
 
     # 📡 Fetch recent posts from a specific handle
     handle = "anime.bsky.social"  # You can change this to any valid Bluesky username
