@@ -109,7 +109,7 @@ if __name__ == "__main__":
 def save_rejected(posts: list[dict], path: str = '../rejected_debug.json'):
     reject_path = os.path.join(os.path.dirname(__file__), path)
     #reject_path = os.path.join(os.path.dirname(__file__), '../rejected_debug.json')
-
+    print(f"📂 Attempting to save rejected posts to: {reject_path}")
     with open(reject_path, 'w', encoding='utf-8') as f:
         json.dump(posts, f, indent=2)
     print(f"📤 Saved {len(posts)} rejected posts to rejected_debug.json")
