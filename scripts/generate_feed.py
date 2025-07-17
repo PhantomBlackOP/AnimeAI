@@ -4,6 +4,8 @@ from atproto import Client
 from atproto_client.models.app.bsky.feed.get_author_feed import Params
 from server.discovery import load_cached_handles
 from server.algos.animeai import HASHTAGS
+    
+rejected_posts = []
 
 # 🧹 Smarter post filtering
 def is_valid_post(post: dict) -> bool:
@@ -77,10 +79,7 @@ def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> 
                     posts.append(post_data)
                 else:
                     print(f"🗑️ Rejected post from {handle}: {post_data['record'].get('text')}")
-                    # ✅ Save rejected post for later review
-                    with open("rejected_debug.json", "a", encoding="utf-8") as f:
-                        json.dump(post_data, f, indent=2)
-                        f.write(",\n")  # keep entries separated
+                    rejected_posts.append(post_data)
         except Exception as e:
             print(f"⚠️ Failed to fetch from {handle}: {e}")
     return posts
@@ -106,3 +105,12 @@ if __name__ == "__main__":
     deduped = deduplicate_posts(raw_posts)
     print(f"🧪 Pre-save: fetched={len(raw_posts)} deduped={len(deduped)}")
     save_feed(deduped)
+
+def save_rejected(posts: list[dict], path: str = '../rejected_debug.json'):
+    reject_path = os.path.join(os.path.dirname(__file__), path)
+    with open(reject_path, 'w', encoding='utf-8') as f:
+        json.dump(posts, f, indent=2)
+    print(f"📤 Saved {len(posts)} rejected posts to rejected_debug.json")
+
+save_rejected(rejected_posts)
+
