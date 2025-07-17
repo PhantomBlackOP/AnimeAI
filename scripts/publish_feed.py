@@ -27,7 +27,7 @@ client.com.atproto.repo.create_record(
     collection="app.bsky.feed.generator",
     record_key="animeai",
     validate=True,
-    record={
+    data={
         "$type": "app.bsky.feed.generator",
         "did": client.me.did,
         "displayName": display_name,
