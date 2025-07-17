@@ -19,6 +19,8 @@ client = Client()
 client.login(USERNAME, PASSWORD)
 
 # Create feed generator record object using correct structure
+from datetime import datetime
+
 feed_record = models.ComAtprotoRepoCreateRecord.Data(
     repo=client.me.did,
     collection="app.bsky.feed.generator",
@@ -28,6 +30,7 @@ feed_record = models.ComAtprotoRepoCreateRecord.Data(
         "displayName": display_name,
         "description": description,
         "serviceEndpoint": f"https://{HOSTNAME}",
+        "createdAt": datetime.utcnow().isoformat() + "Z",  # 🕓 Timestamp added!
     },
     rkey=FEED_ID,
     validate=True
