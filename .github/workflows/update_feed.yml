@@ -33,7 +33,7 @@ jobs:
         run: |
           git config user.name "AnimeAI Bot"
           git config user.email "bot@trevorion.io"
-          git add main/feed.json
+          git add feed.json
           git commit -m "🔄 Auto-update feed.json"
           git push
         env:
