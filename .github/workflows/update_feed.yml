@@ -34,22 +34,7 @@ jobs:
       - name: 🔮 Generate feed and reject log
         run: python -m scripts.generate_feed
 
-      - name: 🚧 Check if feed.json changed
-        id: check_diff1
-        run: |
-          git diff --exit-code feed.json || echo "has_changes=true" >> $GITHUB_ENV
-
-      - name: 🚧 Check if rejected_debug.json changed
-        id: check_diff2
-        run: |
-          git diff --exit-code rejected_debug.json || echo "has_changes=true" >> $GITHUB_ENV
-
-      - name: 📋 Log when feed.json is unchanged
-        if: env.has_changes != 'true'
-        run: echo "🧘 feed.json/rejected_debug.json unchanged — skipping commit this cycle"
-
       - name: 🤖 Commit & Push feed and rejected log
-        if: env.has_changes == 'true'
         run: |
           git config user.name "AnimeAI Bot"
           git config user.email "bot@trevorion.io"
