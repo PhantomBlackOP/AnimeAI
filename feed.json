@@ -1,3 +1,12 @@
 {
-  "feed": []
+  "feed": [
+    {
+      "uri": "at://example.com/post1",
+      "cid": "placeholder-cid"
+    },
+    {
+      "uri": "at://example.com/post2",
+      "cid": "placeholder-cid"
+    }
+  ]
 }
