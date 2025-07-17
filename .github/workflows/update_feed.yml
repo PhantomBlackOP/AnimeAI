@@ -34,4 +34,5 @@ jobs:
           git commit -m "🔄 Auto-update feed.json"
           git push
         env:
+          HOSTNAME: animeai.trevorion.io
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
