@@ -1,13 +1,14 @@
 import os
 import json
 from atproto import Client
-from atproto_client.models.app.bsky.feed.search_posts import Params  # ✅ correct Params for search
+from atproto_client.models.app.bsky.feed.search_posts import Params as SearchParams
+from atproto_client.models.app.bsky.feed.get_author_feed import Params as AuthorParams
 from server.discovery import load_cached_handles
 from server.algos.animeai import HASHTAGS
 
 rejected_posts = []
 
-# 🧹 Smart filtering
+# 🧹 Filter posts
 def is_valid_post(post: dict) -> bool:
     body = post.get("record", {}).get("text", "").strip().lower()
     hashtags = post.get("tags", [])
@@ -22,7 +23,7 @@ def is_valid_post(post: dict) -> bool:
 
     return False
 
-# 🔁 Deduplication
+# 🔁 Deduplicate by cid/uri
 def deduplicate_posts(posts: list[dict]) -> list[dict]:
     seen = set()
     unique = []
@@ -33,7 +34,7 @@ def deduplicate_posts(posts: list[dict]) -> list[dict]:
             unique.append(post)
     return unique
 
-# 🔗 Hashtag-based tagging
+# 🔗 Build hashtag-to-handle map
 def build_handle_tag_map(hashtags: set[str], limit_per_tag: int = 50) -> dict[str, list[str]]:
     client = Client()
     client.login(os.getenv("BSKY_APP_USERNAME"), os.getenv("BSKY_APP_PASSWORD"))
@@ -41,7 +42,7 @@ def build_handle_tag_map(hashtags: set[str], limit_per_tag: int = 50) -> dict[st
     tag_map: dict[str, list[str]] = {}
     for tag in hashtags:
         query = tag.lstrip("#")
-        params = Params(q=query, sort="latest", limit=limit_per_tag)
+        params = SearchParams(q=query, sort="latest", limit=limit_per_tag)
         try:
             response = client.app.bsky.feed.search_posts(params)
         except Exception as e:
@@ -55,7 +56,7 @@ def build_handle_tag_map(hashtags: set[str], limit_per_tag: int = 50) -> dict[st
         print(f"✅ #{query}: {len(response.posts)} posts")
     return tag_map
 
-# 🧠 Fetch and tag posts
+# 🧠 Fetch posts
 def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> list[dict]:
     client = Client()
     client.login(os.getenv("BSKY_APP_USERNAME"), os.getenv("BSKY_APP_PASSWORD"))
@@ -63,7 +64,7 @@ def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> 
     posts = []
     for handle, hashtags in handle_tag_map.items():
         try:
-            params = atproto_client.models.app.bsky.feed.get_author_feed.Params(actor=handle, limit=limit)
+            params = AuthorParams(actor=handle, limit=limit)
             response = client.app.bsky.feed.get_author_feed(params)
             print(f"🔍 {handle}: {len(response.feed)} posts")
 
@@ -80,7 +81,7 @@ def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> 
             print(f"⚠️ Failed to fetch from {handle}: {e}")
     return posts
 
-# 📦 Save final feed
+# 📦 Save curated posts
 def save_feed(posts: list[dict], filename: str = '../feed.json'):
     path = os.path.abspath(os.path.join(os.path.dirname(__file__), filename))
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -88,7 +89,7 @@ def save_feed(posts: list[dict], filename: str = '../feed.json'):
         json.dump(posts, f, indent=2)
     print(f"📦 Saved {len(posts)} curated posts to {path}")
 
-# 📤 Save rejects
+# 📤 Save rejected posts
 def save_rejected(posts: list[dict], filename: str = '../rejected_debug.json'):
     path = os.path.abspath(os.path.join(os.path.dirname(__file__), filename))
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -96,7 +97,7 @@ def save_rejected(posts: list[dict], filename: str = '../rejected_debug.json'):
         json.dump(posts, f, indent=2)
     print(f"📤 Saved {len(posts)} rejected posts to {path}")
 
-# 🚀 Entry point
+# 🚀 Main run block
 if __name__ == "__main__":
     handles = load_cached_handles()
     handle_tag_map = build_handle_tag_map(HASHTAGS)
