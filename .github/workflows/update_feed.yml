@@ -37,6 +37,10 @@ jobs:
         run: |
           git diff --exit-code feed.json || echo "has_changes=true" >> $GITHUB_ENV
 
+      - name: 📋 Log when feed.json is unchanged
+        if: env.has_changes != 'true'
+        run: echo "🧘 feed.json unchanged — skipping commit this cycle"
+      
       - name: 🤖 Commit & Push if feed.json changed
         if: env.has_changes == 'true'
         run: |
