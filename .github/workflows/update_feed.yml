@@ -34,23 +34,19 @@ jobs:
       - name: 🔮 Generate feed and reject log
         run: python -m scripts.generate_feed
 
-      - name: 📤 Upload feed.json and rejected_debug.json
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: animeai-output
-          path: |
-            feed.json
-            rejected_debug.json
-
       - name: 🚧 Check if feed.json changed
-        id: check_diff
+        id: check_diff1
         run: |
           git diff --exit-code feed.json || echo "has_changes=true" >> $GITHUB_ENV
 
+      - name: 🚧 Check if rejected_debug.json changed
+        id: check_diff2
+        run: |
+          git diff --exit-code rejected_debug.json || echo "has_changes=true" >> $GITHUB_ENV
+
       - name: 📋 Log when feed.json is unchanged
         if: env.has_changes != 'true'
-        run: echo "🧘 feed.json unchanged — skipping commit this cycle"
+        run: echo "🧘 feed.json/rejected_debug.json unchanged — skipping commit this cycle"
 
       - name: 🤖 Commit & Push feed and rejected log
         if: env.has_changes == 'true'
@@ -59,6 +55,4 @@ jobs:
           git config user.email "bot@trevorion.io"
           git add feed.json rejected_debug.json
           git commit -m "🔄 Auto-update feed + reject log"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/PhantomBlackOP/AnimeAI.git HEAD:main
