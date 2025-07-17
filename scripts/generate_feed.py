@@ -1,13 +1,13 @@
 import os
 import json
 from atproto import Client
-from atproto_client.models.app.bsky.feed.get_author_feed import Params
+from atproto_client.models.app.bsky.feed.search_posts import Params  # ✅ correct Params for search
 from server.discovery import load_cached_handles
 from server.algos.animeai import HASHTAGS
 
 rejected_posts = []
 
-# ✅ Smart filtering
+# 🧹 Smart filtering
 def is_valid_post(post: dict) -> bool:
     body = post.get("record", {}).get("text", "").strip().lower()
     hashtags = post.get("tags", [])
@@ -22,7 +22,7 @@ def is_valid_post(post: dict) -> bool:
 
     return False
 
-# 🔁 Deduplicate
+# 🔁 Deduplication
 def deduplicate_posts(posts: list[dict]) -> list[dict]:
     seen = set()
     unique = []
@@ -33,7 +33,7 @@ def deduplicate_posts(posts: list[dict]) -> list[dict]:
             unique.append(post)
     return unique
 
-# 🔗 Tag discovery
+# 🔗 Hashtag-based tagging
 def build_handle_tag_map(hashtags: set[str], limit_per_tag: int = 50) -> dict[str, list[str]]:
     client = Client()
     client.login(os.getenv("BSKY_APP_USERNAME"), os.getenv("BSKY_APP_PASSWORD"))
@@ -55,7 +55,7 @@ def build_handle_tag_map(hashtags: set[str], limit_per_tag: int = 50) -> dict[st
         print(f"✅ #{query}: {len(response.posts)} posts")
     return tag_map
 
-# 🧠 Crawl and tag
+# 🧠 Fetch and tag posts
 def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> list[dict]:
     client = Client()
     client.login(os.getenv("BSKY_APP_USERNAME"), os.getenv("BSKY_APP_PASSWORD"))
@@ -63,7 +63,7 @@ def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> 
     posts = []
     for handle, hashtags in handle_tag_map.items():
         try:
-            params = Params(actor=handle, limit=limit)
+            params = atproto_client.models.app.bsky.feed.get_author_feed.Params(actor=handle, limit=limit)
             response = client.app.bsky.feed.get_author_feed(params)
             print(f"🔍 {handle}: {len(response.feed)} posts")
 
@@ -80,7 +80,7 @@ def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> 
             print(f"⚠️ Failed to fetch from {handle}: {e}")
     return posts
 
-# 📦 Save accepted posts
+# 📦 Save final feed
 def save_feed(posts: list[dict], filename: str = '../feed.json'):
     path = os.path.abspath(os.path.join(os.path.dirname(__file__), filename))
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -88,7 +88,7 @@ def save_feed(posts: list[dict], filename: str = '../feed.json'):
         json.dump(posts, f, indent=2)
     print(f"📦 Saved {len(posts)} curated posts to {path}")
 
-# 📤 Save rejected posts
+# 📤 Save rejects
 def save_rejected(posts: list[dict], filename: str = '../rejected_debug.json'):
     path = os.path.abspath(os.path.join(os.path.dirname(__file__), filename))
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -96,7 +96,7 @@ def save_rejected(posts: list[dict], filename: str = '../rejected_debug.json'):
         json.dump(posts, f, indent=2)
     print(f"📤 Saved {len(posts)} rejected posts to {path}")
 
-# 🚀 Run it
+# 🚀 Entry point
 if __name__ == "__main__":
     handles = load_cached_handles()
     handle_tag_map = build_handle_tag_map(HASHTAGS)
