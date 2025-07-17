@@ -72,15 +72,15 @@ def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> 
                 post_data = item.post.model_dump()
                 post_data["tags"] = hashtags
                 post_data["author"] = handle
-
+                
                 if is_valid_post(post_data):
                     posts.append(post_data)
                 else:
                     print(f"🗑️ Rejected post from {handle}: {post_data['record'].get('text')}")
+                    # ✅ Save rejected post for later review
                     with open("rejected_debug.json", "a", encoding="utf-8") as f:
                         json.dump(post_data, f, indent=2)
-                        f.write(",\n")
-
+                        f.write(",\n")  # keep entries separated
         except Exception as e:
             print(f"⚠️ Failed to fetch from {handle}: {e}")
     return posts
