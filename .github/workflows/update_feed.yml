@@ -12,8 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HOSTNAME: ${{ secrets.HOSTNAME }}
-      FEED_URI: ${{ secrets.FEED_URI }}
+      BSKY_APP_USERNAME: ${{ secrets.BSKY_APP_USERNAME }}
+      BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
 
     steps:
       - name: 📥 Checkout repository
