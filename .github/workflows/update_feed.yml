@@ -34,6 +34,13 @@ jobs:
       - name: 🔮 Generate feed.json
         run: python -m scripts.generate_feed
         
+      - name: 📤 Upload rejected_debug.json
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: rejected-posts
+          path: rejected_debug.json
+        
       - name: 🚧 Check if feed.json changed
         id: check_diff
         run: |
