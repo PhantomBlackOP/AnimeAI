@@ -3,7 +3,7 @@ name: Update AnimeAI Feed
 on:
   schedule:
     - cron: '0 */6 * * *'  # Runs every 6 hours
-  workflow_dispatch:       # Allows manual trigger from GitHub UI
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -31,16 +31,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 🔮 Generate feed.json
+      - name: 🔮 Generate feed and reject log
         run: python -m scripts.generate_feed
-        
-      - name: 📤 Upload rejected_debug.json
+
+      - name: 📤 Upload feed.json and rejected_debug.json
         if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: rejected-posts
-          path: rejected_debug.json
-        
+          name: animeai-output
+          path: |
+            feed.json
+            rejected_debug.json
+
       - name: 🚧 Check if feed.json changed
         id: check_diff
         run: |
@@ -49,14 +51,14 @@ jobs:
       - name: 📋 Log when feed.json is unchanged
         if: env.has_changes != 'true'
         run: echo "🧘 feed.json unchanged — skipping commit this cycle"
-      
-      - name: 🤖 Commit & Push if feed.json changed
+
+      - name: 🤖 Commit & Push feed and rejected log
         if: env.has_changes == 'true'
         run: |
           git config user.name "AnimeAI Bot"
           git config user.email "bot@trevorion.io"
-          git add feed.json
-          git commit -m "🔄 Auto-update feed.json"
+          git add feed.json rejected_debug.json
+          git commit -m "🔄 Auto-update feed + reject log"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
