@@ -10,6 +10,8 @@ from server.storage import get_all_posts
 
 def generate_feed():
     posts = get_all_posts()
+    print(f"Retrieved {len(posts)} posts")
+
     uris = animeai_algo(posts)
 
     feed = {
