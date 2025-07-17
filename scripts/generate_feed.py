@@ -39,7 +39,7 @@ def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> 
             params = Params(actor=handle, limit=limit)
             response = client.app.bsky.feed.get_author_feed(params)
             for item in response.feed:
-                post_data = item.post
+                post_data = item.post.model_dump()  # Convert to dict
                 post_data["tags"] = hashtags
                 post_data["author"] = handle
                 posts.append(post_data)
