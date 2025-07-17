@@ -14,7 +14,9 @@ def animeai_algo(posts: List[Post]) -> List[str]:
 
     for post in posts:
         print(f"Checking: {post.text[:60]}...")
+        matched_uris.append(post.uri)
+        
         #if any(tag in post.text.lower() for tag in HASHTAGS):
-            matched_uris.append(post.uri)
+            #matched_uris.append(post.uri)
 
     return matched_uris
