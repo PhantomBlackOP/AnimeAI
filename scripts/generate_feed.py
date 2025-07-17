@@ -5,13 +5,13 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import json
-from server.algos.animeai import animeai_algo
-from server.storage import get_all_posts
+from server.algos.animeai import animeai_algo, HASHTAGS
+from server.storage import get_all_posts, get_all_posts_from_handles
+from server.discovery import discover_handles_by_hashtags
 
 def generate_feed():
-    posts = get_all_posts()
-    print(f"Retrieved {len(posts)} posts")
-
+    handles = discover_handles_by_hashtags(HASHTAGS)
+    posts = get_all_posts_from_handles(handles)
     uris = animeai_algo(posts)
 
     feed = {
