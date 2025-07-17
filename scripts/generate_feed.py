@@ -96,4 +96,5 @@ if __name__ == "__main__":
 
     raw_posts = fetch_tagged_posts(handle_tag_map)
     deduped = deduplicate_posts(raw_posts)
+    print(f"🧪 Pre-save: fetched={len(raw_posts)} deduped={len(deduped)}")
     save_feed(deduped)
