@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import json
 from server.algos.animeai import animeai_algo, HASHTAGS
-from server.storage import get_all_posts, get_all_posts_from_handles
+from server.storage import get_all_posts_from_handles
 from server.discovery import discover_handles_by_hashtags
 
 def generate_feed():
