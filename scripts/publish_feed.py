@@ -22,13 +22,15 @@ client = Client()
 client.login(USERNAME, PASSWORD)
 
 # Register feed generator record
-client.app.bsky.feed.generator.create_record(
-    models.AppBskyFeedGenerator.Record(
-        did=client.me.did,
-        displayName=display_name,
-        description=description,
-        serviceEndpoint=f"https://{HOSTNAME}",
-    )
+client.com.atproto.repo.create_record(
+    repo=client.me.did,
+    collection="app.bsky.feed.generator",
+    record={
+        "did": client.me.did,
+        "displayName": display_name,
+        "description": description,
+        "serviceEndpoint": f"https://{HOSTNAME}",
+    }
 )
 
 print(f"✅ Feed published! Your FEED_URI is:\n{feed_uri}")
