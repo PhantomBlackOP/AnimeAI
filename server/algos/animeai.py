@@ -10,9 +10,11 @@ HASHTAGS = {
 
 def animeai_algo(posts: List[Post]) -> List[str]:
     matched_uris = []
+    print(f"animeai_algo received {len(posts)} posts")
 
     for post in posts:
-        if any(tag in post.text.lower() for tag in HASHTAGS):
+        print(f"Checking: {post.text[:60]}...")
+        #if any(tag in post.text.lower() for tag in HASHTAGS):
             matched_uris.append(post.uri)
 
     return matched_uris
