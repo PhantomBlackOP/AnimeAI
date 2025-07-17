@@ -8,23 +8,18 @@ from server.algos.animeai import HASHTAGS
 # 🧹 Smarter post filtering
 def is_valid_post(post: dict) -> bool:
     body = post.get("record", {}).get("text", "").strip().lower()
+    hashtags = post.get("tags", [])
 
-    # Accept shorter posts (min 15 chars), but reject near-empty
-    if not body or len(body) < 15:
-        return False
+    # Accept if tagged with known signal topics
+    whitelist_tags = ["#aianime", "#aiart", "#animecommunity", "#generativeai", "#aicommunity"]
+    if any(tag in hashtags for tag in whitelist_tags):
+        return True
 
-    # Exclude replies and reposts
-    if post.get("reply") or post.get("type") != "app.bsky.feed.post":
-        return False
-
-    # Light blacklist: only major spam signals
-    bad_patterns = [
-        "test post", "just posted", "link in bio", "bot", "promo code", "sign up", "refer", "credit card"
-    ]
-    if any(p in body for p in bad_patterns):
-        return False
-
-    return True
+    # Accept if body looks human-ish
+    if body and len(body) >= 15 and post.get("type") == "app.bsky.feed.post":
+        blacklist = ["refer", "credit card", "sign up", "campaign", "promo", "bybit"]
+        return not any(p in body for p in blacklist)
+    return False
 
 # 🔁 Deduplicate by cid or uri
 def deduplicate_posts(posts: list[dict]) -> list[dict]:
