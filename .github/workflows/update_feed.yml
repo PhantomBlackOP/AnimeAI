@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HOSTNAME: animeai.trevorion.io
 
     steps:
       - name: 📥 Checkout repository
@@ -34,5 +36,4 @@ jobs:
           git commit -m "🔄 Auto-update feed.json"
           git push
         env:
-          HOSTNAME: animeai.trevorion.io
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
