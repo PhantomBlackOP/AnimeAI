@@ -77,6 +77,10 @@ def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> 
                     posts.append(post_data)
                 else:
                     print(f"🗑️ Rejected post from {handle}: {post_data['record'].get('text')}")
+                    with open("rejected_debug.json", "a", encoding="utf-8") as f:
+                        json.dump(post_data, f, indent=2)
+                        f.write(",\n")
+
         except Exception as e:
             print(f"⚠️ Failed to fetch from {handle}: {e}")
     return posts
