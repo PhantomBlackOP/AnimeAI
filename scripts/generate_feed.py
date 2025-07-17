@@ -16,7 +16,7 @@ def generate_feed():
         "feed": [{"uri": uri, "cid": "placeholder-cid"} for uri in uris]
     }
 
-    with open("main/feed.json", "w") as f:
+    with open("feed.json", "w") as f:
         json.dump(feed, f, indent=2)
 
 if __name__ == "__main__":
