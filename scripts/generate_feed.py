@@ -60,10 +60,14 @@ def fetch_tagged_posts(handle_tag_map: dict[str, list[str]], limit: int = 3) -> 
     client.login(os.getenv("BSKY_APP_USERNAME"), os.getenv("BSKY_APP_PASSWORD"))
 
     posts = []
+    total = 0
     for handle, hashtags in handle_tag_map.items():
         try:
             params = Params(actor=handle, limit=limit)
             response = client.app.bsky.feed.get_author_feed(params)
+            print(f"🔍 {handle}: {len(response.feed)} posts")
+            total += len(response.feed)
+            print(f"📊 Total posts fetched: {total}")
             for item in response.feed:
                 post_data = item.post.model_dump()
                 post_data["tags"] = hashtags
