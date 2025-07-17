@@ -25,7 +25,10 @@ client.login(USERNAME, PASSWORD)
 client.com.atproto.repo.create_record(
     repo=client.me.did,
     collection="app.bsky.feed.generator",
+    record_key="animeai",
+    validate=True,
     record={
+        "$type": "app.bsky.feed.generator",
         "did": client.me.did,
         "displayName": display_name,
         "description": description,
