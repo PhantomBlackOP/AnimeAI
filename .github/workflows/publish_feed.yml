@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      HOSTNAME: animeai.trevorion.io
+      HOSTNAME: ${{ secrets.HOSTNAME }}
       BSKY_USERNAME: ${{ secrets.BSKY_USERNAME }}
       BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
 
