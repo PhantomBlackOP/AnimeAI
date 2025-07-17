@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add repo root to Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import json
 from server.algos.animeai import animeai_algo
 from server.storage import get_all_posts
