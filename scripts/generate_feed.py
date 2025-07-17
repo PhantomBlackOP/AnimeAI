@@ -1,26 +1,23 @@
-import sys
+from server.discovery import discover_handles_by_hashtags
+from server.storage import get_all_posts_from_handles
+from server.algos.animeai import animeai_algo, HASHTAGS
+import json
 import os
 
-# Add repo root to Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-import json
-from server.algos.animeai import animeai_algo, HASHTAGS
-from server.storage import get_all_posts_from_handles
-from server.discovery import discover_handles_by_hashtags
+FEED_PATH = os.path.join(os.path.dirname(__file__), '../feed.json')
 
 def generate_feed():
-    handles = discover_handles_by_hashtags(HASHTAGS)
-    posts = get_all_posts_from_handles(handles)
-    uris = animeai_algo(posts)
+    # 🌐 Discover authors based on AnimeAI hashtags
+    handles = discover_handles_by_hashtags(HASHTAGS, limit_per_tag=50)
 
-    feed = {
-        "feed": [{"uri": uri, "cid": "placeholder-cid"} for uri in uris]
-    }
+    # 📡 Fetch their latest posts
+    posts = get_all_posts_from_handles(handles, posts_per_handle=25)
 
-    with open("feed.json", "w") as f:
-        json.dump(feed, f, indent=2)
+    # 🎚️ Filter posts using your aesthetic algo
+    curated = animeai_algo(posts)
 
-if __name__ == "__main__":
-    generate_feed()
-    print("feed.json updated!")
+    # 💾 Save to feed.json
+    with open(FEED_PATH, 'w', encoding='utf-8') as f:
+        json.dump(curated, f, indent=2, ensure_ascii=False)
+
+    print(f"✅ Saved {len(curated)} curated posts to feed.json")
