@@ -1,5 +1,5 @@
-from atproto import Client, models
 import os
+from atproto import Client, models
 
 # Load environment variables
 USERNAME = os.getenv("BSKY_USERNAME")
@@ -10,10 +10,7 @@ FEED_ID = "animeai"
 if not all([USERNAME, PASSWORD, HOSTNAME]):
     raise RuntimeError("Missing BSKY_USERNAME, BSKY_PASSWORD, or HOSTNAME in environment.")
 
-# Construct full feed URI
-feed_uri = f"at://{USERNAME}/app.bsky.feed.generator/{FEED_ID}"
-
-# Compose metadata
+# Construct display metadata
 display_name = "AnimeAI Stream"
 description = "A mythic AI-powered Bluesky stream curated by AnimeAI."
 
@@ -21,19 +18,25 @@ description = "A mythic AI-powered Bluesky stream curated by AnimeAI."
 client = Client()
 client.login(USERNAME, PASSWORD)
 
-# Register feed generator record
-client.com.atproto.repo.create_record(
+# Create feed generator record object using correct structure
+feed_record = models.ComAtprotoRepoCreateRecord.Data(
     repo=client.me.did,
     collection="app.bsky.feed.generator",
-    record_key="animeai",
-    validate=True,
-    data={
+    record={
         "$type": "app.bsky.feed.generator",
         "did": client.me.did,
         "displayName": display_name,
         "description": description,
         "serviceEndpoint": f"https://{HOSTNAME}",
-    }
+    },
+    rkey=FEED_ID,
+    validate=True
 )
 
-print(f"✅ Feed published! Your FEED_URI is:\n{feed_uri}")
+# Publish the feed generator record to your repo
+client.com.atproto.repo.create_record(feed_record)
+
+# Print the resulting FEED_URI
+feed_uri = f"at://{client.me.did}/app.bsky.feed.generator/{FEED_ID}"
+print(f"\n✅ Feed published successfully!")
+print(f"🔗 FEED_URI: {feed_uri}\n")
