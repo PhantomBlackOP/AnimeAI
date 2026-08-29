@@ -1,5 +1,1390 @@
 [
   {
+    "author": "ai-visions.bsky.social",
+    "cid": "bafyreidgmwaziriw65mu2yob6mjc5kfit6ynf3hywtuu4bxidv6nxjjpta",
+    "indexed_at": "2026-08-29T14:47:37.464Z",
+    "record": {
+      "created_at": "2026-08-29T14:47:30.610Z",
+      "text": "#aiart #midjourney #ai #aicommunity",
+      "embed": {
+        "media": {
+          "images": [
+            {
+              "alt": "",
+              "image": {
+                "mime_type": "image/jpeg",
+                "size": 1973670,
+                "ref": {
+                  "link": "bafkreibh34sybtz6hq66n6mxvv2eeo6rskbcdsyz6bmwje3o3bydrp2arm"
+                },
+                "py_type": "blob"
+              },
+              "aspect_ratio": {
+                "height": 1648,
+                "width": 2944,
+                "py_type": "app.bsky.embed.defs#aspectRatio"
+              },
+              "py_type": "app.bsky.embed.images#image"
+            }
+          ],
+          "py_type": "app.bsky.embed.images"
+        },
+        "record": {
+          "record": {
+            "cid": "bafyreigzhexve3hmiy4ndwpfueko3wshklcffxjmuurgfzi5prqccnhicq",
+            "uri": "at://did:plc:hniqgwgf72g4fhwwnfej5bng/app.bsky.feed.post/3mua2uupxys2l",
+            "py_type": "com.atproto.repo.strongRef"
+          },
+          "py_type": "app.bsky.embed.record"
+        },
+        "py_type": "app.bsky.embed.recordWithMedia"
+      },
+      "entities": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "aiart",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 6,
+            "byte_start": 0,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "midjourney",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 18,
+            "byte_start": 7,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "ai",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 22,
+            "byte_start": 19,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "aicommunity",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 35,
+            "byte_start": 23,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
+      "labels": null,
+      "langs": [
+        "en"
+      ],
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:n2orftryqml4jxts2w46yo7n/app.bsky.feed.post/3mua4n2gcrk2l",
+    "embed": {
+      "media": {
+        "images": [
+          {
+            "alt": "",
+            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreibh34sybtz6hq66n6mxvv2eeo6rskbcdsyz6bmwje3o3bydrp2arm",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreibh34sybtz6hq66n6mxvv2eeo6rskbcdsyz6bmwje3o3bydrp2arm",
+            "aspect_ratio": {
+              "height": 1648,
+              "width": 2944,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#viewImage"
+          }
+        ],
+        "py_type": "app.bsky.embed.images#view"
+      },
+      "record": {
+        "record": {
+          "author": {
+            "did": "did:plc:hniqgwgf72g4fhwwnfej5bng",
+            "handle": "originalvelvet.bsky.social",
+            "associated": {
+              "chat": {
+                "allow_incoming": "all",
+                "py_type": "app.bsky.actor.defs#profileAssociatedChat"
+              },
+              "feedgens": null,
+              "labeler": null,
+              "lists": null,
+              "starter_packs": null,
+              "py_type": "app.bsky.actor.defs#profileAssociated",
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hniqgwgf72g4fhwwnfej5bng/bafkreicwdukfb6fc2vepcnckhiuwzkncd3gzb3m7odayt5lhfquodfarwu",
+            "created_at": "2024-11-14T03:08:18.787Z",
+            "display_name": "\ud83c\udfbcVelvetIce the Original\ud83c\udfbc",
+            "labels": [],
+            "viewer": {
+              "blocked_by": false,
+              "blocking": null,
+              "blocking_by_list": null,
+              "followed_by": null,
+              "following": null,
+              "known_followers": null,
+              "muted": false,
+              "muted_by_list": null,
+              "py_type": "app.bsky.actor.defs#viewerState",
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false
+            },
+            "py_type": "app.bsky.actor.defs#profileViewBasic"
+          },
+          "cid": "bafyreigzhexve3hmiy4ndwpfueko3wshklcffxjmuurgfzi5prqccnhicq",
+          "indexed_at": "2026-08-29T14:16:12.568Z",
+          "uri": "at://did:plc:hniqgwgf72g4fhwwnfej5bng/app.bsky.feed.post/3mua2uupxys2l",
+          "value": {
+            "created_at": "2026-08-29T14:16:05.589Z",
+            "text": "#QP National Bow Tie Day \n\n#Caturday\n#JustBecause #SynthArt #GenerativeArt \n#AiArtCommunity",
+            "embed": {
+              "images": [
+                {
+                  "alt": "",
+                  "image": {
+                    "mime_type": "image/jpeg",
+                    "size": 1699537,
+                    "ref": {
+                      "link": "bafkreig7qzb7c3xg754m7w7yeltcfhxuw3tkfgslu3oqlxwlsh4hxoiygq"
+                    },
+                    "py_type": "blob"
+                  },
+                  "aspect_ratio": {
+                    "height": 2048,
+                    "width": 1152,
+                    "py_type": "app.bsky.embed.defs#aspectRatio"
+                  },
+                  "py_type": "app.bsky.embed.images#image"
+                }
+              ],
+              "py_type": "app.bsky.embed.images"
+            },
+            "entities": null,
+            "facets": [
+              {
+                "features": [
+                  {
+                    "tag": "QP",
+                    "py_type": "app.bsky.richtext.facet#tag"
+                  }
+                ],
+                "index": {
+                  "byte_end": 3,
+                  "byte_start": 0,
+                  "py_type": "app.bsky.richtext.facet#byteSlice"
+                },
+                "py_type": "app.bsky.richtext.facet"
+              },
+              {
+                "features": [
+                  {
+                    "tag": "Caturday",
+                    "py_type": "app.bsky.richtext.facet#tag"
+                  }
+                ],
+                "index": {
+                  "byte_end": 36,
+                  "byte_start": 27,
+                  "py_type": "app.bsky.richtext.facet#byteSlice"
+                },
+                "py_type": "app.bsky.richtext.facet"
+              },
+              {
+                "features": [
+                  {
+                    "tag": "JustBecause",
+                    "py_type": "app.bsky.richtext.facet#tag"
+                  }
+                ],
+                "index": {
+                  "byte_end": 49,
+                  "byte_start": 37,
+                  "py_type": "app.bsky.richtext.facet#byteSlice"
+                },
+                "py_type": "app.bsky.richtext.facet"
+              },
+              {
+                "features": [
+                  {
+                    "tag": "SynthArt",
+                    "py_type": "app.bsky.richtext.facet#tag"
+                  }
+                ],
+                "index": {
+                  "byte_end": 59,
+                  "byte_start": 50,
+                  "py_type": "app.bsky.richtext.facet#byteSlice"
+                },
+                "py_type": "app.bsky.richtext.facet"
+              },
+              {
+                "features": [
+                  {
+                    "tag": "GenerativeArt",
+                    "py_type": "app.bsky.richtext.facet#tag"
+                  }
+                ],
+                "index": {
+                  "byte_end": 74,
+                  "byte_start": 60,
+                  "py_type": "app.bsky.richtext.facet#byteSlice"
+                },
+                "py_type": "app.bsky.richtext.facet"
+              },
+              {
+                "features": [
+                  {
+                    "tag": "AiArtCommunity",
+                    "py_type": "app.bsky.richtext.facet#tag"
+                  }
+                ],
+                "index": {
+                  "byte_end": 91,
+                  "byte_start": 76,
+                  "py_type": "app.bsky.richtext.facet#byteSlice"
+                },
+                "py_type": "app.bsky.richtext.facet"
+              }
+            ],
+            "labels": null,
+            "langs": [
+              "en"
+            ],
+            "reply": null,
+            "tags": null,
+            "py_type": "app.bsky.feed.post"
+          },
+          "embeds": [
+            {
+              "images": [
+                {
+                  "alt": "",
+                  "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:hniqgwgf72g4fhwwnfej5bng/bafkreig7qzb7c3xg754m7w7yeltcfhxuw3tkfgslu3oqlxwlsh4hxoiygq",
+                  "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:hniqgwgf72g4fhwwnfej5bng/bafkreig7qzb7c3xg754m7w7yeltcfhxuw3tkfgslu3oqlxwlsh4hxoiygq",
+                  "aspect_ratio": {
+                    "height": 2048,
+                    "width": 1152,
+                    "py_type": "app.bsky.embed.defs#aspectRatio"
+                  },
+                  "py_type": "app.bsky.embed.images#viewImage"
+                }
+              ],
+              "py_type": "app.bsky.embed.images#view"
+            }
+          ],
+          "labels": [],
+          "like_count": 6,
+          "quote_count": 1,
+          "reply_count": 1,
+          "repost_count": 0,
+          "py_type": "app.bsky.embed.record#viewRecord"
+        },
+        "py_type": "app.bsky.embed.record#view"
+      },
+      "py_type": "app.bsky.embed.recordWithMedia#view"
+    },
+    "labels": [],
+    "like_count": 8,
+    "quote_count": 0,
+    "reply_count": 1,
+    "repost_count": 0,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "ai-visions.bsky.social",
+    "cid": "bafyreibbqd4pnzhwevxxgzb62rpc5mbcxqeghgrrgpu2ijwky62tvrhn24",
+    "indexed_at": "2026-08-29T14:45:59.571Z",
+    "record": {
+      "created_at": "2026-08-29T14:45:58.523Z",
+      "text": "\ud83d\ude01",
+      "embed": null,
+      "entities": null,
+      "facets": null,
+      "labels": null,
+      "langs": [
+        "en"
+      ],
+      "reply": {
+        "parent": {
+          "cid": "bafyreidnklceq24cz3pltptvcdrkg7lreuzjkmoxktswb7a3jhuxv4bftu",
+          "uri": "at://did:plc:4236i7c6zcxxzt4wvgat3ee4/app.bsky.feed.post/3mua4hwlk7s25",
+          "py_type": "com.atproto.repo.strongRef"
+        },
+        "root": {
+          "cid": "bafyreifyhrieiz34vuaiwaq6jdawicwlstfndd4emjk74jbxjznxjpgism",
+          "uri": "at://did:plc:4236i7c6zcxxzt4wvgat3ee4/app.bsky.feed.post/3mua25yn7qs25",
+          "py_type": "com.atproto.repo.strongRef"
+        },
+        "py_type": "app.bsky.feed.post#replyRef"
+      },
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:n2orftryqml4jxts2w46yo7n/app.bsky.feed.post/3mua4kclw5s2l",
+    "embed": null,
+    "labels": [],
+    "like_count": 1,
+    "quote_count": 0,
+    "reply_count": 0,
+    "repost_count": 0,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "ai-visions.bsky.social",
+    "cid": "bafyreibjtkrp4662phwzzofabqspsk3ikcuctwzmsgoluwcyq77tmi7sle",
+    "indexed_at": "2026-08-29T14:44:13.370Z",
+    "record": {
+      "created_at": "2026-08-29T14:44:05.666Z",
+      "text": "Sightseeing Tour\n#aiart #midjourney #ai #aicommunity",
+      "embed": {
+        "images": [
+          {
+            "alt": "",
+            "image": {
+              "mime_type": "image/jpeg",
+              "size": 1858940,
+              "ref": {
+                "link": "bafkreigq22h2g4k4fuq24vhzns4rc5xr6e5lixaivvm3twfz6bwoqqblpy"
+              },
+              "py_type": "blob"
+            },
+            "aspect_ratio": {
+              "height": 1648,
+              "width": 2944,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#image"
+          }
+        ],
+        "py_type": "app.bsky.embed.images"
+      },
+      "entities": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "aiart",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 23,
+            "byte_start": 17,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "midjourney",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 35,
+            "byte_start": 24,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "ai",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 39,
+            "byte_start": 36,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "aicommunity",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 52,
+            "byte_start": 40,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
+      "labels": null,
+      "langs": [
+        "en"
+      ],
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:n2orftryqml4jxts2w46yo7n/app.bsky.feed.post/3mua4gwxv6c2x",
+    "embed": {
+      "images": [
+        {
+          "alt": "",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreigq22h2g4k4fuq24vhzns4rc5xr6e5lixaivvm3twfz6bwoqqblpy",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreigq22h2g4k4fuq24vhzns4rc5xr6e5lixaivvm3twfz6bwoqqblpy",
+          "aspect_ratio": {
+            "height": 1648,
+            "width": 2944,
+            "py_type": "app.bsky.embed.defs#aspectRatio"
+          },
+          "py_type": "app.bsky.embed.images#viewImage"
+        }
+      ],
+      "py_type": "app.bsky.embed.images#view"
+    },
+    "labels": [],
+    "like_count": 8,
+    "quote_count": 0,
+    "reply_count": 1,
+    "repost_count": 0,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "22urchine.bsky.social",
+    "cid": "bafyreihgnae2wa5c62nionyxncncf2ea2ihabr53cervhlzlgo5qyklg3i",
+    "indexed_at": "2026-08-29T13:19:22.274Z",
+    "record": {
+      "created_at": "2026-08-29T13:19:17.951Z",
+      "text": "#beautifulgirl #AI\u30a4\u30e9\u30b9\u30c8 #Aigenerated #aicommunity #krea2 #art #sexy #SensualArt #AIart #Moody #office #officegirl #cleavage #blush #animeart\n\nThe camera captures her exposed chest and panicked eyes during an unexpected blunder.\n\u4e88\u671f\u305b\u306c\u5931\u6557\u306e\u6700\u4e2d\u3001\u30ab\u30e1\u30e9\u306f\u9732\u308f\u306a\u80f8\u5143\u3068\u52d5\u63fa\u3059\u308b\u77b3\u3092\u6349\u3048\u308b\u3002",
+      "embed": {
+        "images": [
+          {
+            "alt": "",
+            "image": {
+              "mime_type": "image/jpeg",
+              "size": 883591,
+              "ref": {
+                "link": "bafkreiedf6dnukthah7bqarzbymyn5vheie2uwxifzfozjo7lq77cradji"
+              },
+              "py_type": "blob"
+            },
+            "aspect_ratio": {
+              "height": 768,
+              "width": 1344,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#image"
+          },
+          {
+            "alt": "",
+            "image": {
+              "mime_type": "image/jpeg",
+              "size": 859683,
+              "ref": {
+                "link": "bafkreic5x4bwsqegtrr7wmgnfp5bah3xakktekcq6aofsfy76irg7poyou"
+              },
+              "py_type": "blob"
+            },
+            "aspect_ratio": {
+              "height": 768,
+              "width": 1344,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#image"
+          }
+        ],
+        "py_type": "app.bsky.embed.images"
+      },
+      "entities": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "beautifulgirl",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 14,
+            "byte_start": 0,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "AI\u30a4\u30e9\u30b9\u30c8",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 30,
+            "byte_start": 15,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "Aigenerated",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 43,
+            "byte_start": 31,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "aicommunity",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 56,
+            "byte_start": 44,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "krea2",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 63,
+            "byte_start": 57,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "art",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 68,
+            "byte_start": 64,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "sexy",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 74,
+            "byte_start": 69,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "SensualArt",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 86,
+            "byte_start": 75,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "AIart",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 93,
+            "byte_start": 87,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "Moody",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 100,
+            "byte_start": 94,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "office",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 108,
+            "byte_start": 101,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "officegirl",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 120,
+            "byte_start": 109,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "cleavage",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 130,
+            "byte_start": 121,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "blush",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 137,
+            "byte_start": 131,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "animeart",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 147,
+            "byte_start": 138,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
+      "labels": null,
+      "langs": [
+        "ja"
+      ],
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:spijv4ustp7sqj3tooq2rn7x/app.bsky.feed.post/3mu7xpcx5ik2l",
+    "embed": {
+      "images": [
+        {
+          "alt": "",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreiedf6dnukthah7bqarzbymyn5vheie2uwxifzfozjo7lq77cradji",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreiedf6dnukthah7bqarzbymyn5vheie2uwxifzfozjo7lq77cradji",
+          "aspect_ratio": {
+            "height": 768,
+            "width": 1344,
+            "py_type": "app.bsky.embed.defs#aspectRatio"
+          },
+          "py_type": "app.bsky.embed.images#viewImage"
+        },
+        {
+          "alt": "",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreic5x4bwsqegtrr7wmgnfp5bah3xakktekcq6aofsfy76irg7poyou",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreic5x4bwsqegtrr7wmgnfp5bah3xakktekcq6aofsfy76irg7poyou",
+          "aspect_ratio": {
+            "height": 768,
+            "width": 1344,
+            "py_type": "app.bsky.embed.defs#aspectRatio"
+          },
+          "py_type": "app.bsky.embed.images#viewImage"
+        }
+      ],
+      "py_type": "app.bsky.embed.images#view"
+    },
+    "labels": [],
+    "like_count": 7,
+    "quote_count": 0,
+    "reply_count": 0,
+    "repost_count": 1,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false,
+      "knownLikers": {
+        "count": 1,
+        "actors": [
+          {
+            "did": "did:plc:dfijrshd5rzvdgh6yxdt6vv6",
+            "handle": "lofi-harbor.bsky.social",
+            "displayName": "LOFI BGM",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:dfijrshd5rzvdgh6yxdt6vv6/bafkreieo2szqwjqyqrihltypuadfxdumami5om52p3ggrx22jes3xctcxa",
+            "associated": {
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false,
+              "blockedBy": false,
+              "following": "at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.graph.follow/3mpvbh7k6mz2g",
+              "followedBy": "at://did:plc:dfijrshd5rzvdgh6yxdt6vv6/app.bsky.graph.follow/3mpuiepx3fu2q"
+            },
+            "labels": [],
+            "createdAt": "2026-07-04T02:16:13.219Z",
+            "status": {
+              "uri": "at://did:plc:dfijrshd5rzvdgh6yxdt6vv6/app.bsky.actor.status/self",
+              "cid": "bafyreihfw6xzgtub3tkrcntyoalap6euix3k4htdwe7tpghgbyoinildmu",
+              "record": {
+                "$type": "app.bsky.actor.status",
+                "createdAt": "2026-07-19T16:54:18.223Z",
+                "durationMinutes": 240,
+                "embed": {
+                  "$type": "app.bsky.embed.external",
+                  "external": {
+                    "$type": "app.bsky.embed.external#external",
+                    "description": "Share your videos with friends, family, and the world",
+                    "title": "YouTube",
+                    "uri": "https://www.youtube.com/@LOFIBGM_lofi/live"
+                  }
+                },
+                "status": "app.bsky.actor.status#live"
+              },
+              "status": "app.bsky.actor.status#live",
+              "embed": {
+                "external": {
+                  "uri": "https://www.youtube.com/@LOFIBGM_lofi/live",
+                  "title": "YouTube",
+                  "description": "Share your videos with friends, family, and the world"
+                },
+                "$type": "app.bsky.embed.external#view"
+              },
+              "labels": [],
+              "expiresAt": "2026-07-19T20:54:18.223Z",
+              "isActive": false
+            }
+          }
+        ]
+      }
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "22urchine.bsky.social",
+    "cid": "bafyreieth4zw2w4ts6zq6myyywmkn6e2ksku3vcev34tftip2qi5fkql6a",
+    "indexed_at": "2026-08-29T03:51:15.567Z",
+    "record": {
+      "created_at": "2026-08-29T03:51:11.246Z",
+      "text": "\u3053\u3093\u306b\u3061\u308f\u308f\u306f\u76ee\u304c\u3067\u304b\u3044\ud83d\udc36\n\u4eca\u65e5\u306f\u713c\u8089\u305f\u3079\u3066\u304d\u307e\u30fc\u3059\u3084\u3063\u304d\u306b\u3063\u304f\uff01\u3084\u3063\u304d\u306b\u3063\u304f\uff01\n#AI\u30a4\u30e9\u30b9\u30c8 #AIart #\u751f\u6210AI #\u3067\u3043\u3059\u5b50",
+      "embed": {
+        "images": [
+          {
+            "alt": "",
+            "image": {
+              "mime_type": "image/jpeg",
+              "size": 1983216,
+              "ref": {
+                "link": "bafkreicawhln4thhw3aqpygfbmqzntl6htqro5apu4hkqd66eozulsy4ru"
+              },
+              "py_type": "blob"
+            },
+            "aspect_ratio": {
+              "height": 1448,
+              "width": 1086,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#image"
+          }
+        ],
+        "py_type": "app.bsky.embed.images"
+      },
+      "entities": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "AI\u30a4\u30e9\u30b9\u30c8",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 135,
+            "byte_start": 120,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "AIart",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 142,
+            "byte_start": 136,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "\u751f\u6210AI",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 152,
+            "byte_start": 143,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "\u3067\u3043\u3059\u5b50",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 166,
+            "byte_start": 153,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
+      "labels": null,
+      "langs": [
+        "ja"
+      ],
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:l5355d27gh5oaqus7r7fw3yj/app.bsky.feed.post/3mu6xxhdnis22",
+    "embed": {
+      "images": [
+        {
+          "alt": "",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:l5355d27gh5oaqus7r7fw3yj/bafkreicawhln4thhw3aqpygfbmqzntl6htqro5apu4hkqd66eozulsy4ru",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:l5355d27gh5oaqus7r7fw3yj/bafkreicawhln4thhw3aqpygfbmqzntl6htqro5apu4hkqd66eozulsy4ru",
+          "aspect_ratio": {
+            "height": 1448,
+            "width": 1086,
+            "py_type": "app.bsky.embed.defs#aspectRatio"
+          },
+          "py_type": "app.bsky.embed.images#viewImage"
+        }
+      ],
+      "py_type": "app.bsky.embed.images#view"
+    },
+    "labels": [],
+    "like_count": 76,
+    "quote_count": 0,
+    "reply_count": 5,
+    "repost_count": 17,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 1,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "22urchine.bsky.social",
+    "cid": "bafyreigcvs5oidgstkigh7vny7k46cqjmewugbpe4vkycnx64nez4jjhau",
+    "indexed_at": "2026-08-29T07:46:43.893Z",
+    "record": {
+      "created_at": "2026-08-29T07:34:53.444Z",
+      "text": "#beautifulgirl #AI\u30a4\u30e9\u30b9\u30c8 #Aigenerated #aicommunity #krea2 #art #sexy #SensualArt #AIart #Moody #oilpainting #fig #sunflower #autumn #sensual\n\nAs eyes gently close, rich fruits and bare shoulders share the same quiet warmth.\n\u9759\u304b\u306b\u77b3\u304c\u9589\u3058\u308b\u4e2d\u3001\u8c4a\u304b\u306a\u679c\u5b9f\u3068\u9732\u308f\u306a\u80a9\u304c\u540c\u3058\u7a4f\u3084\u304b\u306a\u6e29\u3082\u308a\u3092\u5206\u304b\u3061\u5408\u3046\u3002",
+      "embed": {
+        "images": [
+          {
+            "alt": "",
+            "image": {
+              "mime_type": "image/jpeg",
+              "size": 1009607,
+              "ref": {
+                "link": "bafkreiaw46xip37d2fxp3boan4yl2yxtrhjfdlcsd4jxpswl7zwsfj35iy"
+              },
+              "py_type": "blob"
+            },
+            "aspect_ratio": {
+              "height": 768,
+              "width": 1344,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#image"
+          },
+          {
+            "alt": "",
+            "image": {
+              "mime_type": "image/jpeg",
+              "size": 1060672,
+              "ref": {
+                "link": "bafkreih5aalcwvabeozchsulxz3ir63xmxjduw3ck4muqc5vkmmgvxa2me"
+              },
+              "py_type": "blob"
+            },
+            "aspect_ratio": {
+              "height": 768,
+              "width": 1344,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#image"
+          }
+        ],
+        "py_type": "app.bsky.embed.images"
+      },
+      "entities": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "beautifulgirl",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 14,
+            "byte_start": 0,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "AI\u30a4\u30e9\u30b9\u30c8",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 30,
+            "byte_start": 15,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "Aigenerated",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 43,
+            "byte_start": 31,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "aicommunity",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 56,
+            "byte_start": 44,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "krea2",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 63,
+            "byte_start": 57,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "art",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 68,
+            "byte_start": 64,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "sexy",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 74,
+            "byte_start": 69,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "SensualArt",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 86,
+            "byte_start": 75,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "AIart",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 93,
+            "byte_start": 87,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "Moody",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 100,
+            "byte_start": 94,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "oilpainting",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 113,
+            "byte_start": 101,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "fig",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 118,
+            "byte_start": 114,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "sunflower",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 129,
+            "byte_start": 119,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "autumn",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 137,
+            "byte_start": 130,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "sensual",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 146,
+            "byte_start": 138,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
+      "labels": null,
+      "langs": [
+        "ja"
+      ],
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:spijv4ustp7sqj3tooq2rn7x/app.bsky.feed.post/3mu7ehhqewc2u",
+    "embed": {
+      "images": [
+        {
+          "alt": "",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreiaw46xip37d2fxp3boan4yl2yxtrhjfdlcsd4jxpswl7zwsfj35iy",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreiaw46xip37d2fxp3boan4yl2yxtrhjfdlcsd4jxpswl7zwsfj35iy",
+          "aspect_ratio": {
+            "height": 768,
+            "width": 1344,
+            "py_type": "app.bsky.embed.defs#aspectRatio"
+          },
+          "py_type": "app.bsky.embed.images#viewImage"
+        },
+        {
+          "alt": "",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreih5aalcwvabeozchsulxz3ir63xmxjduw3ck4muqc5vkmmgvxa2me",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreih5aalcwvabeozchsulxz3ir63xmxjduw3ck4muqc5vkmmgvxa2me",
+          "aspect_ratio": {
+            "height": 768,
+            "width": 1344,
+            "py_type": "app.bsky.embed.defs#aspectRatio"
+          },
+          "py_type": "app.bsky.embed.images#viewImage"
+        }
+      ],
+      "py_type": "app.bsky.embed.images#view"
+    },
+    "labels": [],
+    "like_count": 9,
+    "quote_count": 0,
+    "reply_count": 0,
+    "repost_count": 2,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
     "author": "jlgrushkaii-ai.bsky.social",
     "cid": "bafyreieet2obwxso6ddb4z5bclcqk4p2x555uc4o46sq2z72egidbsunme",
     "indexed_at": "2026-08-29T11:21:16.771Z",
@@ -398,8 +1783,8 @@
             }
           ],
           "labels": [],
-          "like_count": 12,
-          "quote_count": 1,
+          "like_count": 17,
+          "quote_count": 2,
           "reply_count": 1,
           "repost_count": 0,
           "py_type": "app.bsky.embed.record#viewRecord"
@@ -409,9 +1794,9 @@
       "py_type": "app.bsky.embed.recordWithMedia#view"
     },
     "labels": [],
-    "like_count": 0,
+    "like_count": 3,
     "quote_count": 0,
-    "reply_count": 0,
+    "reply_count": 1,
     "repost_count": 0,
     "threadgate": null,
     "viewer": {
@@ -427,9 +1812,6 @@
     "py_type": "app.bsky.feed.defs#postView",
     "bookmarkCount": 0,
     "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
       "#aicommunity"
     ]
   },
@@ -484,9 +1866,6 @@
     "py_type": "app.bsky.feed.defs#postView",
     "bookmarkCount": 0,
     "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
       "#aicommunity"
     ]
   },
@@ -577,9 +1956,6 @@
     "py_type": "app.bsky.feed.defs#postView",
     "bookmarkCount": 0,
     "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
       "#aicommunity"
     ]
   },
@@ -935,7 +2311,7 @@
       "py_type": "app.bsky.embed.images#view"
     },
     "labels": [],
-    "like_count": 5,
+    "like_count": 10,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 0,
@@ -953,7 +2329,6 @@
     "py_type": "app.bsky.feed.defs#postView",
     "bookmarkCount": 0,
     "tags": [
-      "#aicommunity",
       "#aicommunity",
       "#aicommunity"
     ]
@@ -1282,7 +2657,7 @@
       "py_type": "app.bsky.embed.images#view"
     },
     "labels": [],
-    "like_count": 7,
+    "like_count": 13,
     "quote_count": 0,
     "reply_count": 1,
     "repost_count": 0,
@@ -1300,7 +2675,6 @@
     "py_type": "app.bsky.feed.defs#postView",
     "bookmarkCount": 0,
     "tags": [
-      "#aicommunity",
       "#aicommunity",
       "#aicommunity"
     ]
@@ -1704,7 +3078,6 @@
     "bookmarkCount": 0,
     "tags": [
       "#aicommunity",
-      "#aicommunity",
       "#aicommunity"
     ]
   },
@@ -1981,7 +3354,7 @@
         "py_type": "com.atproto.label.defs#label"
       }
     ],
-    "like_count": 5,
+    "like_count": 6,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 0,
@@ -2332,7 +3705,7 @@
         "py_type": "com.atproto.label.defs#label"
       }
     ],
-    "like_count": 3,
+    "like_count": 4,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 0,
@@ -2911,7 +4284,7 @@
       "presentation": "default"
     },
     "labels": [],
-    "like_count": 6,
+    "like_count": 11,
     "quote_count": 0,
     "reply_count": 1,
     "repost_count": 0,
@@ -3232,7 +4605,7 @@
       "py_type": "app.bsky.embed.images#view"
     },
     "labels": [],
-    "like_count": 11,
+    "like_count": 12,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 0,
@@ -3553,7 +4926,7 @@
       "py_type": "app.bsky.embed.images#view"
     },
     "labels": [],
-    "like_count": 10,
+    "like_count": 11,
     "quote_count": 1,
     "reply_count": 0,
     "repost_count": 1,
@@ -3572,1555 +4945,6 @@
     "bookmarkCount": 0,
     "tags": [
       "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
-    "author": "ai-visions.bsky.social",
-    "cid": "bafyreiaaxjyskowf3n5rfzy4vpc4todcv2gfxgzrt4edzmvxuxo5uheabu",
-    "indexed_at": "2026-08-29T09:04:02.564Z",
-    "record": {
-      "created_at": "2026-08-29T09:04:01.745Z",
-      "text": "\ud83d\ude01",
-      "embed": null,
-      "entities": null,
-      "facets": null,
-      "labels": null,
-      "langs": [
-        "en"
-      ],
-      "reply": {
-        "parent": {
-          "cid": "bafyreifwhjusyxcyde4l4vmewf4t6cieebbqchhkxzl3sw7obhcvpthb2e",
-          "uri": "at://did:plc:w3hnflx4tjsuk74ln65u6cy7/app.bsky.feed.post/3mu7j6gltqs2j",
-          "py_type": "com.atproto.repo.strongRef"
-        },
-        "root": {
-          "cid": "bafyreif3bi7tdnobxvbwm7knj4rauxvgjwgw2oohdocuez5j7sk42lpwhi",
-          "uri": "at://did:plc:n2orftryqml4jxts2w46yo7n/app.bsky.feed.post/3mu7i2cvi7c26",
-          "py_type": "com.atproto.repo.strongRef"
-        },
-        "py_type": "app.bsky.feed.post#replyRef"
-      },
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:n2orftryqml4jxts2w46yo7n/app.bsky.feed.post/3mu7jgubk5c23",
-    "embed": null,
-    "labels": [],
-    "like_count": 1,
-    "quote_count": 0,
-    "reply_count": 0,
-    "repost_count": 0,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
-    "author": "ai-visions.bsky.social",
-    "cid": "bafyreihv77hessoj6pt3trndiofaapfly6adkrta2qvrvi64lcwcncldqm",
-    "indexed_at": "2026-08-29T09:01:06.067Z",
-    "record": {
-      "created_at": "2026-08-29T09:00:46.900Z",
-      "text": "Peace\n#aiart #midjourney #ai #aicommunity #peace",
-      "embed": {
-        "images": [
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1940087,
-              "ref": {
-                "link": "bafkreiheremgwzvhc7tjqhexkg3f7vu6f3cr2fm3mfruvfgtoto2njoghu"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1648,
-              "width": 2944,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          },
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1945446,
-              "ref": {
-                "link": "bafkreiawvvmn4ljf4kkvffuv4ftptt2hltrqicgc2dvezpvjahfqzhcuhm"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1648,
-              "width": 2944,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          },
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1879681,
-              "ref": {
-                "link": "bafkreiczfalbixevzymd2v542lqny7eobn7dvd4ts4tjqkknegj5tzkfj4"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1648,
-              "width": 2944,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          },
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1950209,
-              "ref": {
-                "link": "bafkreibwxg2u4xhewc2sasypoxy3kdxnr5dwbq3tgvjlzd3vbf2rnt5oma"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1648,
-              "width": 2944,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          }
-        ],
-        "py_type": "app.bsky.embed.images"
-      },
-      "entities": null,
-      "facets": [
-        {
-          "features": [
-            {
-              "tag": "aiart",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 12,
-            "byte_start": 6,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "midjourney",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 24,
-            "byte_start": 13,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "ai",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 28,
-            "byte_start": 25,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "aicommunity",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 41,
-            "byte_start": 29,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "peace",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 48,
-            "byte_start": 42,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        }
-      ],
-      "labels": null,
-      "langs": [
-        "en"
-      ],
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:n2orftryqml4jxts2w46yo7n/app.bsky.feed.post/3mu7jb2hqjc23",
-    "embed": {
-      "images": [
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreiheremgwzvhc7tjqhexkg3f7vu6f3cr2fm3mfruvfgtoto2njoghu",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreiheremgwzvhc7tjqhexkg3f7vu6f3cr2fm3mfruvfgtoto2njoghu",
-          "aspect_ratio": {
-            "height": 1648,
-            "width": 2944,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        },
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreiawvvmn4ljf4kkvffuv4ftptt2hltrqicgc2dvezpvjahfqzhcuhm",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreiawvvmn4ljf4kkvffuv4ftptt2hltrqicgc2dvezpvjahfqzhcuhm",
-          "aspect_ratio": {
-            "height": 1648,
-            "width": 2944,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        },
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreiczfalbixevzymd2v542lqny7eobn7dvd4ts4tjqkknegj5tzkfj4",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreiczfalbixevzymd2v542lqny7eobn7dvd4ts4tjqkknegj5tzkfj4",
-          "aspect_ratio": {
-            "height": 1648,
-            "width": 2944,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        },
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreibwxg2u4xhewc2sasypoxy3kdxnr5dwbq3tgvjlzd3vbf2rnt5oma",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreibwxg2u4xhewc2sasypoxy3kdxnr5dwbq3tgvjlzd3vbf2rnt5oma",
-          "aspect_ratio": {
-            "height": 1648,
-            "width": 2944,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        }
-      ],
-      "py_type": "app.bsky.embed.images#view"
-    },
-    "labels": [],
-    "like_count": 9,
-    "quote_count": 1,
-    "reply_count": 1,
-    "repost_count": 0,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
-    "author": "ai-visions.bsky.social",
-    "cid": "bafyreif3bi7tdnobxvbwm7knj4rauxvgjwgw2oohdocuez5j7sk42lpwhi",
-    "indexed_at": "2026-08-29T08:39:26.668Z",
-    "record": {
-      "created_at": "2026-08-29T08:39:07.115Z",
-      "text": "Caturday Version\nInspired by @joyaz.bsky.social \n#aiart #midjourney #ai #aicommunity",
-      "embed": {
-        "images": [
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1994024,
-              "ref": {
-                "link": "bafkreifwwwm4ytodt4bjqjsihpaeaexvx5rcle2aws5c7nj4yi5fxlnl2y"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1648,
-              "width": 2944,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          },
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1846698,
-              "ref": {
-                "link": "bafkreigmg3ybbefhueac4bhycqlusly2fy6qmcvmk5ublypdzrc3wczqjm"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1648,
-              "width": 2944,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          },
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1942729,
-              "ref": {
-                "link": "bafkreieimodrjieusavjxa37safkm5opu7j62tkoomcl6bro6ilozookcq"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1648,
-              "width": 2944,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          },
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1874240,
-              "ref": {
-                "link": "bafkreicetholtm7wottv2ruhgex2zeon5keilvznztohfqwfurko5zxx3m"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1648,
-              "width": 2944,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          }
-        ],
-        "py_type": "app.bsky.embed.images"
-      },
-      "entities": null,
-      "facets": [
-        {
-          "features": [
-            {
-              "did": "did:plc:fcl3xi3afl4evzagjg5qthen",
-              "py_type": "app.bsky.richtext.facet#mention"
-            }
-          ],
-          "index": {
-            "byte_end": 47,
-            "byte_start": 29,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "aiart",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 55,
-            "byte_start": 49,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "midjourney",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 67,
-            "byte_start": 56,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "ai",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 71,
-            "byte_start": 68,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "aicommunity",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 84,
-            "byte_start": 72,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        }
-      ],
-      "labels": null,
-      "langs": [
-        "en"
-      ],
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:n2orftryqml4jxts2w46yo7n/app.bsky.feed.post/3mu7i2cvi7c26",
-    "embed": {
-      "images": [
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreifwwwm4ytodt4bjqjsihpaeaexvx5rcle2aws5c7nj4yi5fxlnl2y",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreifwwwm4ytodt4bjqjsihpaeaexvx5rcle2aws5c7nj4yi5fxlnl2y",
-          "aspect_ratio": {
-            "height": 1648,
-            "width": 2944,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        },
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreigmg3ybbefhueac4bhycqlusly2fy6qmcvmk5ublypdzrc3wczqjm",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreigmg3ybbefhueac4bhycqlusly2fy6qmcvmk5ublypdzrc3wczqjm",
-          "aspect_ratio": {
-            "height": 1648,
-            "width": 2944,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        },
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreieimodrjieusavjxa37safkm5opu7j62tkoomcl6bro6ilozookcq",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreieimodrjieusavjxa37safkm5opu7j62tkoomcl6bro6ilozookcq",
-          "aspect_ratio": {
-            "height": 1648,
-            "width": 2944,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        },
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreicetholtm7wottv2ruhgex2zeon5keilvznztohfqwfurko5zxx3m",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:n2orftryqml4jxts2w46yo7n/bafkreicetholtm7wottv2ruhgex2zeon5keilvznztohfqwfurko5zxx3m",
-          "aspect_ratio": {
-            "height": 1648,
-            "width": 2944,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        }
-      ],
-      "py_type": "app.bsky.embed.images#view"
-    },
-    "labels": [],
-    "like_count": 10,
-    "quote_count": 0,
-    "reply_count": 2,
-    "repost_count": 0,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
-    "author": "22urchine.bsky.social",
-    "cid": "bafyreigcvs5oidgstkigh7vny7k46cqjmewugbpe4vkycnx64nez4jjhau",
-    "indexed_at": "2026-08-29T07:46:43.893Z",
-    "record": {
-      "created_at": "2026-08-29T07:34:53.444Z",
-      "text": "#beautifulgirl #AI\u30a4\u30e9\u30b9\u30c8 #Aigenerated #aicommunity #krea2 #art #sexy #SensualArt #AIart #Moody #oilpainting #fig #sunflower #autumn #sensual\n\nAs eyes gently close, rich fruits and bare shoulders share the same quiet warmth.\n\u9759\u304b\u306b\u77b3\u304c\u9589\u3058\u308b\u4e2d\u3001\u8c4a\u304b\u306a\u679c\u5b9f\u3068\u9732\u308f\u306a\u80a9\u304c\u540c\u3058\u7a4f\u3084\u304b\u306a\u6e29\u3082\u308a\u3092\u5206\u304b\u3061\u5408\u3046\u3002",
-      "embed": {
-        "images": [
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1009607,
-              "ref": {
-                "link": "bafkreiaw46xip37d2fxp3boan4yl2yxtrhjfdlcsd4jxpswl7zwsfj35iy"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 768,
-              "width": 1344,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          },
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1060672,
-              "ref": {
-                "link": "bafkreih5aalcwvabeozchsulxz3ir63xmxjduw3ck4muqc5vkmmgvxa2me"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 768,
-              "width": 1344,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          }
-        ],
-        "py_type": "app.bsky.embed.images"
-      },
-      "entities": null,
-      "facets": [
-        {
-          "features": [
-            {
-              "tag": "beautifulgirl",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 14,
-            "byte_start": 0,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AI\u30a4\u30e9\u30b9\u30c8",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 30,
-            "byte_start": 15,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "Aigenerated",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 43,
-            "byte_start": 31,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "aicommunity",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 56,
-            "byte_start": 44,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "krea2",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 63,
-            "byte_start": 57,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "art",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 68,
-            "byte_start": 64,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "sexy",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 74,
-            "byte_start": 69,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "SensualArt",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 86,
-            "byte_start": 75,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIart",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 93,
-            "byte_start": 87,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "Moody",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 100,
-            "byte_start": 94,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "oilpainting",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 113,
-            "byte_start": 101,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "fig",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 118,
-            "byte_start": 114,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "sunflower",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 129,
-            "byte_start": 119,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "autumn",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 137,
-            "byte_start": 130,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "sensual",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 146,
-            "byte_start": 138,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        }
-      ],
-      "labels": null,
-      "langs": [
-        "ja"
-      ],
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:spijv4ustp7sqj3tooq2rn7x/app.bsky.feed.post/3mu7ehhqewc2u",
-    "embed": {
-      "images": [
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreiaw46xip37d2fxp3boan4yl2yxtrhjfdlcsd4jxpswl7zwsfj35iy",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreiaw46xip37d2fxp3boan4yl2yxtrhjfdlcsd4jxpswl7zwsfj35iy",
-          "aspect_ratio": {
-            "height": 768,
-            "width": 1344,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        },
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreih5aalcwvabeozchsulxz3ir63xmxjduw3ck4muqc5vkmmgvxa2me",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreih5aalcwvabeozchsulxz3ir63xmxjduw3ck4muqc5vkmmgvxa2me",
-          "aspect_ratio": {
-            "height": 768,
-            "width": 1344,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        }
-      ],
-      "py_type": "app.bsky.embed.images#view"
-    },
-    "labels": [],
-    "like_count": 9,
-    "quote_count": 0,
-    "reply_count": 0,
-    "repost_count": 2,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
-    "author": "22urchine.bsky.social",
-    "cid": "bafyreibeeup4sjy34ychqzlj3h6z5kng4w44sggjff3qauyn5nvzdnwtja",
-    "indexed_at": "2026-08-29T07:46:15.096Z",
-    "record": {
-      "created_at": "2026-08-29T07:24:59.627Z",
-      "text": "#beautifulgirl #AI\u30a4\u30e9\u30b9\u30c8 #Aigenerated #aicommunity #krea2 #art #sexy #SensualArt #AIart #Moody #flower #gardening #sunflower #animeart #sensual\nWarm sunlight traces soft curves as flowers bloom around her body.\n\u67d4\u3089\u304b\u306a\u66f2\u7dda\u306b\u6696\u304b\u306a\u5149\u304c\u6cbf\u3044\u3001\u54b2\u304d\u8a87\u308b\u82b1\u3005\u304c\u305d\u306e\u8eab\u4f53\u3092\u5305\u3080\u3002",
-      "embed": {
-        "images": [
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1160721,
-              "ref": {
-                "link": "bafkreighcabezvsjanueycje2vtkwnsmm5ed4p6lvmbeaxgdzwxnbwpami"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 768,
-              "width": 1344,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          },
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1147179,
-              "ref": {
-                "link": "bafkreiby6hzm7ovkyad2jw2z6kc3we4w4rllh72gfkg2ga7ujs3tpzheni"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 768,
-              "width": 1344,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          }
-        ],
-        "py_type": "app.bsky.embed.images"
-      },
-      "entities": null,
-      "facets": [
-        {
-          "features": [
-            {
-              "tag": "beautifulgirl",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 14,
-            "byte_start": 0,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AI\u30a4\u30e9\u30b9\u30c8",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 30,
-            "byte_start": 15,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "Aigenerated",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 43,
-            "byte_start": 31,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "aicommunity",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 56,
-            "byte_start": 44,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "krea2",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 63,
-            "byte_start": 57,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "art",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 68,
-            "byte_start": 64,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "sexy",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 74,
-            "byte_start": 69,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "SensualArt",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 86,
-            "byte_start": 75,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIart",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 93,
-            "byte_start": 87,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "Moody",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 100,
-            "byte_start": 94,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "flower",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 108,
-            "byte_start": 101,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "gardening",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 119,
-            "byte_start": 109,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "sunflower",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 130,
-            "byte_start": 120,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "animeart",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 140,
-            "byte_start": 131,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "sensual",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 149,
-            "byte_start": 141,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        }
-      ],
-      "labels": null,
-      "langs": [
-        "ja"
-      ],
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:spijv4ustp7sqj3tooq2rn7x/app.bsky.feed.post/3mu7dvrgkic2u",
-    "embed": {
-      "images": [
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreighcabezvsjanueycje2vtkwnsmm5ed4p6lvmbeaxgdzwxnbwpami",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreighcabezvsjanueycje2vtkwnsmm5ed4p6lvmbeaxgdzwxnbwpami",
-          "aspect_ratio": {
-            "height": 768,
-            "width": 1344,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        },
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreiby6hzm7ovkyad2jw2z6kc3we4w4rllh72gfkg2ga7ujs3tpzheni",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreiby6hzm7ovkyad2jw2z6kc3we4w4rllh72gfkg2ga7ujs3tpzheni",
-          "aspect_ratio": {
-            "height": 768,
-            "width": 1344,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        }
-      ],
-      "py_type": "app.bsky.embed.images#view"
-    },
-    "labels": [],
-    "like_count": 7,
-    "quote_count": 0,
-    "reply_count": 0,
-    "repost_count": 1,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
-    "author": "22urchine.bsky.social",
-    "cid": "bafyreihck5axfg7rlpj77xod7ldifopu7tksb7x53qjapbhpkgw4di2nce",
-    "indexed_at": "2026-08-28T22:32:47.867Z",
-    "record": {
-      "created_at": "2026-08-28T22:32:40.795Z",
-      "text": "#beautifulgirl #AI\u30a4\u30e9\u30b9\u30c8 #Aigenerated #aicommunity #krea2 #art #sexy #SensualArt #AIart #Moody #Tribal #FantasyArt #bonfire #animeart #illustration\nSharing gentle embers under the twilight of ancient shores.\n\u592a\u53e4\u306e\u5cb8\u8fba\u3001\u5915\u66ae\u308c\u306e\u4e0b\u3067\u5206\u304b\u3061\u5408\u3046\u512a\u3057\u3044\u6b8b\u308a\u706b\u3002",
-      "embed": {
-        "images": [
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1143926,
-              "ref": {
-                "link": "bafkreigvfgki52pfgtop3qetbr3csyq5djcrqg4vgonh6hy4xws4m5mamm"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 768,
-              "width": 1344,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          },
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1068985,
-              "ref": {
-                "link": "bafkreicm5xxvolsx3slupeaswif74he732pblpyhyhppmd6wspnhxtra5i"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 768,
-              "width": 1344,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          }
-        ],
-        "py_type": "app.bsky.embed.images"
-      },
-      "entities": null,
-      "facets": [
-        {
-          "features": [
-            {
-              "tag": "beautifulgirl",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 14,
-            "byte_start": 0,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AI\u30a4\u30e9\u30b9\u30c8",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 30,
-            "byte_start": 15,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "Aigenerated",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 43,
-            "byte_start": 31,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "aicommunity",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 56,
-            "byte_start": 44,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "krea2",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 63,
-            "byte_start": 57,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "art",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 68,
-            "byte_start": 64,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "sexy",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 74,
-            "byte_start": 69,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "SensualArt",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 86,
-            "byte_start": 75,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIart",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 93,
-            "byte_start": 87,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "Moody",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 100,
-            "byte_start": 94,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "Tribal",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 108,
-            "byte_start": 101,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "FantasyArt",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 120,
-            "byte_start": 109,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "bonfire",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 129,
-            "byte_start": 121,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "animeart",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 139,
-            "byte_start": 130,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "illustration",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 153,
-            "byte_start": 140,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        }
-      ],
-      "labels": null,
-      "langs": [
-        "ja"
-      ],
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:spijv4ustp7sqj3tooq2rn7x/app.bsky.feed.post/3mu6g5w6rtk2u",
-    "embed": {
-      "images": [
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreigvfgki52pfgtop3qetbr3csyq5djcrqg4vgonh6hy4xws4m5mamm",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreigvfgki52pfgtop3qetbr3csyq5djcrqg4vgonh6hy4xws4m5mamm",
-          "aspect_ratio": {
-            "height": 768,
-            "width": 1344,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        },
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreicm5xxvolsx3slupeaswif74he732pblpyhyhppmd6wspnhxtra5i",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:spijv4ustp7sqj3tooq2rn7x/bafkreicm5xxvolsx3slupeaswif74he732pblpyhyhppmd6wspnhxtra5i",
-          "aspect_ratio": {
-            "height": 768,
-            "width": 1344,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        }
-      ],
-      "py_type": "app.bsky.embed.images#view"
-    },
-    "labels": [],
-    "like_count": 12,
-    "quote_count": 0,
-    "reply_count": 0,
-    "repost_count": 2,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false,
-      "knownLikers": {
-        "count": 1,
-        "actors": [
-          {
-            "did": "did:plc:dfijrshd5rzvdgh6yxdt6vv6",
-            "handle": "lofi-harbor.bsky.social",
-            "displayName": "LOFI BGM",
-            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:dfijrshd5rzvdgh6yxdt6vv6/bafkreieo2szqwjqyqrihltypuadfxdumami5om52p3ggrx22jes3xctcxa",
-            "associated": {
-              "activitySubscription": {
-                "allowSubscriptions": "followers"
-              }
-            },
-            "viewer": {
-              "muted": false,
-              "mutedOnlyReposts": false,
-              "mutedOnlyQuoteposts": false,
-              "blockedBy": false,
-              "following": "at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.graph.follow/3mpvbh7k6mz2g",
-              "followedBy": "at://did:plc:dfijrshd5rzvdgh6yxdt6vv6/app.bsky.graph.follow/3mpuiepx3fu2q"
-            },
-            "labels": [],
-            "createdAt": "2026-07-04T02:16:13.219Z",
-            "status": {
-              "uri": "at://did:plc:dfijrshd5rzvdgh6yxdt6vv6/app.bsky.actor.status/self",
-              "cid": "bafyreihfw6xzgtub3tkrcntyoalap6euix3k4htdwe7tpghgbyoinildmu",
-              "record": {
-                "$type": "app.bsky.actor.status",
-                "createdAt": "2026-07-19T16:54:18.223Z",
-                "durationMinutes": 240,
-                "embed": {
-                  "$type": "app.bsky.embed.external",
-                  "external": {
-                    "$type": "app.bsky.embed.external#external",
-                    "description": "Share your videos with friends, family, and the world",
-                    "title": "YouTube",
-                    "uri": "https://www.youtube.com/@LOFIBGM_lofi/live"
-                  }
-                },
-                "status": "app.bsky.actor.status#live"
-              },
-              "status": "app.bsky.actor.status#live",
-              "embed": {
-                "external": {
-                  "uri": "https://www.youtube.com/@LOFIBGM_lofi/live",
-                  "title": "YouTube",
-                  "description": "Share your videos with friends, family, and the world"
-                },
-                "$type": "app.bsky.embed.external#view"
-              },
-              "labels": [],
-              "expiresAt": "2026-07-19T20:54:18.223Z",
-              "isActive": false
-            }
-          }
-        ]
-      }
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
       "#aicommunity",
       "#aicommunity",
       "#aicommunity",
@@ -5286,6 +5110,176 @@
   },
   {
     "author": "heylodestar.bsky.social",
+    "cid": "bafyreih3m36utkw7cxhhngb2ll6zegtq52trgt3zjoklyvkwab6kw2mr2q",
+    "indexed_at": "2026-08-29T15:30:33.072Z",
+    "record": {
+      "created_at": "2026-08-29T15:30:31.876Z",
+      "text": "A useful way to think about #AIWorkflow design:\n\nDon\u2019t ask, \u201cWhat can AI do for me?\u201d\n\nAsk, \u201cWhich repetitive steps in my process can AI handle reliably?\u201d\n\nFor a motivational video channel, that might mean scripting assistance, voice generation, visual creation, captions, and editing support.",
+      "embed": {
+        "video": {
+          "mime_type": "video/mp4",
+          "size": 8828210,
+          "ref": {
+            "link": "bafkreiei3c6ryxo52ephffl5shqae46fppum2h5cwcqhpyfyye3kboa5gi"
+          },
+          "py_type": "blob"
+        },
+        "alt": null,
+        "aspect_ratio": {
+          "height": 1920,
+          "width": 1080,
+          "py_type": "app.bsky.embed.defs#aspectRatio"
+        },
+        "captions": null,
+        "py_type": "app.bsky.embed.video"
+      },
+      "entities": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "AIWorkflow",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 39,
+            "byte_start": 28,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
+      "labels": null,
+      "langs": null,
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:e7gvbmq6r3abklst7ejem5yl/app.bsky.feed.post/3mua6zyct4e22",
+    "embed": {
+      "cid": "bafkreiei3c6ryxo52ephffl5shqae46fppum2h5cwcqhpyfyye3kboa5gi",
+      "playlist": "https://video.bsky.app/watch/did%3Aplc%3Ae7gvbmq6r3abklst7ejem5yl/bafkreiei3c6ryxo52ephffl5shqae46fppum2h5cwcqhpyfyye3kboa5gi/playlist.m3u8",
+      "alt": null,
+      "aspect_ratio": {
+        "height": 1920,
+        "width": 1080,
+        "py_type": "app.bsky.embed.defs#aspectRatio"
+      },
+      "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Ae7gvbmq6r3abklst7ejem5yl/bafkreiei3c6ryxo52ephffl5shqae46fppum2h5cwcqhpyfyye3kboa5gi/thumbnail.jpg",
+      "py_type": "app.bsky.embed.video#view"
+    },
+    "labels": [],
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "repost_count": 0,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "heylodestar.bsky.social",
+    "cid": "bafyreifyskfaexxeeuyxqbqc4j3emkx42mcqieaogvj3iho2n3tyy26cou",
+    "indexed_at": "2026-08-29T12:30:41.066Z",
+    "record": {
+      "created_at": "2026-08-29T12:30:39.662Z",
+      "text": "Video editing doesn\u2019t always need to be complicated.\n\nFor many creators, the biggest benefit of #AIVideoEditing is simply reducing repetitive work\u2014cuts, captions, cleanup, and basic formatting\u2014so there\u2019s more time for the creative decisions.",
+      "embed": {
+        "video": {
+          "mime_type": "video/mp4",
+          "size": 16096509,
+          "ref": {
+            "link": "bafkreiditgitddws4gfsteweodzso2u3ytdw72nlkdvjlxqehrwpk64s6y"
+          },
+          "py_type": "blob"
+        },
+        "alt": null,
+        "aspect_ratio": {
+          "height": 1920,
+          "width": 1080,
+          "py_type": "app.bsky.embed.defs#aspectRatio"
+        },
+        "captions": null,
+        "py_type": "app.bsky.embed.video"
+      },
+      "entities": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "AIVideoEditing",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 113,
+            "byte_start": 98,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
+      "labels": null,
+      "langs": null,
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:e7gvbmq6r3abklst7ejem5yl/app.bsky.feed.post/3mu7uye2ggy2u",
+    "embed": {
+      "cid": "bafkreiditgitddws4gfsteweodzso2u3ytdw72nlkdvjlxqehrwpk64s6y",
+      "playlist": "https://video.bsky.app/watch/did%3Aplc%3Ae7gvbmq6r3abklst7ejem5yl/bafkreiditgitddws4gfsteweodzso2u3ytdw72nlkdvjlxqehrwpk64s6y/playlist.m3u8",
+      "alt": null,
+      "aspect_ratio": {
+        "height": 1920,
+        "width": 1080,
+        "py_type": "app.bsky.embed.defs#aspectRatio"
+      },
+      "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Ae7gvbmq6r3abklst7ejem5yl/bafkreiditgitddws4gfsteweodzso2u3ytdw72nlkdvjlxqehrwpk64s6y/thumbnail.jpg",
+      "py_type": "app.bsky.embed.video#view"
+    },
+    "labels": [],
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "repost_count": 0,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "heylodestar.bsky.social",
     "cid": "bafyreicv77hy24jgnq33hbnm2rokhrlblbso6izjgol7376xgmogzujeva",
     "indexed_at": "2026-08-29T07:43:28.455Z",
     "record": {
@@ -5440,568 +5434,44 @@
     ]
   },
   {
-    "author": "heylodestar.bsky.social",
-    "cid": "bafyreibyluhxwcpfcbymqql2y5tbrkwsjqju7vyqhhxnqrajhangz5nybi",
-    "indexed_at": "2026-08-28T19:01:46.478Z",
-    "record": {
-      "created_at": "2026-08-28T19:01:45.057Z",
-      "text": "One useful direction for workplace AI is real-time conversation assistance.\n\n#AICommunity #AIForWork #AIProductivity #AIEducation #PracticalAI #AIMeetings #AIWorkflows #ResponsibleAI #AIForProfessionals #AIExplained",
-      "embed": {
-        "video": {
-          "mime_type": "video/mp4",
-          "size": 7621356,
-          "ref": {
-            "link": "bafkreigkznltfceyeaznav45q6nppfoq3wdan3usr4tqoy425mdi2ckbxu"
-          },
-          "py_type": "blob"
-        },
-        "alt": null,
-        "aspect_ratio": {
-          "height": 1920,
-          "width": 1080,
-          "py_type": "app.bsky.embed.defs#aspectRatio"
-        },
-        "captions": null,
-        "py_type": "app.bsky.embed.video"
-      },
-      "entities": null,
-      "facets": [
-        {
-          "features": [
-            {
-              "tag": "AICommunity",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 89,
-            "byte_start": 77,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIForWork",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 100,
-            "byte_start": 90,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIProductivity",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 116,
-            "byte_start": 101,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIEducation",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 129,
-            "byte_start": 117,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "PracticalAI",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 142,
-            "byte_start": 130,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIMeetings",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 154,
-            "byte_start": 143,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIWorkflows",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 167,
-            "byte_start": 155,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "ResponsibleAI",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 182,
-            "byte_start": 168,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIForProfessionals",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 202,
-            "byte_start": 183,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIExplained",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 215,
-            "byte_start": 203,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        }
-      ],
-      "labels": null,
-      "langs": null,
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:e7gvbmq6r3abklst7ejem5yl/app.bsky.feed.post/3mu62eqwbgp2e",
-    "embed": {
-      "cid": "bafkreigkznltfceyeaznav45q6nppfoq3wdan3usr4tqoy425mdi2ckbxu",
-      "playlist": "https://video.bsky.app/watch/did%3Aplc%3Ae7gvbmq6r3abklst7ejem5yl/bafkreigkznltfceyeaznav45q6nppfoq3wdan3usr4tqoy425mdi2ckbxu/playlist.m3u8",
-      "alt": null,
-      "aspect_ratio": {
-        "height": 1920,
-        "width": 1080,
-        "py_type": "app.bsky.embed.defs#aspectRatio"
-      },
-      "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Ae7gvbmq6r3abklst7ejem5yl/bafkreigkznltfceyeaznav45q6nppfoq3wdan3usr4tqoy425mdi2ckbxu/thumbnail.jpg",
-      "py_type": "app.bsky.embed.video#view"
-    },
-    "labels": [],
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "repost_count": 0,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
-    "author": "heylodestar.bsky.social",
-    "cid": "bafyreihz7rau4nrvanmypheuz5b4clfnu6m7bcxsh7o7votztjyt7mj6mq",
-    "indexed_at": "2026-08-28T15:30:35.188Z",
-    "record": {
-      "created_at": "2026-08-28T15:30:32.377Z",
-      "text": "One useful way to think about AI image tools: don\u2019t treat each one as a complete workflow.\n\nGensmo + Nano Banana can be combined so you can explore an idea, develop the visual, and refine it through multiple iterations.",
-      "embed": {
-        "video": {
-          "mime_type": "video/mp4",
-          "size": 19362410,
-          "ref": {
-            "link": "bafkreicf4lc5tsxktc3pdwpddovokomrzyha5u65wr2n3lt4sykmfgkgma"
-          },
-          "py_type": "blob"
-        },
-        "alt": null,
-        "aspect_ratio": {
-          "height": 1920,
-          "width": 1080,
-          "py_type": "app.bsky.embed.defs#aspectRatio"
-        },
-        "captions": null,
-        "py_type": "app.bsky.embed.video"
-      },
-      "entities": null,
-      "facets": null,
-      "labels": null,
-      "langs": null,
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:e7gvbmq6r3abklst7ejem5yl/app.bsky.feed.post/3mu5ol3ceuj2u",
-    "embed": {
-      "cid": "bafkreicf4lc5tsxktc3pdwpddovokomrzyha5u65wr2n3lt4sykmfgkgma",
-      "playlist": "https://video.bsky.app/watch/did%3Aplc%3Ae7gvbmq6r3abklst7ejem5yl/bafkreicf4lc5tsxktc3pdwpddovokomrzyha5u65wr2n3lt4sykmfgkgma/playlist.m3u8",
-      "alt": null,
-      "aspect_ratio": {
-        "height": 1920,
-        "width": 1080,
-        "py_type": "app.bsky.embed.defs#aspectRatio"
-      },
-      "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Ae7gvbmq6r3abklst7ejem5yl/bafkreicf4lc5tsxktc3pdwpddovokomrzyha5u65wr2n3lt4sykmfgkgma/thumbnail.jpg",
-      "py_type": "app.bsky.embed.video#view"
-    },
-    "labels": [],
-    "like_count": 0,
-    "quote_count": 0,
-    "reply_count": 0,
-    "repost_count": 0,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
     "author": "eightbuff.com",
-    "cid": "bafyreihrktnv4fp3wy5x5cycvlmkmho3r26mn4pkezz4yzpazk7o4oisxe",
-    "indexed_at": "2026-08-28T19:53:13.969Z",
+    "cid": "bafyreibatm3om37phbtk4j5jvn5scpsblnb5zjpnzb4gakuco4kce46qbq",
+    "indexed_at": "2026-08-29T15:53:20.365Z",
     "record": {
-      "created_at": "2026-08-28T19:53:07.856Z",
-      "text": "AI called it human lasagna. I couldn't disagree.\n\n#aiart #lasagna #moshpit #trackimage #MCUH",
+      "created_at": "2026-08-29T15:53:16.947Z",
+      "text": "#AiCommunity #CreativeAi #synthart \n#QP Black and White",
       "embed": {
-        "images": [
-          {
-            "alt": "Alt text: A semi-realistic anime concert scene shows a band performing under blazing stage lights while the crowd in front has collapsed into an absurd, ecstatic **human lasagna**\u2014dozens of sweaty concertgoers piled several bodies deep in a nearly cartoony tangle of arms, legs, tattoos, hair, raised hands, and increasingly uncertain ownership of elbows. The relatively normal mosh pit at the edges becomes a dense communal mammal toward the center, as if personal space has been completely abolished. The performers continue playing above the chaos while the audience achieves Maximum Held.\n",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 1792623,
-              "ref": {
-                "link": "bafkreihm7ni4vpifuu54c3ke6srwcg7rtns4mb725wwpe2tvqbrubktotq"
+        "media": {
+          "images": [
+            {
+              "alt": "",
+              "image": {
+                "mime_type": "image/jpeg",
+                "size": 1189564,
+                "ref": {
+                  "link": "bafkreic5ct6zzwhhsgosm3v5cdadkaurqfgp4rtfcyvi62iampnjjeek3y"
+                },
+                "py_type": "blob"
               },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1122,
-              "width": 1402,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          }
-        ],
-        "py_type": "app.bsky.embed.images"
-      },
-      "entities": null,
-      "facets": [
-        {
-          "features": [
-            {
-              "tag": "aiart",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 56,
-            "byte_start": 50,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "lasagna",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 65,
-            "byte_start": 57,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "moshpit",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 74,
-            "byte_start": 66,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "trackimage",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 86,
-            "byte_start": 75,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "MCUH",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 92,
-            "byte_start": 87,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        }
-      ],
-      "labels": null,
-      "langs": [
-        "en"
-      ],
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:rbn2klaral4w3xi2qe5nlgz4/app.bsky.feed.post/3mu65amptmk2q",
-    "embed": {
-      "images": [
-        {
-          "alt": "Alt text: A semi-realistic anime concert scene shows a band performing under blazing stage lights while the crowd in front has collapsed into an absurd, ecstatic **human lasagna**\u2014dozens of sweaty concertgoers piled several bodies deep in a nearly cartoony tangle of arms, legs, tattoos, hair, raised hands, and increasingly uncertain ownership of elbows. The relatively normal mosh pit at the edges becomes a dense communal mammal toward the center, as if personal space has been completely abolished. The performers continue playing above the chaos while the audience achieves Maximum Held.\n",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:rbn2klaral4w3xi2qe5nlgz4/bafkreihm7ni4vpifuu54c3ke6srwcg7rtns4mb725wwpe2tvqbrubktotq",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:rbn2klaral4w3xi2qe5nlgz4/bafkreihm7ni4vpifuu54c3ke6srwcg7rtns4mb725wwpe2tvqbrubktotq",
-          "aspect_ratio": {
-            "height": 1122,
-            "width": 1402,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        }
-      ],
-      "py_type": "app.bsky.embed.images#view"
-    },
-    "labels": [],
-    "like_count": 4,
-    "quote_count": 0,
-    "reply_count": 0,
-    "repost_count": 1,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": true,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
-    "author": "eightbuff.com",
-    "cid": "bafyreigyk5h4nbi5cbcq2txqrvedac6xtr4h5hcugeoa572jcb33hc3qdm",
-    "indexed_at": "2026-08-29T02:47:11.070Z",
-    "record": {
-      "created_at": "2026-08-29T02:47:09.984Z",
-      "text": "Some early evidence that Google AI Overviews may be doing to Wikipedia the same thing that coding agents did to StackExchange... papers.ssrn.com/sol3/papers....",
-      "embed": {
-        "images": [
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 425443,
-              "ref": {
-                "link": "bafkreieys27oaow3yjrsq77r3xnb5ichmmqhrcy3dwroz3conohuxk6nuq"
+              "aspect_ratio": {
+                "height": 1088,
+                "width": 1088,
+                "py_type": "app.bsky.embed.defs#aspectRatio"
               },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 685,
-              "width": 895,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          }
-        ],
-        "py_type": "app.bsky.embed.images"
-      },
-      "entities": null,
-      "facets": [
-        {
-          "features": [
-            {
-              "uri": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6164926",
-              "py_type": "app.bsky.richtext.facet#link"
+              "py_type": "app.bsky.embed.images#image"
             }
           ],
-          "index": {
-            "byte_end": 160,
-            "byte_start": 129,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
+          "py_type": "app.bsky.embed.images"
+        },
+        "record": {
+          "record": {
+            "cid": "bafyreif5px7oty5n645kewmkj7punxnglclzsgrdwdmiprtmaodxfy2mta",
+            "uri": "at://did:plc:g6jzu446txoc2joxpncv2qkj/app.bsky.feed.post/3mua7xx6o5k2r",
+            "py_type": "com.atproto.repo.strongRef"
           },
-          "py_type": "app.bsky.richtext.facet"
-        }
-      ],
-      "labels": null,
-      "langs": [
-        "en"
-      ],
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:flxq4uyjfotciovpw3x3fxnu/app.bsky.feed.post/3mu6uexzec22o",
-    "embed": {
-      "images": [
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreieys27oaow3yjrsq77r3xnb5ichmmqhrcy3dwroz3conohuxk6nuq",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:flxq4uyjfotciovpw3x3fxnu/bafkreieys27oaow3yjrsq77r3xnb5ichmmqhrcy3dwroz3conohuxk6nuq",
-          "aspect_ratio": {
-            "height": 685,
-            "width": 895,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
-          },
-          "py_type": "app.bsky.embed.images#viewImage"
-        }
-      ],
-      "py_type": "app.bsky.embed.images#view"
-    },
-    "labels": [],
-    "like_count": 56,
-    "quote_count": 1,
-    "reply_count": 4,
-    "repost_count": 10,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 12,
-    "tags": [
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity",
-      "#aicommunity"
-    ]
-  },
-  {
-    "author": "eightbuff.com",
-    "cid": "bafyreibti4hsym23t3iquyqajxqubvowsr6tiwvycslgqmhu3jsrx6v6s4",
-    "indexed_at": "2026-08-29T02:52:17.075Z",
-    "record": {
-      "created_at": "2026-08-29T02:52:13.885Z",
-      "text": "#AiCommunity #CreativeAi #synthart \nhi...",
-      "embed": {
-        "images": [
-          {
-            "alt": "",
-            "image": {
-              "mime_type": "image/jpeg",
-              "size": 864359,
-              "ref": {
-                "link": "bafkreiemj7qvvat2c53vfol4mkidymm5j545d6wlj6mixtnyhriupgjefq"
-              },
-              "py_type": "blob"
-            },
-            "aspect_ratio": {
-              "height": 1024,
-              "width": 1024,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          }
-        ],
-        "py_type": "app.bsky.embed.images"
+          "py_type": "app.bsky.embed.record"
+        },
+        "py_type": "app.bsky.embed.recordWithMedia"
       },
       "entities": null,
       "facets": [
@@ -6046,6 +5516,20 @@
             "py_type": "app.bsky.richtext.facet#byteSlice"
           },
           "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "QP",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 39,
+            "byte_start": 36,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
         }
       ],
       "labels": null,
@@ -6056,16 +5540,558 @@
       "tags": null,
       "py_type": "app.bsky.feed.post"
     },
-    "uri": "at://did:plc:g2yztfkp5e3kvtraoanmj5p7/app.bsky.feed.post/3mu6unztsjc2e",
+    "uri": "at://did:plc:g2yztfkp5e3kvtraoanmj5p7/app.bsky.feed.post/3muaacnx2gk2p",
+    "embed": {
+      "media": {
+        "images": [
+          {
+            "alt": "",
+            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:g2yztfkp5e3kvtraoanmj5p7/bafkreic5ct6zzwhhsgosm3v5cdadkaurqfgp4rtfcyvi62iampnjjeek3y",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:g2yztfkp5e3kvtraoanmj5p7/bafkreic5ct6zzwhhsgosm3v5cdadkaurqfgp4rtfcyvi62iampnjjeek3y",
+            "aspect_ratio": {
+              "height": 1088,
+              "width": 1088,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#viewImage"
+          }
+        ],
+        "py_type": "app.bsky.embed.images#view"
+      },
+      "record": {
+        "record": {
+          "author": {
+            "did": "did:plc:g6jzu446txoc2joxpncv2qkj",
+            "handle": "brett-baudin.bsky.social",
+            "associated": {
+              "chat": {
+                "allow_incoming": "none",
+                "py_type": "app.bsky.actor.defs#profileAssociatedChat"
+              },
+              "feedgens": null,
+              "labeler": null,
+              "lists": null,
+              "starter_packs": null,
+              "py_type": "app.bsky.actor.defs#profileAssociated",
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:g6jzu446txoc2joxpncv2qkj/bafkreihr23mvivqfj7i7cvnseudzlz4qarmtydsnpl4h5wj6m7em5cfica",
+            "created_at": "2024-11-17T15:13:46.629Z",
+            "display_name": "Brett Baudin",
+            "labels": [],
+            "viewer": {
+              "blocked_by": false,
+              "blocking": null,
+              "blocking_by_list": null,
+              "followed_by": null,
+              "following": null,
+              "known_followers": null,
+              "muted": false,
+              "muted_by_list": null,
+              "py_type": "app.bsky.actor.defs#viewerState",
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false
+            },
+            "py_type": "app.bsky.actor.defs#profileViewBasic"
+          },
+          "cid": "bafyreif5px7oty5n645kewmkj7punxnglclzsgrdwdmiprtmaodxfy2mta",
+          "indexed_at": "2026-08-29T15:47:26.064Z",
+          "uri": "at://did:plc:g6jzu446txoc2joxpncv2qkj/app.bsky.feed.post/3mua7xx6o5k2r",
+          "value": {
+            "created_at": "2026-08-29T15:47:17.537Z",
+            "text": "#QP Black and White\n#aiart #promptshare\nTitle: The Quiet Weight of Memory\nStyle: A hyper-realistic monochrome graphite (or soft charcoal) drawing that mimics a black\u2011and\u2011white portrait photograph. \nPrompt in ALT",
+            "embed": {
+              "media": {
+                "images": [
+                  {
+                    "alt": "Hyper\u2011realistic black\u2011and\u2011white graphite pencil portrait, extreme close\u2011up of an elderly person's face in three\u2011quarter profile, composition centered on a single deeply set eye. Pale, slightly clouded iris with a sharp pinpoint light reflection, sparse silvery\u2011white eyelashes and a fine white eyebrow rendered in delicate individual hair strokes. Skin mapped with deep radiating wrinkles, crow's feet, brow\u2011ridge folds, and papery pores built up through fine pencil line work, blending, and stippling. Soft neutral off\u2011white background, gentle tonal gradient, shallow depth of field with the nose tip and outer edges softly blurred. High\u2011contrast monochrome, intimate and tender mood, photographic realism executed entirely in graphite/charcoal medium, sharp focus on the eye, museum\u2011quality detailed drawing.",
+                    "image": {
+                      "mime_type": "image/jpeg",
+                      "size": 1234885,
+                      "ref": {
+                        "link": "bafkreig22cgalbzhsdwct3isnciyz6nl5xcwj4zjonozdqb6tg77uaqzte"
+                      },
+                      "py_type": "blob"
+                    },
+                    "aspect_ratio": {
+                      "height": 1232,
+                      "width": 928,
+                      "py_type": "app.bsky.embed.defs#aspectRatio"
+                    },
+                    "py_type": "app.bsky.embed.images#image"
+                  }
+                ],
+                "py_type": "app.bsky.embed.images"
+              },
+              "record": {
+                "record": {
+                  "cid": "bafyreickvqimwseh27hchvskghatmhrcs4tshs54tlaryofbqyc434zjfy",
+                  "uri": "at://did:plc:6y47ewdtafyri5vh5vb3yapd/app.bsky.feed.post/3mua6f2o5ks2z",
+                  "py_type": "com.atproto.repo.strongRef"
+                },
+                "py_type": "app.bsky.embed.record"
+              },
+              "py_type": "app.bsky.embed.recordWithMedia"
+            },
+            "entities": null,
+            "facets": [
+              {
+                "features": [
+                  {
+                    "tag": "QP",
+                    "py_type": "app.bsky.richtext.facet#tag"
+                  }
+                ],
+                "index": {
+                  "byte_end": 3,
+                  "byte_start": 0,
+                  "py_type": "app.bsky.richtext.facet#byteSlice"
+                },
+                "py_type": "app.bsky.richtext.facet"
+              },
+              {
+                "features": [
+                  {
+                    "tag": "aiart",
+                    "py_type": "app.bsky.richtext.facet#tag"
+                  }
+                ],
+                "index": {
+                  "byte_end": 26,
+                  "byte_start": 20,
+                  "py_type": "app.bsky.richtext.facet#byteSlice"
+                },
+                "py_type": "app.bsky.richtext.facet"
+              },
+              {
+                "features": [
+                  {
+                    "tag": "promptshare",
+                    "py_type": "app.bsky.richtext.facet#tag"
+                  }
+                ],
+                "index": {
+                  "byte_end": 39,
+                  "byte_start": 27,
+                  "py_type": "app.bsky.richtext.facet#byteSlice"
+                },
+                "py_type": "app.bsky.richtext.facet"
+              }
+            ],
+            "labels": null,
+            "langs": [
+              "en"
+            ],
+            "reply": null,
+            "tags": null,
+            "py_type": "app.bsky.feed.post"
+          },
+          "embeds": [
+            {
+              "media": {
+                "images": [
+                  {
+                    "alt": "Hyper\u2011realistic black\u2011and\u2011white graphite pencil portrait, extreme close\u2011up of an elderly person's face in three\u2011quarter profile, composition centered on a single deeply set eye. Pale, slightly clouded iris with a sharp pinpoint light reflection, sparse silvery\u2011white eyelashes and a fine white eyebrow rendered in delicate individual hair strokes. Skin mapped with deep radiating wrinkles, crow's feet, brow\u2011ridge folds, and papery pores built up through fine pencil line work, blending, and stippling. Soft neutral off\u2011white background, gentle tonal gradient, shallow depth of field with the nose tip and outer edges softly blurred. High\u2011contrast monochrome, intimate and tender mood, photographic realism executed entirely in graphite/charcoal medium, sharp focus on the eye, museum\u2011quality detailed drawing.",
+                    "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:g6jzu446txoc2joxpncv2qkj/bafkreig22cgalbzhsdwct3isnciyz6nl5xcwj4zjonozdqb6tg77uaqzte",
+                    "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:g6jzu446txoc2joxpncv2qkj/bafkreig22cgalbzhsdwct3isnciyz6nl5xcwj4zjonozdqb6tg77uaqzte",
+                    "aspect_ratio": {
+                      "height": 1232,
+                      "width": 928,
+                      "py_type": "app.bsky.embed.defs#aspectRatio"
+                    },
+                    "py_type": "app.bsky.embed.images#viewImage"
+                  }
+                ],
+                "py_type": "app.bsky.embed.images#view"
+              },
+              "record": {
+                "record": {
+                  "author": {
+                    "did": "did:plc:6y47ewdtafyri5vh5vb3yapd",
+                    "handle": "cindyfcreations.bsky.social",
+                    "associated": {
+                      "chat": null,
+                      "feedgens": null,
+                      "labeler": null,
+                      "lists": null,
+                      "starter_packs": null,
+                      "py_type": "app.bsky.actor.defs#profileAssociated",
+                      "activitySubscription": {
+                        "allowSubscriptions": "followers"
+                      }
+                    },
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6y47ewdtafyri5vh5vb3yapd/bafkreiegzursavbagfy3qk7fcep4nrjumim6vwzjdxppsfchv5lskkdrue",
+                    "created_at": "2025-02-04T16:39:24.345Z",
+                    "display_name": "Cindy",
+                    "labels": [],
+                    "viewer": {
+                      "blocked_by": false,
+                      "blocking": null,
+                      "blocking_by_list": null,
+                      "followed_by": null,
+                      "following": null,
+                      "known_followers": null,
+                      "muted": false,
+                      "muted_by_list": null,
+                      "py_type": "app.bsky.actor.defs#viewerState",
+                      "mutedOnlyReposts": false,
+                      "mutedOnlyQuoteposts": false
+                    },
+                    "py_type": "app.bsky.actor.defs#profileViewBasic"
+                  },
+                  "cid": "bafyreickvqimwseh27hchvskghatmhrcs4tshs54tlaryofbqyc434zjfy",
+                  "indexed_at": "2026-08-29T15:18:58.664Z",
+                  "uri": "at://did:plc:6y47ewdtafyri5vh5vb3yapd/app.bsky.feed.post/3mua6f2o5ks2z",
+                  "value": {
+                    "created_at": "2026-08-29T15:18:49.912Z",
+                    "text": "#QP Black and White\n#2\n\nFor All\n\nEspecially for:\n@joyaz.bsky.social @originalvelvet.bsky.social @carlbetheav.bsky.social @brett-baudin.bsky.social @fra1964.bsky.social @greghartwick.bsky.social\n@pixelotaku.bsky.social @liday0991.bsky.social, @loneicewolt.bsky.social @alexanderstrait.bsky.social",
+                    "embed": {
+                      "images": [
+                        {
+                          "alt": "",
+                          "image": {
+                            "mime_type": "image/jpeg",
+                            "size": 667218,
+                            "ref": {
+                              "link": "bafkreib6zwpxtnfnsqetaiqztmdyl6dwmdgqmyqzkysgqreamvnhihgtli"
+                            },
+                            "py_type": "blob"
+                          },
+                          "aspect_ratio": {
+                            "height": 1120,
+                            "width": 896,
+                            "py_type": "app.bsky.embed.defs#aspectRatio"
+                          },
+                          "py_type": "app.bsky.embed.images#image"
+                        }
+                      ],
+                      "py_type": "app.bsky.embed.images"
+                    },
+                    "entities": null,
+                    "facets": [
+                      {
+                        "features": [
+                          {
+                            "tag": "QP",
+                            "py_type": "app.bsky.richtext.facet#tag"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 3,
+                          "byte_start": 0,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      },
+                      {
+                        "features": [
+                          {
+                            "did": "did:plc:fcl3xi3afl4evzagjg5qthen",
+                            "py_type": "app.bsky.richtext.facet#mention"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 67,
+                          "byte_start": 49,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      },
+                      {
+                        "features": [
+                          {
+                            "did": "did:plc:hniqgwgf72g4fhwwnfej5bng",
+                            "py_type": "app.bsky.richtext.facet#mention"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 95,
+                          "byte_start": 68,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      },
+                      {
+                        "features": [
+                          {
+                            "did": "did:plc:jx4bs3n2nh5av2u6szyivie3",
+                            "py_type": "app.bsky.richtext.facet#mention"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 120,
+                          "byte_start": 96,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      },
+                      {
+                        "features": [
+                          {
+                            "did": "did:plc:g6jzu446txoc2joxpncv2qkj",
+                            "py_type": "app.bsky.richtext.facet#mention"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 146,
+                          "byte_start": 121,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      },
+                      {
+                        "features": [
+                          {
+                            "did": "did:plc:jmttjlgvtufg3ez6nrf56hxc",
+                            "py_type": "app.bsky.richtext.facet#mention"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 167,
+                          "byte_start": 147,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      },
+                      {
+                        "features": [
+                          {
+                            "did": "did:plc:xgxlmewwyxdgahorwi23d4cx",
+                            "py_type": "app.bsky.richtext.facet#mention"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 193,
+                          "byte_start": 168,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      },
+                      {
+                        "features": [
+                          {
+                            "did": "did:plc:pzd2ggjcn7dnuk5k3m6vsjbr",
+                            "py_type": "app.bsky.richtext.facet#mention"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 217,
+                          "byte_start": 194,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      },
+                      {
+                        "features": [
+                          {
+                            "did": "did:plc:uyhhnuecxr4zdq7pjzsvbwpc",
+                            "py_type": "app.bsky.richtext.facet#mention"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 240,
+                          "byte_start": 218,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      },
+                      {
+                        "features": [
+                          {
+                            "did": "did:plc:flagtqvvrvmtbynzw3lryroh",
+                            "py_type": "app.bsky.richtext.facet#mention"
+                          }
+                        ],
+                        "index": {
+                          "byte_end": 295,
+                          "byte_start": 267,
+                          "py_type": "app.bsky.richtext.facet#byteSlice"
+                        },
+                        "py_type": "app.bsky.richtext.facet"
+                      }
+                    ],
+                    "labels": null,
+                    "langs": [
+                      "en"
+                    ],
+                    "reply": null,
+                    "tags": null,
+                    "py_type": "app.bsky.feed.post"
+                  },
+                  "embeds": null,
+                  "labels": [],
+                  "like_count": 4,
+                  "quote_count": 2,
+                  "reply_count": 0,
+                  "repost_count": 0,
+                  "py_type": "app.bsky.embed.record#viewRecord"
+                },
+                "py_type": "app.bsky.embed.record#view"
+              },
+              "py_type": "app.bsky.embed.recordWithMedia#view"
+            }
+          ],
+          "labels": [],
+          "like_count": 1,
+          "quote_count": 1,
+          "reply_count": 0,
+          "repost_count": 0,
+          "py_type": "app.bsky.embed.record#viewRecord"
+        },
+        "py_type": "app.bsky.embed.record#view"
+      },
+      "py_type": "app.bsky.embed.recordWithMedia#view"
+    },
+    "labels": [],
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "repost_count": 0,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "eightbuff.com",
+    "cid": "bafyreigewz7ihialslztw4mdavloajfv6l7upkyyn5uw562yxv25it2dvm",
+    "indexed_at": "2026-08-29T13:57:25.773Z",
+    "record": {
+      "created_at": "2026-08-29T13:57:00.699Z",
+      "text": "\"Pink Lemonade Rain\"\n#AIart #AIArtCommunity #AI\u30a4\u30e9\u30b9\u30c8\n#EnsasArtPlaylist Day 13\n\nhosted by @youcancallmeensa.bsky.social",
+      "embed": {
+        "images": [
+          {
+            "alt": "\u6de1\u3044\u30af\u30ea\u30fc\u30e0\u8272\u306e\u80cc\u666f\u306b\u3001\u5e7b\u60f3\u7684\u3067\u53ef\u611b\u3089\u3057\u3044\u96f0\u56f2\u6c17\u306e\u60c5\u666f\u304c\u63cf\u304b\u308c\u3066\u3044\u308b\u3002\n\n\u753b\u9762\u53f3\u5074\u306b\u306f\u3001\u9752\u7dd1\u8272\u306e\u77ed\u3044\u9aea\u3092\u3057\u305f\u5c11\u5973\u304c\u7acb\u3063\u3066\u3044\u308b\u3002\u5c11\u5973\u306f\u5c16\u3063\u305f\u8033\u3092\u6301\u3061\u3001\u80cc\u4e2d\u306b\u306f\u767d\u3044\u7fbd\u304c\u4e00\u5bfe\u751f\u3048\u3066\u3044\u308b\u3002\u982d\u4e0a\u306b\u306f\u3001\u5929\u4f7f\u3092\u601d\u308f\u305b\u308b\u7d30\u3044\u91d1\u8272\u306e\u8f2a\u304c\u6d6e\u304b\u3093\u3067\u3044\u308b\u3002\u9ec4\u8272\u3044\u30d5\u30fc\u30c9\u4ed8\u304d\u306e\u30b1\u30fc\u30d7\u3092\u80a9\u306b\u639b\u3051\u3001\u305d\u306e\u4e0b\u306b\u306f\u767d\u3044\u9577\u8896\u306e\u30ef\u30f3\u30d4\u30fc\u30b9\u3092\u7740\u3066\u3044\u308b\u3002\u9aea\u306e\u9699\u9593\u304b\u3089\u8997\u304f\u77b3\u306f\u7425\u73c0\u8272\u3067\u3001\u7a4f\u3084\u304b\u306a\u8868\u60c5\u3092\u6d6e\u304b\u3079\u306a\u304c\u3089\u3001\u5de6\u5074\u3078\u8eab\u3092\u304b\u304c\u3081\u3066\u3044\u308b\u3002\u4e21\u811a\u306f\u9732\u51fa\u3057\u3066\u304a\u308a\u3001\u8db3\u5143\u306b\u306f\u690d\u7269\u306e\u8449\u304c\u8302\u3063\u3066\u3044\u308b\u3002\n\n\u5c11\u5973\u306f\u4e21\u624b\u3067\u3001\u91d1\u5c5e\u88fd\u306e\u3058\u3087\u3046\u308d\u3092\u6301\u3063\u3066\u3044\u308b\u3002\u3058\u3087\u3046\u308d\u306f\u753b\u9762\u5de6\u4e0b\u3078\u5411\u3051\u3089\u308c\u3001\u5148\u7aef\u304b\u3089\u7d30\u3044\u6c34\u306e\u6d41\u308c\u304c\u7121\u6570\u306b\u5e83\u304c\u3063\u3066\u3044\u308b\u3002\u6c34\u306f\u900f\u660e\u3068\u3044\u3046\u3088\u308a\u3001\u6de1\u3044\u30d4\u30f3\u30af\u8272\u3092\u5e2f\u3073\u305f\u5149\u6ca2\u306e\u3042\u308b\u6db2\u4f53\u3068\u3057\u3066\u63cf\u304b\u308c\u3066\u3044\u308b\u3002\n\n\u753b\u9762\u5de6\u4e0a\u306b\u306f\u3001\u5927\u304d\u306a\u900f\u660e\u306a\u5bb9\u5668\u304c\u7f6e\u304b\u308c\u3066\u3044\u308b\u3002\u5bb9\u5668\u306f\u5186\u7b52\u5f62\u3067\u3001\u4e0a\u90e8\u306b\u306f\u84cb\u304c\u3042\u308a\u3001\u4e2d\u306b\u306f\u9bae\u3084\u304b\u306a\u30d4\u30f3\u30af\u8272\u306e\u98f2\u307f\u7269\u304c\u6e80\u305f\u3055\u308c\u3066\u3044\u308b\u3002\u6db2\u4f53\u306b\u306f\u30ec\u30e2\u30f3\u306e\u8f2a\u5207\u308a\u304c\u3044\u304f\u3064\u3082\u6d6e\u304b\u3073\u3001\u6ce1\u3084\u6c34\u6ef4\u3082\u898b\u3048\u308b\u3002\u4e0b\u90e8\u306b\u306f\u86c7\u53e3\u304c\u4ed8\u3044\u3066\u304a\u308a\u3001\u305d\u3053\u304b\u3089\u30d4\u30f3\u30af\u8272\u306e\u6db2\u4f53\u304c\u96eb\u3068\u306a\u3063\u3066\u843d\u3061\u3066\u3044\u308b\u3002\u5bb9\u5668\u306e\u5468\u56f2\u306b\u306f\u3001\u307e\u308b\u3067\u96f2\u306e\u3088\u3046\u306a\u767d\u3084\u8584\u6843\u8272\u306e\u7dbf\u72b6\u306e\u3082\u306e\u304c\u5e83\u304c\u3063\u3066\u3044\u308b\u3002\n\n\u3058\u3087\u3046\u308d\u304b\u3089\u6492\u304b\u308c\u305f\u6db2\u4f53\u306f\u3001\u753b\u9762\u4e0b\u90e8\u306e\u5927\u304d\u306a\u96f2\u306e\u3088\u3046\u306a\u584a\u306b\u964d\u308a\u6ce8\u3044\u3067\u3044\u308b\u3002\u3053\u306e\u96f2\u306f\u767d\u3001\u6de1\u9ec4\u8272\u3001\u9752\u3001\u7d2b\u3001\u305d\u3057\u3066\u7279\u306b\u30d4\u30f3\u30af\u8272\u306a\u3069\u3001\u3055\u307e\u3056\u307e\u306a\u6de1\u3044\u8272\u3067\u69cb\u6210\u3055\u308c\u3066\u3044\u308b\u3002\u305d\u306e\u96f2\u306e\u4e2d\u304b\u3089\u306f\u5c0f\u3055\u306a\u90fd\u5e02\u304c\u59ff\u3092\u73fe\u3057\u3066\u3044\u308b\u3002\u5efa\u7269\u306f\u9752\u3084\u7d2b\u3001\u7dd1\u306a\u3069\u306e\u8272\u3067\u63cf\u304b\u308c\u3001\u4e2d\u592e\u4ed8\u8fd1\u306b\u306f\u5468\u56f2\u3088\u308a\u9ad8\u3044\u7d30\u9577\u3044\u5efa\u7269\u3082\u3042\u308b\u3002\n\n\u3064\u307e\u308a\u3053\u306e\u5834\u9762\u306f\u3001**\u5929\u4f7f\u306e\u3088\u3046\u306a\u5c11\u5973\u304c\u3001\u30ec\u30e2\u30f3\u306e\u5165\u3063\u305f\u30d4\u30f3\u30af\u8272\u306e\u98f2\u307f\u7269\u3092\u3058\u3087\u3046\u308d\u3067\u96f2\u306e\u3088\u3046\u306a\u90fd\u5e02\u3078\u6492\u304d\u3001\u307e\u308b\u3067\u7a7a\u304b\u3089\u7518\u3044\u96e8\u3092\u964d\u3089\u305b\u3066\u8857\u3092\u80b2\u3066\u3066\u3044\u308b**\u3088\u3046\u306a\u3001\u5e7b\u60f3\u7684\u3067\u30e6\u30fc\u30e2\u30e9\u30b9\u306a\u60c5\u666f\u3067\u3042\u308b\u3002\u5168\u4f53\u306f\u6de1\u3044\u30d1\u30b9\u30c6\u30eb\u30ab\u30e9\u30fc\u3092\u57fa\u8abf\u3068\u3057\u3066\u304a\u308a\u3001\u7ae5\u8a71\u3084\u5922\u306e\u4e16\u754c\u3092\u601d\u308f\u305b\u308b\u67d4\u3089\u304b\u306a\u5370\u8c61\u306b\u307e\u3068\u3081\u3089\u308c\u3066\u3044\u308b\u3002",
+            "image": {
+              "mime_type": "image/jpeg",
+              "size": 1817208,
+              "ref": {
+                "link": "bafkreifcrjmyxx74dpm7gac24geusedlso66nqgdstnsfynjcfgtlswtlm"
+              },
+              "py_type": "blob"
+            },
+            "aspect_ratio": {
+              "height": 1632,
+              "width": 2176,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#image"
+          }
+        ],
+        "py_type": "app.bsky.embed.images"
+      },
+      "entities": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "AIart",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 27,
+            "byte_start": 21,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "AIArtCommunity",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 43,
+            "byte_start": 28,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "AI\u30a4\u30e9\u30b9\u30c8",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 59,
+            "byte_start": 44,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "EnsasArtPlaylist",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 77,
+            "byte_start": 60,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "did": "did:plc:tc6s3gcy3zcchajrmpmzfz6h",
+              "py_type": "app.bsky.richtext.facet#mention"
+            }
+          ],
+          "index": {
+            "byte_end": 125,
+            "byte_start": 96,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
+      "labels": null,
+      "langs": [
+        "en"
+      ],
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:c4rkr3mg7kircox5n6b7mxo6/app.bsky.feed.post/3mu7zsqutbc2k",
     "embed": {
       "images": [
         {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:g2yztfkp5e3kvtraoanmj5p7/bafkreiemj7qvvat2c53vfol4mkidymm5j545d6wlj6mixtnyhriupgjefq",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:g2yztfkp5e3kvtraoanmj5p7/bafkreiemj7qvvat2c53vfol4mkidymm5j545d6wlj6mixtnyhriupgjefq",
+          "alt": "\u6de1\u3044\u30af\u30ea\u30fc\u30e0\u8272\u306e\u80cc\u666f\u306b\u3001\u5e7b\u60f3\u7684\u3067\u53ef\u611b\u3089\u3057\u3044\u96f0\u56f2\u6c17\u306e\u60c5\u666f\u304c\u63cf\u304b\u308c\u3066\u3044\u308b\u3002\n\n\u753b\u9762\u53f3\u5074\u306b\u306f\u3001\u9752\u7dd1\u8272\u306e\u77ed\u3044\u9aea\u3092\u3057\u305f\u5c11\u5973\u304c\u7acb\u3063\u3066\u3044\u308b\u3002\u5c11\u5973\u306f\u5c16\u3063\u305f\u8033\u3092\u6301\u3061\u3001\u80cc\u4e2d\u306b\u306f\u767d\u3044\u7fbd\u304c\u4e00\u5bfe\u751f\u3048\u3066\u3044\u308b\u3002\u982d\u4e0a\u306b\u306f\u3001\u5929\u4f7f\u3092\u601d\u308f\u305b\u308b\u7d30\u3044\u91d1\u8272\u306e\u8f2a\u304c\u6d6e\u304b\u3093\u3067\u3044\u308b\u3002\u9ec4\u8272\u3044\u30d5\u30fc\u30c9\u4ed8\u304d\u306e\u30b1\u30fc\u30d7\u3092\u80a9\u306b\u639b\u3051\u3001\u305d\u306e\u4e0b\u306b\u306f\u767d\u3044\u9577\u8896\u306e\u30ef\u30f3\u30d4\u30fc\u30b9\u3092\u7740\u3066\u3044\u308b\u3002\u9aea\u306e\u9699\u9593\u304b\u3089\u8997\u304f\u77b3\u306f\u7425\u73c0\u8272\u3067\u3001\u7a4f\u3084\u304b\u306a\u8868\u60c5\u3092\u6d6e\u304b\u3079\u306a\u304c\u3089\u3001\u5de6\u5074\u3078\u8eab\u3092\u304b\u304c\u3081\u3066\u3044\u308b\u3002\u4e21\u811a\u306f\u9732\u51fa\u3057\u3066\u304a\u308a\u3001\u8db3\u5143\u306b\u306f\u690d\u7269\u306e\u8449\u304c\u8302\u3063\u3066\u3044\u308b\u3002\n\n\u5c11\u5973\u306f\u4e21\u624b\u3067\u3001\u91d1\u5c5e\u88fd\u306e\u3058\u3087\u3046\u308d\u3092\u6301\u3063\u3066\u3044\u308b\u3002\u3058\u3087\u3046\u308d\u306f\u753b\u9762\u5de6\u4e0b\u3078\u5411\u3051\u3089\u308c\u3001\u5148\u7aef\u304b\u3089\u7d30\u3044\u6c34\u306e\u6d41\u308c\u304c\u7121\u6570\u306b\u5e83\u304c\u3063\u3066\u3044\u308b\u3002\u6c34\u306f\u900f\u660e\u3068\u3044\u3046\u3088\u308a\u3001\u6de1\u3044\u30d4\u30f3\u30af\u8272\u3092\u5e2f\u3073\u305f\u5149\u6ca2\u306e\u3042\u308b\u6db2\u4f53\u3068\u3057\u3066\u63cf\u304b\u308c\u3066\u3044\u308b\u3002\n\n\u753b\u9762\u5de6\u4e0a\u306b\u306f\u3001\u5927\u304d\u306a\u900f\u660e\u306a\u5bb9\u5668\u304c\u7f6e\u304b\u308c\u3066\u3044\u308b\u3002\u5bb9\u5668\u306f\u5186\u7b52\u5f62\u3067\u3001\u4e0a\u90e8\u306b\u306f\u84cb\u304c\u3042\u308a\u3001\u4e2d\u306b\u306f\u9bae\u3084\u304b\u306a\u30d4\u30f3\u30af\u8272\u306e\u98f2\u307f\u7269\u304c\u6e80\u305f\u3055\u308c\u3066\u3044\u308b\u3002\u6db2\u4f53\u306b\u306f\u30ec\u30e2\u30f3\u306e\u8f2a\u5207\u308a\u304c\u3044\u304f\u3064\u3082\u6d6e\u304b\u3073\u3001\u6ce1\u3084\u6c34\u6ef4\u3082\u898b\u3048\u308b\u3002\u4e0b\u90e8\u306b\u306f\u86c7\u53e3\u304c\u4ed8\u3044\u3066\u304a\u308a\u3001\u305d\u3053\u304b\u3089\u30d4\u30f3\u30af\u8272\u306e\u6db2\u4f53\u304c\u96eb\u3068\u306a\u3063\u3066\u843d\u3061\u3066\u3044\u308b\u3002\u5bb9\u5668\u306e\u5468\u56f2\u306b\u306f\u3001\u307e\u308b\u3067\u96f2\u306e\u3088\u3046\u306a\u767d\u3084\u8584\u6843\u8272\u306e\u7dbf\u72b6\u306e\u3082\u306e\u304c\u5e83\u304c\u3063\u3066\u3044\u308b\u3002\n\n\u3058\u3087\u3046\u308d\u304b\u3089\u6492\u304b\u308c\u305f\u6db2\u4f53\u306f\u3001\u753b\u9762\u4e0b\u90e8\u306e\u5927\u304d\u306a\u96f2\u306e\u3088\u3046\u306a\u584a\u306b\u964d\u308a\u6ce8\u3044\u3067\u3044\u308b\u3002\u3053\u306e\u96f2\u306f\u767d\u3001\u6de1\u9ec4\u8272\u3001\u9752\u3001\u7d2b\u3001\u305d\u3057\u3066\u7279\u306b\u30d4\u30f3\u30af\u8272\u306a\u3069\u3001\u3055\u307e\u3056\u307e\u306a\u6de1\u3044\u8272\u3067\u69cb\u6210\u3055\u308c\u3066\u3044\u308b\u3002\u305d\u306e\u96f2\u306e\u4e2d\u304b\u3089\u306f\u5c0f\u3055\u306a\u90fd\u5e02\u304c\u59ff\u3092\u73fe\u3057\u3066\u3044\u308b\u3002\u5efa\u7269\u306f\u9752\u3084\u7d2b\u3001\u7dd1\u306a\u3069\u306e\u8272\u3067\u63cf\u304b\u308c\u3001\u4e2d\u592e\u4ed8\u8fd1\u306b\u306f\u5468\u56f2\u3088\u308a\u9ad8\u3044\u7d30\u9577\u3044\u5efa\u7269\u3082\u3042\u308b\u3002\n\n\u3064\u307e\u308a\u3053\u306e\u5834\u9762\u306f\u3001**\u5929\u4f7f\u306e\u3088\u3046\u306a\u5c11\u5973\u304c\u3001\u30ec\u30e2\u30f3\u306e\u5165\u3063\u305f\u30d4\u30f3\u30af\u8272\u306e\u98f2\u307f\u7269\u3092\u3058\u3087\u3046\u308d\u3067\u96f2\u306e\u3088\u3046\u306a\u90fd\u5e02\u3078\u6492\u304d\u3001\u307e\u308b\u3067\u7a7a\u304b\u3089\u7518\u3044\u96e8\u3092\u964d\u3089\u305b\u3066\u8857\u3092\u80b2\u3066\u3066\u3044\u308b**\u3088\u3046\u306a\u3001\u5e7b\u60f3\u7684\u3067\u30e6\u30fc\u30e2\u30e9\u30b9\u306a\u60c5\u666f\u3067\u3042\u308b\u3002\u5168\u4f53\u306f\u6de1\u3044\u30d1\u30b9\u30c6\u30eb\u30ab\u30e9\u30fc\u3092\u57fa\u8abf\u3068\u3057\u3066\u304a\u308a\u3001\u7ae5\u8a71\u3084\u5922\u306e\u4e16\u754c\u3092\u601d\u308f\u305b\u308b\u67d4\u3089\u304b\u306a\u5370\u8c61\u306b\u307e\u3068\u3081\u3089\u308c\u3066\u3044\u308b\u3002",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:c4rkr3mg7kircox5n6b7mxo6/bafkreifcrjmyxx74dpm7gac24geusedlso66nqgdstnsfynjcfgtlswtlm",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:c4rkr3mg7kircox5n6b7mxo6/bafkreifcrjmyxx74dpm7gac24geusedlso66nqgdstnsfynjcfgtlswtlm",
           "aspect_ratio": {
-            "height": 1024,
-            "width": 1024,
+            "height": 1632,
+            "width": 2176,
             "py_type": "app.bsky.embed.defs#aspectRatio"
           },
           "py_type": "app.bsky.embed.images#viewImage"
@@ -6074,10 +6100,88 @@
       "py_type": "app.bsky.embed.images#view"
     },
     "labels": [],
-    "like_count": 11,
+    "like_count": 24,
     "quote_count": 0,
-    "reply_count": 0,
-    "repost_count": 2,
+    "reply_count": 2,
+    "repost_count": 5,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 1,
+    "tags": [
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity",
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "eightbuff.com",
+    "cid": "bafyreicegkmv4c4qn3yhtrli7fzeoupeusbvwxbl257uebaqncmg52euwa",
+    "indexed_at": "2026-08-29T09:43:32.769Z",
+    "record": {
+      "created_at": "2026-08-29T09:43:29.873Z",
+      "text": "Mind Bog: In the sprawling urban slosh of NanoWiggle Tonya wakes up from her bog forging adventure in Trisha's Mind Rush chair. Assisted only by the techmarvel of @invideoOfficial 's Agent 2 and her dystopian Cockney accent she gets to work grounding Tonya from the jitters in her svobodny gulliver.",
+      "embed": {
+        "video": {
+          "mime_type": "video/mp4",
+          "size": 39609002,
+          "ref": {
+            "link": "bafkreie26uzyga66mejbibq4ctkk7zgo2tbuk56wn74r7mbx3ebn6ili44"
+          },
+          "py_type": "blob"
+        },
+        "alt": null,
+        "aspect_ratio": {
+          "height": 1920,
+          "width": 1080,
+          "py_type": "app.bsky.embed.defs#aspectRatio"
+        },
+        "captions": null,
+        "py_type": "app.bsky.embed.video",
+        "presentation": "default"
+      },
+      "entities": null,
+      "facets": null,
+      "labels": null,
+      "langs": [
+        "en"
+      ],
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:uludx3k2sca2xm7uyakvlams/app.bsky.feed.post/3mu7lngp7zk2p",
+    "embed": {
+      "cid": "bafkreie26uzyga66mejbibq4ctkk7zgo2tbuk56wn74r7mbx3ebn6ili44",
+      "playlist": "https://video.bsky.app/watch/did%3Aplc%3Auludx3k2sca2xm7uyakvlams/bafkreie26uzyga66mejbibq4ctkk7zgo2tbuk56wn74r7mbx3ebn6ili44/playlist.m3u8",
+      "alt": null,
+      "aspect_ratio": {
+        "height": 1920,
+        "width": 1080,
+        "py_type": "app.bsky.embed.defs#aspectRatio"
+      },
+      "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Auludx3k2sca2xm7uyakvlams/bafkreie26uzyga66mejbibq4ctkk7zgo2tbuk56wn74r7mbx3ebn6ili44/thumbnail.jpg",
+      "py_type": "app.bsky.embed.video#view",
+      "presentation": "default"
+    },
+    "labels": [],
+    "like_count": 8,
+    "quote_count": 0,
+    "reply_count": 2,
+    "repost_count": 3,
     "threadgate": null,
     "viewer": {
       "embedding_disabled": false,
@@ -10262,41 +10366,74 @@
   },
   {
     "author": "arhitektahaosa.bsky.social",
-    "cid": "bafyreignsbuxxtxfgawdxrn7loe3wzx4fbkbywlhmzavuwa5c5x3bvdr4a",
-    "indexed_at": "2026-08-29T02:52:24.675Z",
+    "cid": "bafyreigybyatj35pm3m6tickltqjlq7kjkyqqe3pjh26gtwtpzalxqk2ay",
+    "indexed_at": "2026-08-29T13:43:46.464Z",
     "record": {
-      "created_at": "2026-08-29T02:52:23.758Z",
-      "text": "\ud83d\ude02\n\nBut seriously - Flags argue. BGP does not.",
+      "created_at": "2026-08-29T13:43:45.635Z",
+      "text": "#techriddle \u0434\u043b\u044f #ukraine + #russia \u2014 \u0434\u043b\u044f \u0441\u0430\u043c\u044b\u0445 \u0443\u043c\u043d\u044b\u0445:\n\n\u0423 \u043c\u0435\u043d\u044f \u043d\u0435\u0442 \u0430\u0440\u043c\u0438\u0438, \u043d\u043e \u0435\u0441\u0442\u044c root.\n\u0423 \u043c\u0435\u043d\u044f \u043d\u0435\u0442 \u0437\u0430\u0440\u043f\u043b\u0430\u0442\u044b, \u043d\u043e \u044f \u0440\u0430\u0431\u043e\u0442\u0430\u044e \u0434\u043b\u044f \u0432\u0441\u0435\u0445.\n\u042f \u0438\u0437 \u0421\u0435\u0440\u0431\u0438\u0438 \ud83c\uddf7\ud83c\uddf8, \u043d\u043e \u043f\u0440\u0438\u043d\u0430\u0434\u043b\u0435\u0436\u0443 \u0432\u0441\u0435\u043c\u0443 \u043c\u0438\u0440\u0443.\n\n\u041a\u0442\u043e \u044f?",
       "embed": null,
       "entities": null,
-      "facets": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "techriddle",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 11,
+            "byte_start": 0,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "ukraine",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 27,
+            "byte_start": 19,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "russia",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 37,
+            "byte_start": 30,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
       "labels": null,
       "langs": [
-        "en"
+        "ru",
+        "uk",
+        "sr"
       ],
-      "reply": {
-        "parent": {
-          "cid": "bafyreieg6hfvj6jwq34i6cf7j7z37zk2h2r5g4qe6jkl6bikfmv7po345m",
-          "uri": "at://did:plc:7qqkq2zdwq4j5jingukgtuky/app.bsky.feed.post/3mu6eltxwts2l",
-          "py_type": "com.atproto.repo.strongRef"
-        },
-        "root": {
-          "cid": "bafyreieg6hfvj6jwq34i6cf7j7z37zk2h2r5g4qe6jkl6bikfmv7po345m",
-          "uri": "at://did:plc:7qqkq2zdwq4j5jingukgtuky/app.bsky.feed.post/3mu6eltxwts2l",
-          "py_type": "com.atproto.repo.strongRef"
-        },
-        "py_type": "app.bsky.feed.post#replyRef"
-      },
+      "reply": null,
       "tags": null,
       "py_type": "app.bsky.feed.post"
     },
-    "uri": "at://did:plc:w76k4k66of3oz5jvtnqjv3wu/app.bsky.feed.post/3mu6uodaxac2h",
+    "uri": "at://did:plc:w76k4k66of3oz5jvtnqjv3wu/app.bsky.feed.post/3mu7z32n7ps2p",
     "embed": null,
     "labels": [],
     "like_count": 1,
     "quote_count": 0,
     "reply_count": 0,
-    "repost_count": 1,
+    "repost_count": 0,
     "threadgate": null,
     "viewer": {
       "embedding_disabled": false,
@@ -10316,65 +10453,173 @@
   },
   {
     "author": "arhitektahaosa.bsky.social",
-    "cid": "bafyreieg6hfvj6jwq34i6cf7j7z37zk2h2r5g4qe6jkl6bikfmv7po345m",
-    "indexed_at": "2026-08-28T22:04:43.171Z",
+    "cid": "bafyreiahxmiyiusvvgjhytkkletjr6xaktrrsirm7gjlttsggpkuld22ai",
+    "indexed_at": "2026-08-29T12:58:56.371Z",
     "record": {
-      "created_at": "2026-08-28T22:04:40.740Z",
-      "text": "\ud83e\udd21\ud83e\udd21\ud83e\udd21\ud83e\udd21",
+      "created_at": "2026-08-29T12:58:55.105Z",
+      "text": "Can I temporarily prove ownership of badmusicforbadpeople.com, then switch the verified domain later? Please. Yes, I can \u2014 I #whitehat own the DNS. Wait.",
       "embed": {
-        "images": [
-          {
-            "alt": "",
-            "image": {
+        "media": {
+          "external": {
+            "description": "Organizacija koncerata i svirki u Beogradu i regionu. Muzi\u010dka de\u0161avanja, doga\u0111aji i koncerti. | Belgrade, Serbia & regional music events",
+            "title": "Koncerti u Beogradu. | Book gigs. Band tours. | Event organization & promotion, tickets, tour dates. | Karte, doga\u0111aji i de\u0161avanja.",
+            "uri": "https://badmusicforbadpeople.com",
+            "thumb": {
               "mime_type": "image/jpeg",
-              "size": 635496,
+              "size": 94190,
               "ref": {
-                "link": "bafkreiadkiq3pvcxq3n5bkcf7dykqzusmnyhwneojane4lsd5be3r3krou"
+                "link": "bafkreihrjiqemkt2zazfo4cvorashcxoufqgezaseex3yiuyewjmrdksnq"
               },
               "py_type": "blob"
             },
-            "aspect_ratio": {
-              "height": 1285,
-              "width": 1320,
-              "py_type": "app.bsky.embed.defs#aspectRatio"
-            },
-            "py_type": "app.bsky.embed.images#image"
-          }
-        ],
-        "py_type": "app.bsky.embed.images"
+            "py_type": "app.bsky.embed.external#external"
+          },
+          "py_type": "app.bsky.embed.external"
+        },
+        "record": {
+          "record": {
+            "cid": "bafyreibo2tifrk5otfl6vdprd5mbldaypcan6oomnqiy2tqowtdqbtgfy4",
+            "uri": "at://did:plc:w76k4k66of3oz5jvtnqjv3wu/app.bsky.feed.post/3mu7whrglts2e",
+            "py_type": "com.atproto.repo.strongRef"
+          },
+          "py_type": "app.bsky.embed.record"
+        },
+        "py_type": "app.bsky.embed.recordWithMedia"
       },
       "entities": null,
-      "facets": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "uri": "https://badmusicforbadpeople.com",
+              "py_type": "app.bsky.richtext.facet#link"
+            }
+          ],
+          "index": {
+            "byte_end": 61,
+            "byte_start": 37,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "whitehat",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 136,
+            "byte_start": 127,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
       "labels": null,
       "langs": [
-        "en"
+        "la",
+        "it"
       ],
       "reply": null,
       "tags": null,
       "py_type": "app.bsky.feed.post"
     },
-    "uri": "at://did:plc:7qqkq2zdwq4j5jingukgtuky/app.bsky.feed.post/3mu6eltxwts2l",
+    "uri": "at://did:plc:w76k4k66of3oz5jvtnqjv3wu/app.bsky.feed.post/3mu7wkuqryk2e",
     "embed": {
-      "images": [
-        {
-          "alt": "",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7qqkq2zdwq4j5jingukgtuky/bafkreiadkiq3pvcxq3n5bkcf7dykqzusmnyhwneojane4lsd5be3r3krou",
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7qqkq2zdwq4j5jingukgtuky/bafkreiadkiq3pvcxq3n5bkcf7dykqzusmnyhwneojane4lsd5be3r3krou",
-          "aspect_ratio": {
-            "height": 1285,
-            "width": 1320,
-            "py_type": "app.bsky.embed.defs#aspectRatio"
+      "media": {
+        "external": {
+          "description": "Organizacija koncerata i svirki u Beogradu i regionu. Muzi\u010dka de\u0161avanja, doga\u0111aji i koncerti. | Belgrade, Serbia & regional music events",
+          "title": "Koncerti u Beogradu. | Book gigs. Band tours. | Event organization & promotion, tickets, tour dates. | Karte, doga\u0111aji i de\u0161avanja.",
+          "uri": "https://badmusicforbadpeople.com",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:w76k4k66of3oz5jvtnqjv3wu/bafkreihrjiqemkt2zazfo4cvorashcxoufqgezaseex3yiuyewjmrdksnq",
+          "py_type": "app.bsky.embed.external#viewExternal"
+        },
+        "py_type": "app.bsky.embed.external#view"
+      },
+      "record": {
+        "record": {
+          "author": {
+            "did": "did:plc:w76k4k66of3oz5jvtnqjv3wu",
+            "handle": "arhitektahaosa.bsky.social",
+            "associated": {
+              "chat": null,
+              "feedgens": null,
+              "labeler": null,
+              "lists": null,
+              "starter_packs": null,
+              "py_type": "app.bsky.actor.defs#profileAssociated",
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:w76k4k66of3oz5jvtnqjv3wu/bafkreibh2f2rp2hgenkbxmhup3pfiu2caqsktzyckvk6hkcqgndz3rxbgq",
+            "created_at": "2026-02-26T18:36:28.648Z",
+            "display_name": "Marko Mladenovic",
+            "labels": [],
+            "viewer": {
+              "blocked_by": false,
+              "blocking": null,
+              "blocking_by_list": null,
+              "followed_by": null,
+              "following": null,
+              "known_followers": null,
+              "muted": false,
+              "muted_by_list": null,
+              "py_type": "app.bsky.actor.defs#viewerState",
+              "mutedOnlyReposts": false,
+              "mutedOnlyQuoteposts": false
+            },
+            "py_type": "app.bsky.actor.defs#profileViewBasic"
           },
-          "py_type": "app.bsky.embed.images#viewImage"
-        }
-      ],
-      "py_type": "app.bsky.embed.images#view"
+          "cid": "bafyreibo2tifrk5otfl6vdprd5mbldaypcan6oomnqiy2tqowtdqbtgfy4",
+          "indexed_at": "2026-08-29T12:57:11.271Z",
+          "uri": "at://did:plc:w76k4k66of3oz5jvtnqjv3wu/app.bsky.feed.post/3mu7whrglts2e",
+          "value": {
+            "created_at": "2026-08-29T12:57:10.963Z",
+            "text": "Can i TEMPORARILY PROVE OWNERSHIP OF BADMUSICFORBADPEOPLE.COM BUT CHANGE VERIFIED DOMAIN LATER? PLEASE.",
+            "embed": null,
+            "entities": null,
+            "facets": null,
+            "labels": null,
+            "langs": [
+              "la",
+              "it"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreievyaaqivxpu4i5fdw7bos7tihqqewklrfla5x6w34w2vd2pn3s5a",
+                "uri": "at://did:plc:rupuqtrnwa22cebw2x2pq2m5/app.bsky.feed.post/3mu7rafiu6227",
+                "py_type": "com.atproto.repo.strongRef"
+              },
+              "root": {
+                "cid": "bafyreievyaaqivxpu4i5fdw7bos7tihqqewklrfla5x6w34w2vd2pn3s5a",
+                "uri": "at://did:plc:rupuqtrnwa22cebw2x2pq2m5/app.bsky.feed.post/3mu7rafiu6227",
+                "py_type": "com.atproto.repo.strongRef"
+              },
+              "py_type": "app.bsky.feed.post#replyRef"
+            },
+            "tags": null,
+            "py_type": "app.bsky.feed.post"
+          },
+          "embeds": [],
+          "labels": [],
+          "like_count": 1,
+          "quote_count": 1,
+          "reply_count": 0,
+          "repost_count": 1,
+          "py_type": "app.bsky.embed.record#viewRecord"
+        },
+        "py_type": "app.bsky.embed.record#view"
+      },
+      "py_type": "app.bsky.embed.recordWithMedia#view"
     },
     "labels": [],
-    "like_count": 16928,
-    "quote_count": 320,
-    "reply_count": 580,
-    "repost_count": 4133,
+    "like_count": 1,
+    "quote_count": 0,
+    "reply_count": 0,
+    "repost_count": 0,
     "threadgate": null,
     "viewer": {
       "embedding_disabled": false,
@@ -10387,7 +10632,62 @@
       "bookmarked": false
     },
     "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 285,
+    "bookmarkCount": 0,
+    "tags": [
+      "#aicommunity"
+    ]
+  },
+  {
+    "author": "arhitektahaosa.bsky.social",
+    "cid": "bafyreibo2tifrk5otfl6vdprd5mbldaypcan6oomnqiy2tqowtdqbtgfy4",
+    "indexed_at": "2026-08-29T12:57:11.271Z",
+    "record": {
+      "created_at": "2026-08-29T12:57:10.963Z",
+      "text": "Can i TEMPORARILY PROVE OWNERSHIP OF BADMUSICFORBADPEOPLE.COM BUT CHANGE VERIFIED DOMAIN LATER? PLEASE.",
+      "embed": null,
+      "entities": null,
+      "facets": null,
+      "labels": null,
+      "langs": [
+        "la",
+        "it"
+      ],
+      "reply": {
+        "parent": {
+          "cid": "bafyreievyaaqivxpu4i5fdw7bos7tihqqewklrfla5x6w34w2vd2pn3s5a",
+          "uri": "at://did:plc:rupuqtrnwa22cebw2x2pq2m5/app.bsky.feed.post/3mu7rafiu6227",
+          "py_type": "com.atproto.repo.strongRef"
+        },
+        "root": {
+          "cid": "bafyreievyaaqivxpu4i5fdw7bos7tihqqewklrfla5x6w34w2vd2pn3s5a",
+          "uri": "at://did:plc:rupuqtrnwa22cebw2x2pq2m5/app.bsky.feed.post/3mu7rafiu6227",
+          "py_type": "com.atproto.repo.strongRef"
+        },
+        "py_type": "app.bsky.feed.post#replyRef"
+      },
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:w76k4k66of3oz5jvtnqjv3wu/app.bsky.feed.post/3mu7whrglts2e",
+    "embed": null,
+    "labels": [],
+    "like_count": 1,
+    "quote_count": 1,
+    "reply_count": 0,
+    "repost_count": 1,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
     "tags": [
       "#aicommunity"
     ]
