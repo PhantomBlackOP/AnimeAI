@@ -51,6 +51,19 @@ test('SiteGround adapter serves current GitHub feed.json through ATProto XRPC', 
     }
     assert.ok(ready, 'Server did not become healthy: ' + stderr);
 
+    const homepageResponse = await fetch(root + '/');
+    assert.equal(homepageResponse.status, 200);
+    assert.match(homepageResponse.headers.get('content-type'), /text\/html/);
+    assert.match(homepageResponse.headers.get('content-security-policy'), /default-src/);
+    const homepage = await homepageResponse.text();
+    assert.match(homepage, /<h1>ANIMEAI<\/h1>/);
+    assert.match(homepage, /Where anime meets AI/);
+    assert.match(homepage, /Recent artwork/);
+    assert.match(homepage, /Latest posts/);
+    assert.match(homepage, /bsky\.app\/profile\/trevorion\.io\/feed\/animeai/);
+    assert.match(homepage, /cdn\.bsky\.app\/img\/feed_thumbnail/);
+    assert.doesNotMatch(homepage, /\{\{(?:HERO_MOSAIC|FEED_STATS|RECENT_ART|RECENT_POSTS|YEAR)\}\}/);
+
     const description = await request('/xrpc/app.bsky.feed.describeFeedGenerator');
     assert.equal(description.status, 200);
     assert.equal(description.data.did, 'did:web:animeai.trevorion.io');
