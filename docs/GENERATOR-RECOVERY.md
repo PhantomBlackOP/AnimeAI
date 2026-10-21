@@ -81,3 +81,13 @@ This links to the **existing** registered AnimeAI Stream, not a replacement.
 - Added a fixture-based test covering one thumbnail post, one text-only post and one adult-labeled post. Native feed skeleton content remains unchanged.
 - CI passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39691891275
 - Live SiteGround homepage verified to include both image and text-only post cards, while health and XRPC endpoints remain operational: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39691960949
+
+## Legacy AnimeAI website unification, 2026-10-22
+
+- Before this change, `https://animeai.trevorion.io/` showed an obsolete static 2025 introduction, including an incorrect implication that raw JSON can be subscribed to directly as a Bluesky custom feed.
+- The root `index.html` of the **existing GitHub Pages site** now sends visitors to the current SiteGround homepage `https://bsky.trevorion.io/` via a zero-delay meta refresh and JavaScript redirect, with an accessible manual link as fallback.
+- The redirect applies **only to the root homepage**. `https://animeai.trevorion.io/feed.json` and `https://animeai.trevorion.io/.well-known/did.json` remain served directly by GitHub Pages. The DID identity and generator service endpoint remain unchanged.
+- The SiteGround homepage's footer no longer links back redundantly to the obsolete AnimeAI website; it now links directly to the public Feed JSON. Its Bluesky feed link remains `https://bsky.app/profile/trevorion.io/feed/animeai`.
+- The websites share the same underlying AnimeAI post inventory but differ in display: SiteGround previews posts and art, while Bluesky supplies the full native interactive feed.
+- Generator CI after footer change passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39692299073
+- Independent live verification is performed by `.github/workflows/verify_site_unification.yml`; inspect the latest workflow result before claiming the public redirect is available.
