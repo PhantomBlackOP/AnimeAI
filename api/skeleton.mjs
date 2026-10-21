@@ -66,7 +66,7 @@ export default async function handler(req, res) {
     if (byUri.size === 0) throw new Error('No valid Bluesky post URIs in source');
 
     const entries = Array.from(byUri.values()).sort(
-      (a, b) => b.timestamp - a.timestamp || b.uri.localeCompare(a.uri)
+      (a, b) => b.timestamp - a.timestamp || (a.uri < b.uri ? 1 : a.uri > b.uri ? -1 : 0)
     );
     const eligible = boundary
       ? entries.filter(item => item.timestamp < boundary.t ||
