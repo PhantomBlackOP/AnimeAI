@@ -1,0 +1,33 @@
+name: Repair existing AnimeAI Bluesky feed registration
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Update the existing record only after live generator health and DID checks pass"
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BSKY_APP_USERNAME: ${{ secrets.BSKY_APP_USERNAME }}
+      BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Bluesky SDK
+        run: python -m pip install "atproto>=0.0.60,<1"
+      - name: Verify service DID and current feed (dry run)
+        run: python scripts/repair_feed_registration.py
+      - name: Repair only the existing record (guarded)
+        if: ${{ inputs.apply }}
+        run: python scripts/repair_feed_registration.py --apply
