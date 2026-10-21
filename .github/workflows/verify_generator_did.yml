@@ -1,0 +1,68 @@
+name: Verify live AnimeAI generator DID
+
+on:
+  push:
+    paths:
+      - '.well-known/did.json'
+      - '.nojekyll'
+      - '.github/workflows/verify_generator_did.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check public DID, service description and skeleton
+        run: |
+          python - <<'PY'
+          import json, urllib.request, urllib.parse, time
+          domain = "https://animeai.trevorion.io"
+          target = "https://trevorg22.sg-host.com"
+          did = "did:web:animeai.trevorion.io"
+          uri = "at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai"
+
+          def load(url):
+              request = urllib.request.Request(url, headers={
+                  "Accept": "application/json",
+                  "User-Agent": "AnimeAI-live-service-verifier/1.0",
+              })
+              with urllib.request.urlopen(request, timeout=12) as response:
+                  assert response.status == 200, f"Unexpected HTTP {response.status} from {url}"
+                  return json.load(response)
+
+          # Give GitHub Pages time to deploy after the DID commit.
+          for attempt in range(12):
+              try:
+                  record = load(domain + "/.well-known/did.json")
+                  assert record["id"] == did
+                  services = [s for s in record.get("service", [])
+                      if s.get("id", "").endswith("#bsky_fg")
+                      and s.get("type") == "BskyFeedGenerator"]
+                  assert len(services) == 1
+                  assert services[0]["serviceEndpoint"] == target
+                  print("PUBLIC DID VERIFIED:", record["id"], services[0]["serviceEndpoint"])
+                  break
+              except Exception as e:
+                  if attempt == 11:
+                      raise
+                  print("DID deployment pending:", str(e)[:120])
+                  time.sleep(10)
+
+          info = load(target + "/xrpc/app.bsky.feed.describeFeedGenerator")
+          assert info["did"] == did
+          assert {"uri": uri} in info["feeds"]
+          print("GENERATOR DESCRIPTION VERIFIED:", info["did"])
+
+          query = urllib.parse.urlencode({"feed": uri, "limit": "2"})
+          skeleton = load(target + "/xrpc/app.bsky.feed.getFeedSkeleton?" + query)
+          assert skeleton.get("feed") and all(
+              p.get("post", "").startswith("at://did:")
+              and "/app.bsky.feed.post/" in p["post"]
+              for p in skeleton["feed"]
+          )
+          print("LIVE BLUESKY SKELETON VERIFIED, POSTS:", len(skeleton["feed"]))
+          PY
