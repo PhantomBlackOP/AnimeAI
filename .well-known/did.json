@@ -1,0 +1,13 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1"
+  ],
+  "id": "did:web:animeai.trevorion.io",
+  "service": [
+    {
+      "id": "#bsky_fg",
+      "type": "BskyFeedGenerator",
+      "serviceEndpoint": "https://trevorg22.sg-host.com"
+    }
+  ]
+}
