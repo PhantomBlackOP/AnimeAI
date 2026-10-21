@@ -1,0 +1,53 @@
+name: Probe SiteGround AnimeAI host
+
+on:
+  push:
+    paths:
+      - '.github/workflows/probe_siteground.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Public HTTPS and XRPC endpoint checks, read-only
+        env:
+          HOST: https://trevorg22.sg-host.com
+        run: |
+          python - <<'PY'
+          import os, ssl, urllib.request, urllib.parse, urllib.error
+          base = os.environ["HOST"]
+          paths = [
+            "/",
+            "/health",
+            "/xrpc/app.bsky.feed.describeFeedGenerator",
+            "/xrpc/app.bsky.feed.getFeedSkeleton?" + urllib.parse.urlencode({
+              "feed": "at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai",
+              "limit": "2",
+            }),
+          ]
+          for path in paths:
+            try:
+              req = urllib.request.Request(base + path, headers={
+                "Accept": "application/json",
+                "User-Agent": "AnimeAI-SiteGround-read-only-probe/1.0",
+              })
+              with urllib.request.urlopen(req, timeout=12) as response:
+                contents = response.read(1500).decode("utf-8", "replace")
+                print(f"PATH: {path.split('?')[0]}")
+                print(f"HTTP: {response.status}")
+                print(f"URL: {response.geturl()}")
+                print(f"TYPE: {response.headers.get('Content-Type')}")
+                print("BODY:", repr(contents[:450]))
+            except urllib.error.HTTPError as exc:
+              print(f"PATH: {path.split('?')[0]} HTTP ERROR: {exc.code}")
+              print("TYPE:", exc.headers.get("Content-Type"))
+              print("BODY:", repr(exc.read(350).decode("utf-8", "replace")))
+            except Exception as exc:
+              print(f"PATH: {path.split('?')[0]} NETWORK ERROR: {type(exc).__name__}: {str(exc)[:300]}")
+            print("-" * 35)
+          PY
