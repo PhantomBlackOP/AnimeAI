@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/xrpc/app.bsky.feed.getFeedSkeleton",
+      "destination": "/api/skeleton"
+    },
+    {
+      "source": "/xrpc/app.bsky.feed.describeFeedGenerator",
+      "destination": "/api/describe"
+    }
+  ]
+}
