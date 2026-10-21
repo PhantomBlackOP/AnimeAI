@@ -78,11 +78,17 @@ jobs:
                              "bsky.app/profile/trevorion.io/feed/animeai"):
                   if phrase not in page:
                       raise RuntimeError("Homepage missing expected content: " + phrase)
-              if '.post-with-image {' not in page or 'class="post-thumbnail"' not in page:
-                  raise RuntimeError("Latest post thumbnails missing from the public homepage")
-              if 'class="post" href=' not in page:
-                  raise RuntimeError("Text-only fallback cards missing from the public homepage")
-              print("LATEST POST THUMBNAILS AND TEXT-ONLY FALLBACK VERIFIED", flush=True)
+              if '<script src="/animeai-home.js" defer></script>' not in page:
+                  raise RuntimeError("Shared index.html script missing from homepage")
+              if 'id="latest-posts"' not in page or 'id="art-gallery"' not in page:
+                  raise RuntimeError("Homepage dynamic preview containers missing")
+              with urllib.request.urlopen(origin + "/animeai-home.js", timeout=12) as response:
+                  if response.status != 200 or "javascript" not in response.headers.get("Content-Type", ""):
+                      raise RuntimeError("Homepage renderer JavaScript not served")
+                  script = response.read(100_000).decode("utf-8")
+              if 'function renderPosts' not in script or 'post-with-image' not in script:
+                  raise RuntimeError("Latest-post thumbnail rendering code missing")
+              print("SHARED INDEX.HTML AND THUMBNAIL RENDERER VERIFIED", flush=True)
               print("PUBLIC HOMEPAGE VERIFIED, BYTES:", len(page), flush=True)
               print("PERMANENT HOST FULLY VERIFIED", flush=True)
 
