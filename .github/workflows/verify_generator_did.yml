@@ -21,7 +21,7 @@ jobs:
           python - <<'PY'
           import json, urllib.request, urllib.parse, time
           domain = "https://animeai.trevorion.io"
-          target = "https://trevorg22.sg-host.com"
+          target = "https://bsky.trevorion.io"
           did = "did:web:animeai.trevorion.io"
           uri = "at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai"
 
