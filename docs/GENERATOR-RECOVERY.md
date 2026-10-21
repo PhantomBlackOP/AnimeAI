@@ -93,15 +93,19 @@ This links to the **existing** registered AnimeAI Stream, not a replacement.
 - GitHub Pages and SiteGround obtain that published static data from the same repository, without additional collecting or a permanent Python server.
 - The public website is a **preview** of that collected inventory; Bluesky's own UI remains the place to interact with posts.
 
-## Public homepage Zine navigation, 2026-10-22
+## Public homepage navigation, corrected 2026-10-22
 
-At Trevorion's request, remove all user-facing GitHub/code links from the shared `index.html` homepage and substitute meaningful Zine destinations:
+Trevorion flagged unrequested homepage changes from the earlier GitHub-to-Zine link task: the Latest Posts navigation card had been displaced by Zine News, and Zine Articles/Archive destinations were added without authorization. Those changes have been reverted.
 
-- Previous **Raw feed data** card -> **Zine News**, `https://zine.trevorion.io/news/`
-- Previous **Open-source project** GitHub card -> **Trevorion Zine**, `https://zine.trevorion.io/`
-- Previous **Feed JSON** footer link -> **Zine archive**, `https://zine.trevorion.io/archive/`
-- Previous **GitHub** footer link -> **Zine articles**, `https://zine.trevorion.io/articles/`
+Current shared `index.html` navigation:
+- **Recent artwork** card -> `#gallery`.
+- **Latest posts** card -> `#latest` (preserved six-post preview with image thumbnails where available).
+- **Trevorion Zine** card -> `https://zine.trevorion.io/` (replaces the old GitHub code-project card).
+- Footer **Bluesky feed**, **Feed JSON**, **Zine RSS**, and **Status** remain.
+- Footer **Trevorion Zine** -> `https://zine.trevorion.io/` (replaces the old GitHub code link).
+- **No Zine News, Zine Articles, or Zine Archive links**.
 
-`Zine RSS`, Bluesky, gallery, latest posts and service status links remain. The underlying public `/feed.json`, GitHub Actions collector, source repository and Bluesky XRPC endpoints are **unchanged**; only the public homepage navigation was edited. Both `animeai.trevorion.io` and `bsky.trevorion.io` serve the same shared `index.html`, so both receive the changes.
+Only the two former public GitHub links have been replaced with the Zine homepage. The underlying `feed.json`, `animeai-home.js`, generator, DID and native Bluesky feed remain unchanged.
 
-Homepage unit tests assert all four Zine destinations are present and GitHub/code UI links are absent. CI: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39693714132. Live two-domain verification: `.github/workflows/verify_site_unification.yml` (inspect the latest completed run before claiming deployment).
+Latest homepage tests: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39694262155
+Independent production verification of the corrected links, identical HTML/JS on both domains, and preserved Bluesky generator: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39694285227
