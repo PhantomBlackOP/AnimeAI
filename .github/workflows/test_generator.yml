@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'siteground-generator.mjs'
+      - 'siteground-homepage.html'
       - 'package.json'
       - 'tests/**'
       - '.github/workflows/test_generator.yml'
