@@ -78,6 +78,11 @@ jobs:
                              "bsky.app/profile/trevorion.io/feed/animeai"):
                   if phrase not in page:
                       raise RuntimeError("Homepage missing expected content: " + phrase)
+              if '.post-with-image {' not in page or 'class="post-thumbnail"' not in page:
+                  raise RuntimeError("Latest post thumbnails missing from the public homepage")
+              if 'class="post" href=' not in page:
+                  raise RuntimeError("Text-only fallback cards missing from the public homepage")
+              print("LATEST POST THUMBNAILS AND TEXT-ONLY FALLBACK VERIFIED", flush=True)
               print("PUBLIC HOMEPAGE VERIFIED, BYTES:", len(page), flush=True)
               print("PERMANENT HOST FULLY VERIFIED", flush=True)
 
