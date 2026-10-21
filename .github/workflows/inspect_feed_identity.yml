@@ -1,0 +1,45 @@
+name: Inspect existing AnimeAI feed identity (read only)
+
+on:
+  push:
+    paths:
+      - '.github/workflows/inspect_feed_identity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BSKY_APP_USERNAME: ${{ secrets.BSKY_APP_USERNAME }}
+      BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Bluesky SDK
+        run: python -m pip install "atproto>=0.0.60,<1"
+      - name: Read existing feed record without updating it
+        run: |
+          python - <<'PY'
+          import os
+          from atproto import Client, models
+          client = Client()
+          client.login(os.environ["BSKY_APP_USERNAME"], os.environ["BSKY_APP_PASSWORD"])
+          record = client.com.atproto.repo.get_record(
+              models.ComAtprotoRepoGetRecord.Params(
+                  repo=client.me.did,
+                  collection="app.bsky.feed.generator",
+                  rkey="animeai",
+              )
+          )
+          data = record.value
+          print("Existing AT URI:", record.uri)
+          print("Account DID:", client.me.did)
+          print("Current generator service DID:", data.get("did") if isinstance(data, dict) else data.did)
+          print("Read-only inspection completed; nothing was modified.")
+          PY
