@@ -5,13 +5,15 @@
  * SiteGround's GitHub deployment pulls the same feed.json that the existing
  * GitHub Actions collector refreshes every six hours.
  *
- * Required environment variable: FEED_URI (the *existing* Bluesky feed AT URI).
+ * Feed URI verified from the live Bluesky record on 2026-10-21.
+ * FEED_URI may override this value; no credentials or env setup are required.
  * SiteGround supplies PORT and terminates HTTPS in front of this Node process.
  */
 import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 
 const SERVICE_DID = 'did:web:animeai.trevorion.io';
+const EXISTING_FEED_URI = 'at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai';
 const FEED_FILE = new URL('./feed.json', import.meta.url);
 const URI_PATTERN = /^at:\/\/did:(?:plc|web):[^/]+\/app\.bsky\.feed\.post\/[A-Za-z0-9._~-]+$/;
 const MAX_LIMIT = 100;
@@ -72,7 +74,7 @@ async function loadFeed() {
 }
 
 function getExpectedFeedUri() {
-  const uri = process.env.FEED_URI?.trim() || '';
+  const uri = process.env.FEED_URI?.trim() || EXISTING_FEED_URI;
   if (!/^at:\/\/did:(?:plc|web):[^/]+\/app\.bsky\.feed\.generator\/[A-Za-z0-9._~-]+$/.test(uri)) {
     return null;
   }
