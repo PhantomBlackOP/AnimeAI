@@ -73,3 +73,11 @@ This links to the **existing** registered AnimeAI Stream, not a replacement.
 - Bluesky thumbnails come from public `cdn.bsky.app` URLs. The page excludes posts labeled `porn`, `sexual`, `nudity`, or `graphic-media` from previews without altering the native feed's selection; all user text is HTML-escaped. A restrictive Content Security Policy blocks scripts and limits image sources.
 - Tests in `tests/generator-smoke.test.mjs` cover HTTP 200 HTML homepage plus native Bluesky endpoints; GitHub Actions PASS: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39690979403
 - **Independent external verification** of the live public HTTPS homepage and unchanged generator API: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39691042861 (HTTP 200, HTML page containing AnimeAI header, artwork and latest posts; returned 24,415 bytes).
+
+## Latest Posts thumbnail update, 2026-10-22 (Malta)
+
+- The Latest Posts section now displays a compact Bluesky image preview on each card whenever the post has a valid CDN thumbnail. Image-less posts remain text-only.
+- Implemented in `siteground-generator.mjs` with responsive card styles in `siteground-homepage.html`. Existing content-label filtering for homepage previews and HTML escaping are preserved.
+- Added a fixture-based test covering one thumbnail post, one text-only post and one adult-labeled post. Native feed skeleton content remains unchanged.
+- CI passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39691891275
+- Live SiteGround homepage verified to include both image and text-only post cards, while health and XRPC endpoints remain operational: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39691960949
