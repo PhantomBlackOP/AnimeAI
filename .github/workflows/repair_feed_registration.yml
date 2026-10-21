@@ -1,6 +1,9 @@
 name: Repair existing AnimeAI Bluesky feed registration
 
 on:
+  push:
+    paths:
+      - '.github/workflows/repair_feed_registration.yml'
   workflow_dispatch:
     inputs:
       apply:
@@ -26,8 +29,16 @@ jobs:
           python-version: '3.11'
       - name: Install Bluesky SDK
         run: python -m pip install "atproto>=0.0.60,<1"
-      - name: Verify service DID and current feed (dry run)
-        run: python scripts/repair_feed_registration.py
-      - name: Repair only the existing record (guarded)
-        if: ${{ inputs.apply }}
+      - name: Verify live service and current feed before any changes
+        run: |
+          for i in $(seq 1 15); do
+            if python scripts/repair_feed_registration.py; then
+              exit 0
+            fi
+            echo "SiteGround redeploy or DID propagation may be in progress. Retrying validation."
+            sleep 10
+          done
+          exit 1
+      - name: Repair original feed record after successful validation
+        if: ${{ github.event_name == 'push' || inputs.apply }}
         run: python scripts/repair_feed_registration.py --apply
