@@ -4,7 +4,7 @@ import net from 'node:net';
 import { spawn } from 'node:child_process';
 import { setTimeout as sleep } from 'node:timers/promises';
 
-const FEED_URI = 'at://did:plc:aaaaaaaaaaaaaaaaaaaaaaaa/app.bsky.feed.generator/animeai';
+const FEED_URI = 'at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai';
 
 async function freePort() {
   return new Promise((resolve, reject) => {
@@ -20,7 +20,7 @@ async function freePort() {
 test('SiteGround adapter serves current GitHub feed.json through ATProto XRPC', async () => {
   const port = await freePort();
   const child = spawn(process.execPath, ['siteground-generator.mjs'], {
-    env: { ...process.env, PORT: String(port), FEED_URI },
+    env: { ...process.env, PORT: String(port), FEED_URI: '' },
     stdio: ['ignore', 'pipe', 'pipe'],
   });
 
