@@ -61,5 +61,15 @@ This links to the **existing** registered AnimeAI Stream, not a replacement.
 - Initial independent probe failed with a self-signed certificate; subsequent re-run confirmed valid HTTPS and all generator endpoints, **216 posts**, on the permanent hostname: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39689458037 (attempt 2).
 - Updated GitHub Pages `.well-known/did.json` to point to `https://bsky.trevorion.io`. Published DID document and generator tests both passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39690232246.
 - Verified original Bluesky AppView endpoint still returns 3 real posts after the DID switch: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39686703284 (attempt 3).
-- The Node.js root URL `https://bsky.trevorion.io/` intentionally returns HTTP 404 with `{\"error\":\"Not found\"}`; this is normal because it is an API-only service. Use `/health` to check status.
+- The Node.js root URL `https://bsky.trevorion.io/` now serves an HTML landing page inspired by the RSS homepage. `/health` remains the machine-readable status endpoint.
 - During transient SiteGround redeploy/security checks, the temporary domain returned HTTP 202 with a SiteGround CAPTCHA to certain automated clients; do **not** interpret HTTP 202 HTML as a valid Bluesky API response. Permanent domain was tested separately.
+
+## RSS-inspired AnimeAI homepage, 2026-10-22 (Malta time)
+
+- `https://bsky.trevorion.io/` serves HTTP 200 HTML, no longer the original JSON 404. The Node generator handles only `GET /` for this page. API routes and output remain unchanged.
+- Design follows `PhantomBlackOP/RSS`'s dark navy palette, mosaic hero, featured feed card, navigation cards and recent artwork/posts, but displays Bluesky content, not Zine posts.
+- `siteground-homepage.html` is the standalone HTML/CSS template. `siteground-generator.mjs` fills it from the same cached local `feed.json` data used by the live generator.
+- The homepage includes current post and creator counts, latest indexed date (UTC), Bluesky feed subscription link, links to raw JSON and GitHub, a twelve-thumbnail artwork preview and six recent post excerpts.
+- Bluesky thumbnails come from public `cdn.bsky.app` URLs. The page excludes posts labeled `porn`, `sexual`, `nudity`, or `graphic-media` from previews without altering the native feed's selection; all user text is HTML-escaped. A restrictive Content Security Policy blocks scripts and limits image sources.
+- Tests in `tests/generator-smoke.test.mjs` cover HTTP 200 HTML homepage plus native Bluesky endpoints; GitHub Actions PASS: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39690979403
+- **Independent external verification** of the live public HTTPS homepage and unchanged generator API: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39691042861 (HTTP 200, HTML page containing AnimeAI header, artwork and latest posts; returned 24,415 bytes).
