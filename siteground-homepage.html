@@ -80,6 +80,9 @@
     .posts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 13px; }
     .post { display: block; border: 1px solid var(--line); border-radius: 9px; padding: 18px 19px; background: var(--surface); text-decoration: none; min-width: 0; }
     .post:hover { background: var(--surface2); border-color: var(--accent); }
+    .post-with-image { display: grid; grid-template-columns: 116px minmax(0,1fr); gap: 15px; align-items: start; }
+    .post-thumbnail { width: 116px; height: 116px; object-fit: cover; border-radius: 6px; background: #0d192a; }
+    .post-copy { min-width: 0; }
     .post-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 15px; font-size: .82rem; }
     .post-author { font-weight: 760; color: #aed8ff; overflow-wrap: anywhere; }
     .post-date { color: var(--muted); }
@@ -105,6 +108,8 @@
       .shell { padding-top: 28px; }
       .feature { padding: 21px; }
       .portal-grid,.posts { grid-template-columns: 1fr; }
+      .post-with-image { grid-template-columns: 92px minmax(0,1fr); gap: 12px; }
+      .post-thumbnail { width: 92px; height: 92px; }
       .gallery { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .section-head { align-items: flex-start; flex-direction: column; gap: 5px; }
     }
