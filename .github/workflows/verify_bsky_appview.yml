@@ -1,0 +1,63 @@
+name: Verify original AnimeAI feed in Bluesky AppView
+
+on:
+  push:
+    paths:
+      - '.github/workflows/verify_bsky_appview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify updated generator record and AppView feed
+        run: |
+          python - <<'PY'
+          import json, time, urllib.error, urllib.request, urllib.parse
+          owner = "did:plc:c36xxd4j5cyfojgcfgwt7fd5"
+          service = "did:web:animeai.trevorion.io"
+          feed_uri = f"at://{owner}/app.bsky.feed.generator/animeai"
+
+          def load(base, params):
+              url = base + "?" + urllib.parse.urlencode(params)
+              req = urllib.request.Request(url, headers={
+                  "Accept": "application/json",
+                  "User-Agent": "AnimeAI-Bluesky-AppView-Verification/1.0"
+              })
+              with urllib.request.urlopen(req, timeout=15) as response:
+                  assert response.status == 200
+                  return json.load(response)
+
+          # Read current account repository record publicly; no app password.
+          record = load("https://bsky.social/xrpc/com.atproto.repo.getRecord", {
+              "repo": owner,
+              "collection": "app.bsky.feed.generator",
+              "rkey": "animeai",
+          })
+          assert record["uri"] == feed_uri, "Original feed URI changed"
+          assert record["value"]["did"] == service, "Service DID not updated"
+          print("ORIGINAL FEED RECORD VERIFIED:", record["uri"], record["value"]["did"])
+
+          error = None
+          for attempt in range(15):
+              try:
+                  response = load("https://public.api.bsky.app/xrpc/app.bsky.feed.getFeed", {
+                      "feed": feed_uri, "limit": 3
+                  })
+                  posts = response.get("feed", [])
+                  assert posts, "Bluesky app returned empty feed"
+                  assert all(p.get("post", {}).get("uri", "").startswith("at://")
+                             for p in posts)
+                  print("BLUESKY APPVIEW FEED VERIFIED; POSTS:", len(posts))
+                  print("FIRST POST:", posts[0]["post"]["uri"])
+                  break
+              except Exception as exc:
+                  error = exc
+                  print("AppView not yet ready:", type(exc).__name__, str(exc)[:180])
+                  if attempt == 14: raise
+                  time.sleep(10)
+          PY
