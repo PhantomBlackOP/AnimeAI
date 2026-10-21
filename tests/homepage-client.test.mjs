@@ -107,6 +107,16 @@ test('Shared homepage preserves correct paths and contains no obsolete redirect'
   }
   assert.match(html, /<h1>ANIMEAI<\/h1>/);
   assert.doesNotMatch(html, /http-equiv="refresh"/);
+  for (const destination of [
+    'https://zine.trevorion.io/',
+    'https://zine.trevorion.io/news/',
+    'https://zine.trevorion.io/articles/',
+    'https://zine.trevorion.io/archive/',
+  ]) {
+    assert.ok(html.includes('href="' + destination + '"'), 'Missing Zine link: ' + destination);
+  }
+  assert.doesNotMatch(html, /href="https:\/\/github\.com\//i);
+  assert.doesNotMatch(html, /Raw feed data|Feed JSON|Open-source project|See the code/i);
   assert.doesNotMatch(html, /window\.location\.replace/);
   assert.doesNotMatch(html, /\{\{(?:RECENT_ART|RECENT_POSTS|FEED_STATS|HERO_MOSAIC|YEAR)\}\}/);
 });
