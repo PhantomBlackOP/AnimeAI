@@ -7,7 +7,7 @@
     {
       "id": "#bsky_fg",
       "type": "BskyFeedGenerator",
-      "serviceEndpoint": "https://trevorg22.sg-host.com"
+      "serviceEndpoint": "https://bsky.trevorion.io"
     }
   ]
 }
