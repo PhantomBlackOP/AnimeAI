@@ -87,11 +87,18 @@ async function renderHomepage() {
   const latest = visible.filter(post => postLink(post.uri)).slice(0, 6).map(post => {
     const url = postLink(post.uri);
     const text = Array.from(post.text).slice(0, 280).join('');
-    return '<a class="post" href="' + escapeHtml(url) + '"><div class="post-head">'
+    const hasImage = Boolean(post.thumbnail);
+    const thumbnail = hasImage
+      ? '<img class="post-thumbnail" src="' + escapeHtml(post.thumbnail)
+        + '" loading="lazy" decoding="async" alt="">'
+      : '';
+    return '<a class="post' + (hasImage ? ' post-with-image' : '')
+      + '" href="' + escapeHtml(url) + '">' + thumbnail
+      + '<div class="post-copy"><div class="post-head">'
       + '<span class="post-author">@' + escapeHtml(post.author) + '</span>'
       + '<span class="post-date">' + escapeHtml(displayDate(post.timestamp)) + '</span>'
       + '</div><p class="post-text">' + escapeHtml(text)
-      + (Array.from(post.text).length > 280 ? '…' : '') + '</p></a>';
+      + (Array.from(post.text).length > 280 ? '…' : '') + '</p></div></a>';
   }).join('') || '<p class="empty">No posts in the current preview.</p>';
 
   const authorCount = new Set(posts.map(post => post.author)).size;
