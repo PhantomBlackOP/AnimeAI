@@ -64,30 +64,31 @@ This links to the **existing** registered AnimeAI Stream, not a replacement.
 - The Node.js root URL `https://bsky.trevorion.io/` now serves an HTML landing page inspired by the RSS homepage. `/health` remains the machine-readable status endpoint.
 - During transient SiteGround redeploy/security checks, the temporary domain returned HTTP 202 with a SiteGround CAPTCHA to certain automated clients; do **not** interpret HTTP 202 HTML as a valid Bluesky API response. Permanent domain was tested separately.
 
-## RSS-inspired AnimeAI homepage, 2026-10-22 (Malta time)
+## Unified AnimeAI website, 2026-10-22 (Malta time)
 
-- `https://bsky.trevorion.io/` serves HTTP 200 HTML, no longer the original JSON 404. The Node generator handles only `GET /` for this page. API routes and output remain unchanged.
-- Design follows `PhantomBlackOP/RSS`'s dark navy palette, mosaic hero, featured feed card, navigation cards and recent artwork/posts, but displays Bluesky content, not Zine posts.
-- `siteground-homepage.html` is the standalone HTML/CSS template. `siteground-generator.mjs` fills it from the same cached local `feed.json` data used by the live generator.
-- The homepage includes current post and creator counts, latest indexed date (UTC), Bluesky feed subscription link, links to raw JSON and GitHub, a twelve-thumbnail artwork preview and six recent post excerpts.
-- Bluesky thumbnails come from public `cdn.bsky.app` URLs. The page excludes posts labeled `porn`, `sexual`, `nudity`, or `graphic-media` from previews without altering the native feed's selection; all user text is HTML-escaped. A restrictive Content Security Policy blocks scripts and limits image sources.
-- Tests in `tests/generator-smoke.test.mjs` cover HTTP 200 HTML homepage plus native Bluesky endpoints; GitHub Actions PASS: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39690979403
-- **Independent external verification** of the live public HTTPS homepage and unchanged generator API: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39691042861 (HTTP 200, HTML page containing AnimeAI header, artwork and latest posts; returned 24,415 bytes).
+**Single entry point: `index.html`, served unchanged from both GitHub Pages and SiteGround.** The obsolete `siteground-homepage.html` template was removed.
 
-## Latest Posts thumbnail update, 2026-10-22 (Malta)
+- `https://animeai.trevorion.io/` (GitHub Pages) serves `index.html` directly, **not a redirect**.
+- `https://bsky.trevorion.io/` (SiteGround Node.js) serves the **same index.html bytes**. Its root route simply reads this file.
+- Both domains serve the same `animeai-home.js` browser-side renderer and a same-origin `/feed.json`:
+  - GitHub Pages serves its public `feed.json` directly.
+  - SiteGround exposes `GET /feed.json` from the identical local repository file delivered by GitHub deployment.
+- The browser renders the shared RSS-inspired dark-blue layout, mosaic hero, current post/creator statistics, 12 artwork thumbnails, and six latest-post cards with conditional image thumbnails or text-only fallback.
+- The HTML/CSS layout is in **`index.html`**. The client-side renderer is **`animeai-home.js`**. The Node service remains in **`siteground-generator.mjs`**.
+- This unification is **not** a replacement for the native Bluesky app feed. `https://bsky.app/profile/trevorion.io/feed/animeai` remains the full interactive Bluesky interface.
+- Posts tagged with content labels `porn`, `sexual`, `nudity`, or `graphic-media` are excluded from *homepage previews only*, without altering Bluesky feed skeleton posts.
+- Public image previews use validated `https://cdn.bsky.app/img/feed_thumbnail/` URLs. User-provided post text is rendered using `textContent`, preventing HTML/script injection. The SiteGround page Content Security Policy permits only same-origin JavaScript/feed requests, inline CSS, and Bluesky CDN imagery.
+- The original generator's DID document `/.well-known/did.json` remains on GitHub Pages and points to `https://bsky.trevorion.io`; the registered feed URI and metadata are unchanged.
+- `GET /health`, `GET /xrpc/app.bsky.feed.describeFeedGenerator`, and `GET /xrpc/app.bsky.feed.getFeedSkeleton` all remain supported.
 
-- The Latest Posts section now displays a compact Bluesky image preview on each card whenever the post has a valid CDN thumbnail. Image-less posts remain text-only.
-- Implemented in `siteground-generator.mjs` with responsive card styles in `siteground-homepage.html`. Existing content-label filtering for homepage previews and HTML escaping are preserved.
-- Added a fixture-based test covering one thumbnail post, one text-only post and one adult-labeled post. Native feed skeleton content remains unchanged.
-- CI passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39691891275
-- Live SiteGround homepage verified to include both image and text-only post cards, while health and XRPC endpoints remain operational: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39691960949
+### Verification
 
-## Legacy AnimeAI website unification, 2026-10-22
+- Shared homepage/JS DOM unit tests (image thumbnail, text-only fallback, restricted previews, preserved literal post text) and generator smoke tests passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39693270604
+- **Live independent test confirmed identical HTML and JavaScript on both domains**, valid `feed.json` (216 entries on both during test), unchanged DID service and native generator: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39693365105
+- Permanent SiteGround probe workflow: `.github/workflows/probe_siteground.yml`; both-site consistency: `.github/workflows/verify_site_unification.yml`.
 
-- Before this change, `https://animeai.trevorion.io/` showed an obsolete static 2025 introduction, including an incorrect implication that raw JSON can be subscribed to directly as a Bluesky custom feed.
-- The root `index.html` of the **existing GitHub Pages site** now sends visitors to the current SiteGround homepage `https://bsky.trevorion.io/` via a zero-delay meta refresh and JavaScript redirect, with an accessible manual link as fallback.
-- The redirect applies **only to the root homepage**. `https://animeai.trevorion.io/feed.json` and `https://animeai.trevorion.io/.well-known/did.json` remain served directly by GitHub Pages. The DID identity and generator service endpoint remain unchanged.
-- The SiteGround homepage's footer no longer links back redundantly to the obsolete AnimeAI website; it now links directly to the public Feed JSON. Its Bluesky feed link remains `https://bsky.app/profile/trevorion.io/feed/animeai`.
-- The websites share the same underlying AnimeAI post inventory but differ in display: SiteGround previews posts and art, while Bluesky supplies the full native interactive feed.
-- Generator CI after footer change passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39692299073
-- Independent live verification is performed by `.github/workflows/verify_site_unification.yml`; inspect the latest workflow result before claiming the public redirect is available.
+### Source-of-truth policy
+
+- GitHub Actions fetches Bluesky posts every six hours and commits `feed.json`.
+- GitHub Pages and SiteGround obtain that published static data from the same repository, without additional collecting or a permanent Python server.
+- The public website is a **preview** of that collected inventory; Bluesky's own UI remains the place to interact with posts.
