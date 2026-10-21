@@ -1,14 +1,14 @@
 # AnimeAI native Bluesky feed: SiteGround recovery
 
-Status as of 2026-10-22 (Malta time): **REPAIRED, VERIFIED END TO END, LIVE.**
+Status as of 2026-10-22 (Malta time): **REPAIRED, VERIFIED END TO END, LIVE ON PERMANENT DOMAIN.**
 
 ## Architecture (Bluesky-only)
 
 - The original GitHub Actions collector runs every six hours and commits `feed.json` to `PhantomBlackOP/AnimeAI`, branch `main`.
 - The SiteGround managed Node.js project deploys that GitHub branch. The dependency-free `siteground-generator.mjs` serves the local static `feed.json` through native AT Protocol endpoints:
-  - `https://trevorg22.sg-host.com/health`
-  - `https://trevorg22.sg-host.com/xrpc/app.bsky.feed.describeFeedGenerator`
-  - `https://trevorg22.sg-host.com/xrpc/app.bsky.feed.getFeedSkeleton`
+  - `https://bsky.trevorion.io/health`
+  - `https://bsky.trevorion.io/xrpc/app.bsky.feed.describeFeedGenerator`
+  - `https://bsky.trevorion.io/xrpc/app.bsky.feed.getFeedSkeleton`
 - The original GitHub Pages website remains at `https://animeai.trevorion.io/`; its DID document is `https://animeai.trevorion.io/.well-known/did.json` and points the feed-generator service DID `did:web:animeai.trevorion.io` to the SiteGround HTTPS endpoint.
 - Existing owner account DID is `did:plc:c36xxd4j5cyfojgcfgwt7fd5`. It is **not** itself the service DID.
 - **Original preserved feed URI:** `at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai`.
@@ -42,10 +42,10 @@ Status as of 2026-10-22 (Malta time): **REPAIRED, VERIFIED END TO END, LIVE.**
 - SiteGround GitHub auto-deploy should refresh the deployed `feed.json` from every committed update. During redeployment SiteGround may briefly return HTTP 202; later requests should succeed.
 - Generator code: `siteground-generator.mjs`; automated unit/smoke tests: `npm test` and `.github/workflows/test_generator.yml`.
 - Monitoring:
-  - `https://trevorg22.sg-host.com/health`
+  - `https://bsky.trevorion.io/health`
   - `https://animeai.trevorion.io/.well-known/did.json`
   - `https://github.com/PhantomBlackOP/AnimeAI/actions`
-- **Important:** SiteGround supplied a temporary domain, `trevorg22.sg-host.com`. If the project hostname changes or a permanent subdomain is assigned, update only the DID document's `serviceEndpoint` after verifying the new host. No need to create or rename the Bluesky feed.
+- **Permanent hostname:** `bsky.trevorion.io` points to SiteGround Site IP `34.1.230.193` using a Squarespace DNS A record. The original temporary SiteGround hostname has been retired from the public service DID.
 - The old `server/` Python/Flask files and original broken `scripts/publish_feed.py` are not part of the live Node generator. Do **not** run the old publish script as it uses `createRecord` and the account DID incorrectly.
 - For any future record change, use the manual-only `repair_feed_registration.yml` workflow with validation and explicit approval.
 
@@ -54,3 +54,12 @@ Status as of 2026-10-22 (Malta time): **REPAIRED, VERIFIED END TO END, LIVE.**
 `https://bsky.app/profile/trevorion.io/feed/animeai`
 
 This links to the **existing** registered AnimeAI Stream, not a replacement.
+
+## Permanent-domain activation, 2026-10-22 (Malta time)
+
+- SiteGround project primary domain set to `bsky.trevorion.io` by Trevorion; Squarespace `A bsky -> 34.1.230.193`. Existing domain nameservers remained at Squarespace.
+- Initial independent probe failed with a self-signed certificate; subsequent re-run confirmed valid HTTPS and all generator endpoints, **216 posts**, on the permanent hostname: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39689458037 (attempt 2).
+- Updated GitHub Pages `.well-known/did.json` to point to `https://bsky.trevorion.io`. Published DID document and generator tests both passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39690232246.
+- Verified original Bluesky AppView endpoint still returns 3 real posts after the DID switch: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39686703284 (attempt 3).
+- The Node.js root URL `https://bsky.trevorion.io/` intentionally returns HTTP 404 with `{\"error\":\"Not found\"}`; this is normal because it is an API-only service. Use `/health` to check status.
+- During transient SiteGround redeploy/security checks, the temporary domain returned HTTP 202 with a SiteGround CAPTCHA to certain automated clients; do **not** interpret HTTP 202 HTML as a valid Bluesky API response. Permanent domain was tested separately.
