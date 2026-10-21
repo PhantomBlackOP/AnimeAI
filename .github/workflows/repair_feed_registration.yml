@@ -1,9 +1,6 @@
 name: Repair existing AnimeAI Bluesky feed registration
 
 on:
-  push:
-    paths:
-      - '.github/workflows/repair_feed_registration.yml'
   workflow_dispatch:
     inputs:
       apply:
@@ -40,5 +37,5 @@ jobs:
           done
           exit 1
       - name: Repair original feed record after successful validation
-        if: ${{ github.event_name == 'push' || inputs.apply }}
+        if: ${{ inputs.apply }}
         run: python scripts/repair_feed_registration.py --apply
