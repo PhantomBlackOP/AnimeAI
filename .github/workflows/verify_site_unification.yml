@@ -50,6 +50,16 @@ jobs:
                       assert 'id="latest-posts"' in html
                       assert 'id="art-gallery"' in html
                       assert 'http-equiv="refresh"' not in html
+                      assert 'href="https://github.com/' not in html, "GitHub link still displayed"
+                      assert 'Raw feed data' not in html and 'Feed JSON' not in html
+                      assert 'Open-source project' not in html
+                      for href in (
+                          "https://zine.trevorion.io/",
+                          "https://zine.trevorion.io/news/",
+                          "https://zine.trevorion.io/archive/",
+                          "https://zine.trevorion.io/articles/",
+                      ):
+                          assert 'href="' + href + '"' in html, "Missing Zine link: " + href
                       pages.append(html)
 
                       kind, script = read(origin + "/animeai-home.js", "text/javascript")
