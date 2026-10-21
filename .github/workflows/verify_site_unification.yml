@@ -4,7 +4,8 @@ on:
   push:
     paths:
       - 'index.html'
-      - 'siteground-homepage.html'
+      - 'animeai-home.js'
+      - 'siteground-generator.mjs'
       - '.github/workflows/verify_site_unification.yml'
   workflow_dispatch:
 
@@ -14,61 +15,73 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 6
     steps:
-      - name: Check legacy redirect, service DID and live homepage
+      - name: Verify both websites share index.html and public feed data
         run: |
           python - <<'PY'
           import json
           import time
+          import urllib.error
           import urllib.request
 
-          old = "https://animeai.trevorion.io"
-          new = "https://bsky.trevorion.io"
-          old_feed = "https://bsky.app/profile/trevorion.io/feed/animeai"
-          wanted_redirect = 'content="0; url=https://bsky.trevorion.io/"'
+          domains = ("https://animeai.trevorion.io", "https://bsky.trevorion.io")
+          feed_uri = "at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai"
 
-          def get(url, accept):
+          def read(url, accept):
               req = urllib.request.Request(url, headers={
                   "Accept": accept,
-                  "User-Agent": "AnimeAI-website-consistency-check/1.0",
+                  "User-Agent": "AnimeAI-shared-index-verifier/1.0",
               })
               with urllib.request.urlopen(req, timeout=12) as resp:
                   if resp.status != 200:
-                      raise RuntimeError(url + " returned " + str(resp.status))
-                  return resp.headers.get("Content-Type", ""), resp.read(3_000_000).decode("utf-8")
+                      raise RuntimeError(f"Unexpected HTTP {resp.status}: {url}")
+                  return resp.headers.get("Content-Type", ""), resp.read(4_000_000).decode("utf-8")
 
-          for attempt in range(1, 13):
+          for attempt in range(1, 16):
               try:
-                  ct, page = get(old + "/", "text/html")
-                  assert "text/html" in ct
-                  assert wanted_redirect in page, "Legacy homepage has not deployed its redirect"
-                  assert 'rel="canonical" href="https://bsky.trevorion.io/"' in page
-                  print("LEGACY HOMEPAGE REDIRECT VERIFIED")
+                  pages = []
+                  scripts = []
+                  for origin in domains:
+                      kind, html = read(origin + "/", "text/html")
+                      assert "text/html" in kind, f"Missing HTML: {origin}"
+                      assert "<h1>ANIMEAI</h1>" in html
+                      assert '<script src="/animeai-home.js" defer></script>' in html
+                      assert 'id="latest-posts"' in html
+                      assert 'id="art-gallery"' in html
+                      assert 'http-equiv="refresh"' not in html
+                      pages.append(html)
 
-                  _, raw_did = get(old + "/.well-known/did.json", "application/json")
-                  did = json.loads(raw_did)
+                      kind, script = read(origin + "/animeai-home.js", "text/javascript")
+                      assert "javascript" in kind
+                      assert "function renderPosts" in script
+                      scripts.append(script)
+
+                      kind, raw = read(origin + "/feed.json", "application/json")
+                      assert "json" in kind
+                      entries = json.loads(raw)
+                      assert isinstance(entries, list) and len(entries) > 0
+                      print(origin, "index, script, feed valid; posts:", len(entries), flush=True)
+
+                  assert pages[0] == pages[1], "The two public index.html files differ"
+                  assert scripts[0] == scripts[1], "The two public animeai-home.js versions differ"
+                  print("BOTH DOMAINS SERVE THE SAME INDEX.HTML AND SCRIPT", flush=True)
+
+                  _, doc = read(domains[0] + "/.well-known/did.json", "application/json")
+                  did = json.loads(doc)
                   assert did["id"] == "did:web:animeai.trevorion.io"
-                  assert did["service"][0]["serviceEndpoint"] == new
-                  print("PUBLIC SERVICE DID UNCHANGED AND VERIFIED")
+                  assert did["service"][0]["serviceEndpoint"] == domains[1]
+                  print("BLUESKY SERVICE DID PRESERVED", flush=True)
 
-                  _, raw_posts = get(old + "/feed.json", "application/json")
-                  feed = json.loads(raw_posts)
-                  assert isinstance(feed, list) and feed
-                  print("STATIC FEED.JSON PRESERVED; POST COUNT:", len(feed))
-
-                  ct, homepage = get(new + "/", "text/html")
-                  assert "text/html" in ct
-                  assert "<h1>ANIMEAI</h1>" in homepage
-                  assert old_feed in homepage
-                  assert '<a href="https://animeai.trevorion.io/feed.json">Feed JSON</a>' in homepage
-                  assert '<a href="https://animeai.trevorion.io/">AnimeAI website</a>' not in homepage
-                  print("LIVE WEBSITE FOOTER VERIFIED")
-                  print("WEBSITE UNIFICATION VERIFIED")
+                  _, desc = read(domains[1] + "/xrpc/app.bsky.feed.describeFeedGenerator", "application/json")
+                  generator = json.loads(desc)
+                  assert {"uri": feed_uri} in generator["feeds"]
+                  print("BLUESKY GENERATOR PRESERVED", flush=True)
+                  print("UNIFIED WEBSITE VERIFIED", flush=True)
                   break
-              except Exception as err:
-                  print(f"Attempt {attempt}: {type(err).__name__}: {str(err)[:200]}", flush=True)
-                  if attempt == 12:
+              except Exception as exc:
+                  print(f"Attempt {attempt} pending: {type(exc).__name__}: {str(exc)[:210]}", flush=True)
+                  if attempt == 15:
                       raise
                   time.sleep(10)
           PY
