@@ -1,0 +1,13 @@
+{
+  "name": "animeai-feed-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only Bluesky feed skeleton service for SiteGround, fed by GitHub Actions feed.json",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node siteground-generator.mjs"
+  }
+}
