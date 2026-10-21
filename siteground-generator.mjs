@@ -15,7 +15,8 @@ import { readFile } from 'node:fs/promises';
 const SERVICE_DID = 'did:web:animeai.trevorion.io';
 const EXISTING_FEED_URI = 'at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai';
 const FEED_FILE = new URL('./feed.json', import.meta.url);
-const HOMEPAGE_FILE = new URL('./siteground-homepage.html', import.meta.url);
+const INDEX_FILE = new URL('./index.html', import.meta.url);
+const CLIENT_SCRIPT_FILE = new URL('./animeai-home.js', import.meta.url);
 const RESTRICTED_LABELS = new Set(['porn', 'sexual', 'nudity', 'graphic-media']);
 const URI_PATTERN = /^at:\/\/did:(?:plc|web):[^/]+\/app\.bsky\.feed\.post\/[A-Za-z0-9._~-]+$/;
 const MAX_LIMIT = 100;
@@ -32,12 +33,6 @@ function json(res, status, body, cacheSeconds = 0) {
   res.end(JSON.stringify(body));
 }
 
-function escapeHtml(text) {
-  return String(text).replace(/[&<>"']/g, character => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
-  }[character]));
-}
-
 function validatedThumbnail(raw) {
   if (typeof raw !== 'string') return null;
   try {
@@ -48,71 +43,6 @@ function validatedThumbnail(raw) {
   } catch {
     return null;
   }
-}
-
-function postLink(uri) {
-  const match = /^at:\/\/(did:(?:plc|web):[^/]+)\/app\.bsky\.feed\.post\/([A-Za-z0-9._~-]+)$/.exec(uri);
-  return match ? 'https://bsky.app/profile/' + match[1] + '/post/' + match[2] : null;
-}
-
-function displayDate(timestamp) {
-  return new Intl.DateTimeFormat('en-GB', {
-    day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC',
-  }).format(new Date(timestamp));
-}
-
-async function renderHomepage() {
-  const [template, posts] = await Promise.all([
-    readFile(HOMEPAGE_FILE, 'utf8'),
-    loadFeed(),
-  ]);
-  // The native Bluesky feed remains unchanged; this filtering applies to the
-  // public landing page's illustrative previews only.
-  const visible = posts.filter(post => !post.restricted);
-  const imagePosts = visible.filter(post => post.thumbnail && postLink(post.uri));
-
-  const heroMosaic = imagePosts.slice(0, 24).map(post =>
-    '<img loading="lazy" decoding="async" alt="" src="' + escapeHtml(post.thumbnail) + '">'
-  ).join('');
-
-  const art = imagePosts.slice(0, 12).map(post => {
-    const url = postLink(post.uri);
-    const author = escapeHtml(post.author);
-    return '<a href="' + escapeHtml(url) + '" aria-label="View artwork by ' + author
-      + ' on Bluesky"><img loading="lazy" decoding="async" alt="" src="'
-      + escapeHtml(post.thumbnail) + '"><span class="by">@'
-      + author + '</span></a>';
-  }).join('') || '<p class="empty">No image posts in the current preview.</p>';
-
-  const latest = visible.filter(post => postLink(post.uri)).slice(0, 6).map(post => {
-    const url = postLink(post.uri);
-    const text = Array.from(post.text).slice(0, 280).join('');
-    const hasImage = Boolean(post.thumbnail);
-    const thumbnail = hasImage
-      ? '<img class="post-thumbnail" src="' + escapeHtml(post.thumbnail)
-        + '" loading="lazy" decoding="async" alt="">'
-      : '';
-    return '<a class="post' + (hasImage ? ' post-with-image' : '')
-      + '" href="' + escapeHtml(url) + '">' + thumbnail
-      + '<div class="post-copy"><div class="post-head">'
-      + '<span class="post-author">@' + escapeHtml(post.author) + '</span>'
-      + '<span class="post-date">' + escapeHtml(displayDate(post.timestamp)) + '</span>'
-      + '</div><p class="post-text">' + escapeHtml(text)
-      + (Array.from(post.text).length > 280 ? '…' : '') + '</p></div></a>';
-  }).join('') || '<p class="empty">No posts in the current preview.</p>';
-
-  const authorCount = new Set(posts.map(post => post.author)).size;
-  const stats = '<span><strong>' + posts.length + '</strong> recent posts</span>'
-    + '<span><strong>' + authorCount + '</strong> creators</span>'
-    + '<span><strong>' + escapeHtml(displayDate(posts[0].timestamp))
-    + '</strong> latest indexed post (UTC)</span>';
-
-  return template
-    .replaceAll('{{HERO_MOSAIC}}', heroMosaic)
-    .replaceAll('{{RECENT_ART}}', art)
-    .replaceAll('{{RECENT_POSTS}}', latest)
-    .replaceAll('{{FEED_STATS}}', stats)
-    .replaceAll('{{YEAR}}', String(new Date().getUTCFullYear()));
 }
 
 function parseCursor(raw) {
@@ -189,18 +119,35 @@ async function handler(req, res) {
 
   if (url.pathname === '/') {
     try {
-      const html = await renderHomepage();
+      const html = await readFile(INDEX_FILE, 'utf8');
       res.writeHead(200, {
         'Content-Type': 'text/html; charset=utf-8',
         'Cache-Control': 'public, max-age=60',
         'X-Content-Type-Options': 'nosniff',
         'Referrer-Policy': 'no-referrer',
-        'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; img-src https://cdn.bsky.app; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+        'Content-Security-Policy': "default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; img-src https://cdn.bsky.app; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
       });
       res.end(html);
     } catch (err) {
-      console.error('AnimeAI homepage unavailable:', err);
+      console.error('AnimeAI index.html unavailable:', err);
       return json(res, 503, { error: 'Homepage temporarily unavailable' });
+    }
+    return;
+  }
+
+  if (url.pathname === '/animeai-home.js' || url.pathname === '/feed.json') {
+    try {
+      const isScript = url.pathname === '/animeai-home.js';
+      const file = await readFile(isScript ? CLIENT_SCRIPT_FILE : FEED_FILE, 'utf8');
+      res.writeHead(200, {
+        'Content-Type': isScript ? 'text/javascript; charset=utf-8' : 'application/json; charset=utf-8',
+        'Cache-Control': 'public, max-age=60',
+        'X-Content-Type-Options': 'nosniff',
+      });
+      res.end(file);
+    } catch (err) {
+      console.error('AnimeAI public resource unavailable:', err);
+      return json(res, 503, { error: 'Resource temporarily unavailable' });
     }
     return;
   }
