@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import net from 'node:net';
 import { spawn } from 'node:child_process';
 import { setTimeout as sleep } from 'node:timers/promises';
+import { mkdtemp, copyFile, writeFile, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
 const FEED_URI = 'at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai';
 
@@ -87,5 +90,80 @@ test('SiteGround adapter serves current GitHub feed.json through ATProto XRPC', 
     assert.equal((await request('/missing')).status, 404);
   } finally {
     child.kill('SIGTERM');
+  }
+});
+
+
+test('Latest-post cards include image thumbnails only when available', async () => {
+  const dir = await mkdtemp(join(tmpdir(), 'animeai-card-test-'));
+  const port = await freePort();
+  const author = 'did:plc:abcdefghijklmnopqrstuvwx';
+  const base = 'at://' + author + '/app.bsky.feed.post/';
+  const imageUrl = 'https://cdn.bsky.app/img/feed_thumbnail/plain/' + author + '/bafkreifakefixture';
+  const fixture = [
+    {
+      uri: base + '3aaaaaaa', author: 'image-artist.bsky.social',
+      indexed_at: '2026-10-22T10:00:00.000Z',
+      record: { text: 'Fresh art with <special> details' },
+      labels: [],
+      embed: { images: [{ thumb: imageUrl }] },
+    },
+    {
+      uri: base + '3bbbbbbb', author: 'text-only.bsky.social',
+      indexed_at: '2026-10-21T10:00:00.000Z',
+      record: { text: 'A plain text update' },
+      labels: [],
+      embed: null,
+    },
+    {
+      uri: base + '3ccccccc', author: 'restricted.bsky.social',
+      indexed_at: '2026-10-20T10:00:00.000Z',
+      record: { text: 'Restricted preview' },
+      labels: [{ val: 'porn' }],
+      embed: { images: [{ thumb: imageUrl }] },
+    },
+  ];
+  let child;
+  try {
+    await copyFile('siteground-generator.mjs', join(dir, 'siteground-generator.mjs'));
+    await copyFile('siteground-homepage.html', join(dir, 'siteground-homepage.html'));
+    await writeFile(join(dir, 'feed.json'), JSON.stringify(fixture));
+
+    child = spawn(process.execPath, [join(dir, 'siteground-generator.mjs')], {
+      env: { ...process.env, PORT: String(port), FEED_URI: '' },
+      stdio: 'ignore',
+    });
+
+    const root = 'http://127.0.0.1:' + port;
+    let response;
+    for (let i = 0; i < 50; i++) {
+      try {
+        response = await fetch(root + '/');
+        break;
+      } catch {
+        await sleep(100);
+      }
+    }
+    assert.ok(response, 'Fixture server must start');
+    assert.equal(response.status, 200);
+    const page = await response.text();
+    const recent = page.split('<div class="posts">')[1].split('</section>')[0];
+
+    assert.match(recent, /<a class="post post-with-image"[^>]*><img class="post-thumbnail"/);
+    assert.match(recent, /src="https:\/\/cdn\.bsky\.app\/img\/feed_thumbnail\/plain\//);
+    assert.match(recent, /<a class="post"[^>]*><div class="post-copy">/);
+    assert.equal((recent.match(/class="post-thumbnail"/g) || []).length, 1);
+    assert.match(recent, /Fresh art with &lt;special&gt; details/);
+    assert.match(recent, /A plain text update/);
+    assert.doesNotMatch(recent, /Restricted preview/);
+
+    const skeleton = await fetch(root + '/xrpc/app.bsky.feed.getFeedSkeleton?feed=' +
+      encodeURIComponent(FEED_URI));
+    assert.equal(skeleton.status, 200);
+    assert.equal((await skeleton.json()).feed.length, 3,
+      'Homepage preview restrictions must not change the native Bluesky feed');
+  } finally {
+    if (child) child.kill('SIGTERM');
+    await rm(dir, { recursive: true, force: true });
   }
 });
