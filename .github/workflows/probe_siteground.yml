@@ -12,42 +12,70 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 5
     steps:
-      - name: Public HTTPS and XRPC endpoint checks, read-only
-        env:
-          HOST: https://trevorg22.sg-host.com
+      - name: Verify permanent DNS, HTTPS and ATProto generator
         run: |
           python - <<'PY'
-          import os, ssl, urllib.request, urllib.parse, urllib.error
-          base = os.environ["HOST"]
-          paths = [
-            "/",
-            "/health",
-            "/xrpc/app.bsky.feed.describeFeedGenerator",
-            "/xrpc/app.bsky.feed.getFeedSkeleton?" + urllib.parse.urlencode({
-              "feed": "at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai",
-              "limit": "2",
-            }),
-          ]
-          for path in paths:
-            try:
-              req = urllib.request.Request(base + path, headers={
-                "Accept": "application/json",
-                "User-Agent": "AnimeAI-SiteGround-read-only-probe/1.0",
-              })
-              with urllib.request.urlopen(req, timeout=12) as response:
-                contents = response.read(1500).decode("utf-8", "replace")
-                print(f"PATH: {path.split('?')[0]}")
-                print(f"HTTP: {response.status}")
-                print(f"URL: {response.geturl()}")
-                print(f"TYPE: {response.headers.get('Content-Type')}")
-                print("BODY:", repr(contents[:450]))
-            except urllib.error.HTTPError as exc:
-              print(f"PATH: {path.split('?')[0]} HTTP ERROR: {exc.code}")
-              print("TYPE:", exc.headers.get("Content-Type"))
-              print("BODY:", repr(exc.read(350).decode("utf-8", "replace")))
-            except Exception as exc:
-              print(f"PATH: {path.split('?')[0]} NETWORK ERROR: {type(exc).__name__}: {str(exc)[:300]}")
-            print("-" * 35)
+          import json
+          import socket
+          import time
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+          host = "bsky.trevorion.io"
+          origin = "https://" + host
+          expected_ip = "34.1.230.193"
+          feed_uri = "at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai"
+          service_did = "did:web:animeai.trevorion.io"
+
+          def check():
+              ips = sorted({entry[4][0] for entry in socket.getaddrinfo(host, 443, type=socket.SOCK_STREAM)})
+              print("DNS IPs:", ", ".join(ips), flush=True)
+              if expected_ip not in ips:
+                  raise RuntimeError("Expected Squarespace A record not resolved")
+
+              def fetch(path):
+                  req = urllib.request.Request(origin + path, headers={
+                      "Accept": "application/json",
+                      "User-Agent": "AnimeAI-permanent-host-read-only-check/1.0",
+                  })
+                  with urllib.request.urlopen(req, timeout=12) as response:
+                      if response.status != 200:
+                          raise RuntimeError("HTTP " + str(response.status) + " for " + path)
+                      return json.load(response)
+
+              health = fetch("/health")
+              print("HEALTH:", health, flush=True)
+              if health.get("status") != "ok" or health.get("posts", 0) < 1:
+                  raise RuntimeError("Health endpoint does not report active feed")
+
+              desc = fetch("/xrpc/app.bsky.feed.describeFeedGenerator")
+              print("DESCRIPTION:", desc, flush=True)
+              if desc.get("did") != service_did or {"uri": feed_uri} not in desc.get("feeds", []):
+                  raise RuntimeError("Wrong service DID or feed URI")
+
+              query = urllib.parse.urlencode({"feed": feed_uri, "limit": 2})
+              skeleton = fetch("/xrpc/app.bsky.feed.getFeedSkeleton?" + query)
+              print("SKELETON SAMPLE:", skeleton, flush=True)
+              if not skeleton.get("feed") or not all(
+                  isinstance(post.get("post"), str) and
+                  post["post"].startswith("at://did:") and
+                  "/app.bsky.feed.post/" in post["post"]
+                  for post in skeleton["feed"]
+              ):
+                  raise RuntimeError("Generator returned no valid ATProto posts")
+              print("PERMANENT HOST FULLY VERIFIED", flush=True)
+
+          for attempt in range(1, 10):
+              try:
+                  print("CHECK ATTEMPT", attempt, flush=True)
+                  check()
+                  break
+              except Exception as exc:
+                  print("NOT YET VERIFIED:", type(exc).__name__, str(exc)[:250], flush=True)
+                  if attempt == 9:
+                      raise
+                  time.sleep(12)
           PY
