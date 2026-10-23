@@ -10,5 +10,6 @@
   "scripts": {
     "start": "node siteground-generator.mjs",
     "test": "node --test tests/*.test.mjs"
-  }
+  },
+  "license": "MIT"
 }
