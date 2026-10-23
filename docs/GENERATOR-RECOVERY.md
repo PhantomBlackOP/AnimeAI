@@ -1,118 +1,76 @@
-# AnimeAI native Bluesky feed: SiteGround recovery
+# AnimeAI deployment and maintenance
 
-Status as of 2026-10-22 (Malta time): **REPAIRED, VERIFIED END TO END, LIVE ON PERMANENT DOMAIN.**
+Updated 23 October 2026. Trevorion confirmed the feed works after the repository cleanup.
 
-## Architecture (Bluesky-only)
+## Production architecture
 
-- The original GitHub Actions collector runs every six hours and commits `feed.json` to `PhantomBlackOP/AnimeAI`, branch `main`.
-- The SiteGround managed Node.js project deploys that GitHub branch. The dependency-free `siteground-generator.mjs` serves the local static `feed.json` through native AT Protocol endpoints:
-  - `https://bsky.trevorion.io/health`
-  - `https://bsky.trevorion.io/xrpc/app.bsky.feed.describeFeedGenerator`
-  - `https://bsky.trevorion.io/xrpc/app.bsky.feed.getFeedSkeleton`
-- The original GitHub Pages website remains at `https://animeai.trevorion.io/`; its DID document is `https://animeai.trevorion.io/.well-known/did.json` and points the feed-generator service DID `did:web:animeai.trevorion.io` to the SiteGround HTTPS endpoint.
-- Existing owner account DID is `did:plc:c36xxd4j5cyfojgcfgwt7fd5`. It is **not** itself the service DID.
-- **Original preserved feed URI:** `at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai`.
-- No Vercel account, running local Python server, database, or SiteGround credentials/environment variables are required for serving the feed.
-- The unrelated projects Zine, Feeder, Sitemap, and RSS remain detached.
+| Component | Source | Purpose |
+| --- | --- | --- |
+| Collector | `scripts/generate_feed.py` | Collects, filters and deduplicates Bluesky posts into `feed.json` |
+| Handle discovery | `scripts/discover_handles.py` | Refreshes `handles.json` |
+| Website | `index.html`, `animeai-home.js` | Shared artwork and latest-post previews |
+| Native generator | `siteground-generator.mjs` | Serves the snapshot through AT Protocol XRPC |
+| Service identity | `.well-known/did.json` | Links the service DID to the generator endpoint |
 
-## Verification evidence (21 October 2026 UTC; 22 October in Malta)
+GitHub Pages serves `https://animeai.trevorion.io/`. SiteGround deploys branch `main` and serves the same HTML, JavaScript and feed snapshot at `https://bsky.trevorion.io/`.
 
-1. **Node SiteGround deployment** verified from public GitHub Actions runner:
-   https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39686134133
-   - `/health`: HTTP 200, 216 valid post URIs in the deployed snapshot.
-   - `/xrpc/app.bsky.feed.describeFeedGenerator`: HTTP 200, exact original feed URI and service DID.
-   - `/xrpc/app.bsky.feed.getFeedSkeleton`: HTTP 200, Bluesky post URIs and cursor.
-2. **DID document** published in `.well-known/did.json` (root `.nojekyll` ensures static hosting). Public DID and service verified:
-   https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39686309888
-   - First attempt coincided with SiteGround redeploy and transient HTTP 202; second attempt succeeded.
-3. **Existing Bluesky record repaired** by guarded GitHub Actions:
-   https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39686550248
-   - Script `scripts/repair_feed_registration.py` read the original record, dry-run validated the DID and nonempty skeleton, then updated the original record via `com.atproto.repo.putRecord` with CID compare-and-swap.
-   - Record kept same URI, rkey and all existing display metadata; only `did` changed from account DID to `did:web:animeai.trevorion.io`.
-   - The one-time automatic activation was **removed** afterwards; `.github/workflows/repair_feed_registration.yml` is manual-only again.
-4. **Independent Bluesky AppView verification passed**:
-   https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39686703284
-   - Public `com.atproto.repo.getRecord` returned the original feed URI with correct service DID.
-   - Public `app.bsky.feed.getFeed` returned **three real posts** (requested limit 3) successfully.
-   - This confirms the feed works through Bluesky, not just directly against SiteGround.
+The Node service needs no database, Bluesky credentials or third-party npm dependencies. Hosting supplies `PORT`. The optional `FEED_URI` setting overrides the default identity; leave it unset for the existing deployment.
 
-## Maintenance
+The old Python/Flask service is not deployed. Keep its modules for now: the collectors import `server.discovery` and `server.algos.animeai`, including their package initialization dependencies.
 
-- Existing collection: `.github/workflows/update_feed.yml`, every six hours.
-- SiteGround GitHub auto-deploy should refresh the deployed `feed.json` from every committed update. During redeployment SiteGround may briefly return HTTP 202; later requests should succeed.
-- Generator code: `siteground-generator.mjs`; automated unit/smoke tests: `npm test` and `.github/workflows/test_generator.yml`.
-- Monitoring:
-  - `https://bsky.trevorion.io/health`
-  - `https://animeai.trevorion.io/.well-known/did.json`
-  - `https://github.com/PhantomBlackOP/AnimeAI/actions`
-- **Permanent hostname:** `bsky.trevorion.io` points to SiteGround Site IP `34.1.230.193` using a Squarespace DNS A record. The original temporary SiteGround hostname has been retired from the public service DID.
-- The old Python/Flask service is not part of the live Node generator. The collector still imports `server.discovery` and `server.algos.animeai`, so retain their import dependencies. The obsolete `scripts/publish_feed.py` and its workflow were removed on 2026-10-23; use the guarded repair workflow for the existing registration.
-- For any future record change, use the manual-only `repair_feed_registration.yml` workflow with validation and explicit approval.
+## Preserve the registered identity
 
-## User-facing Bluesky feed
+- User-facing feed: `https://bsky.app/profile/trevorion.io/feed/animeai`
+- Feed URI: `at://did:plc:c36xxd4j5cyfojgcfgwt7fd5/app.bsky.feed.generator/animeai`
+- Service DID: `did:web:animeai.trevorion.io`
+- DID document: `https://animeai.trevorion.io/.well-known/did.json`
+- Generator endpoint: `https://bsky.trevorion.io`
 
-`https://bsky.app/profile/trevorion.io/feed/animeai`
+The account DID and service DID have different roles. Do not replace the service DID with the account DID or recreate the registered feed.
 
-This links to the **existing** registered AnimeAI Stream, not a replacement.
+For registration maintenance, run `repair_feed_registration.yml` in its default validation-only mode first. Apply a change only when intended, after validation passes. The repair script preserves display metadata and uses the current record CID for compare-and-swap. The legacy root `publish_feed.py` can replace metadata and is not the supported maintenance path.
 
-## Permanent-domain activation, 2026-10-22 (Malta time)
+## Scheduled collection
 
-- SiteGround project primary domain set to `bsky.trevorion.io` by Trevorion; Squarespace `A bsky -> 34.1.230.193`. Existing domain nameservers remained at Squarespace.
-- Initial independent probe failed with a self-signed certificate; subsequent re-run confirmed valid HTTPS and all generator endpoints, **216 posts**, on the permanent hostname: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39689458037 (attempt 2).
-- Updated GitHub Pages `.well-known/did.json` to point to `https://bsky.trevorion.io`. Published DID document and generator tests both passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39690232246.
-- Verified original Bluesky AppView endpoint still returns 3 real posts after the DID switch: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39686703284 (attempt 3).
-- The Node.js root URL `https://bsky.trevorion.io/` now serves an HTML landing page inspired by the RSS homepage. `/health` remains the machine-readable status endpoint.
-- During transient SiteGround redeploy/security checks, the temporary domain returned HTTP 202 with a SiteGround CAPTCHA to certain automated clients; do **not** interpret HTTP 202 HTML as a valid Bluesky API response. Permanent domain was tested separately.
+- `update_feed.yml`: every six hours, `0 */6 * * *` (UTC).
+- `discover_handles.yml`: daily, `0 3 * * *` (UTC).
+- Both support manual dispatch. GitHub scheduled jobs can start later than their nominal time.
+- Credentials are supplied through GitHub secrets. Never put actual credentials into repository files.
+- Only `feed.json` is committed by the feed collector. `rejected_debug.json` is a local ignored diagnostic file; old public commits still contain earlier copies.
+- The push steps retain the existing `GH_PAT` credential and pass it through a step environment variable.
 
-## Unified AnimeAI website, 2026-10-22 (Malta time)
+SiteGround's GitHub deployment should refresh its copy of the snapshot after a commit. The Node process caches normalized feed data for 60 seconds.
 
-**Single entry point: `index.html`, served unchanged from both GitHub Pages and SiteGround.** The obsolete `siteground-homepage.html` template was removed.
+## Checks
 
-- `https://animeai.trevorion.io/` (GitHub Pages) serves `index.html` directly, **not a redirect**.
-- `https://bsky.trevorion.io/` (SiteGround Node.js) serves the **same index.html bytes**. Its root route simply reads this file.
-- Both domains serve the same `animeai-home.js` browser-side renderer and a same-origin `/feed.json`:
-  - GitHub Pages serves its public `feed.json` directly.
-  - SiteGround exposes `GET /feed.json` from the identical local repository file delivered by GitHub deployment.
-- The browser renders the shared RSS-inspired dark-blue layout, mosaic hero, current post/creator statistics, 12 artwork thumbnails, and six latest-post cards with conditional image thumbnails or text-only fallback.
-- The HTML/CSS layout is in **`index.html`**. The client-side renderer is **`animeai-home.js`**. The Node service remains in **`siteground-generator.mjs`**.
-- This unification is **not** a replacement for the native Bluesky app feed. `https://bsky.app/profile/trevorion.io/feed/animeai` remains the full interactive Bluesky interface.
-- Posts tagged with content labels `porn`, `sexual`, `nudity`, or `graphic-media` are excluded from *homepage previews only*, without altering Bluesky feed skeleton posts.
-- Public image previews use validated `https://cdn.bsky.app/img/feed_thumbnail/` URLs. User-provided post text is rendered using `textContent`, preventing HTML/script injection. The SiteGround page Content Security Policy permits only same-origin JavaScript/feed requests, inline CSS, and Bluesky CDN imagery.
-- The original generator's DID document `/.well-known/did.json` remains on GitHub Pages and points to `https://bsky.trevorion.io`; the registered feed URI and metadata are unchanged.
-- `GET /health`, `GET /xrpc/app.bsky.feed.describeFeedGenerator`, and `GET /xrpc/app.bsky.feed.getFeedSkeleton` all remain supported.
+Run `npm test` for generator and homepage tests, and `python -m compileall -q scripts server common` for Python syntax checks. Serving a local snapshot requires no external account login.
 
-### Verification
+Public checks:
 
-- Shared homepage/JS DOM unit tests (image thumbnail, text-only fallback, restricted previews, preserved literal post text) and generator smoke tests passed: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39693270604
-- **Live independent test confirmed identical HTML and JavaScript on both domains**, valid `feed.json` (216 entries on both during test), unchanged DID service and native generator: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39693365105
-- Permanent SiteGround probe workflow: `.github/workflows/probe_siteground.yml`; both-site consistency: `.github/workflows/verify_site_unification.yml`.
+- `GET /health` on the generator should return HTTP 200 JSON with `status: ok` and a positive post count.
+- `GET /xrpc/app.bsky.feed.describeFeedGenerator` should contain the service DID and exact feed URI above.
+- `GET /xrpc/app.bsky.feed.getFeedSkeleton?feed=<URL-encoded-feed-URI>&limit=2` should return valid post AT URIs.
+- Verify the DID document's service endpoint and try the feed in Bluesky itself.
+- Compare both public homepages and JavaScript if a deployment appears stale.
 
-### Source-of-truth policy
+Repository workflows provide these checks: `test_generator.yml`, `probe_siteground.yml`, `verify_generator_did.yml`, `verify_bsky_appview.yml`, and `verify_site_unification.yml`. `inspect_feed_identity.yml` reads the existing record without changing it.
 
-- GitHub Actions fetches Bluesky posts every six hours and commits `feed.json`.
-- GitHub Pages and SiteGround obtain that published static data from the same repository, without additional collecting or a permanent Python server.
-- The public website is a **preview** of that collected inventory; Bluesky's own UI remains the place to interact with posts.
+During hosting deployment or security checks, automated clients may receive HTML challenges or HTTP 202/403. These responses do not verify generator health; repeat a read-only check from an allowed client. On 23 October the local review environment received 403 at the health endpoint, while the homepage returned 200 and Trevorion subsequently confirmed working operation.
 
-## Public homepage navigation, corrected 2026-10-22
+## Website behaviour
 
-Trevorion flagged unrequested homepage changes from the earlier GitHub-to-Zine link task: the Latest Posts navigation card had been displaced by Zine News, and Zine Articles/Archive destinations were added without authorization. Those changes have been reverted.
+Both domains use the same source files. The preview shows artwork and six latest-post cards with image or text fallback. Labels `porn`, `sexual`, `nudity`, and `graphic-media` exclude posts from homepage previews only; they do not change the native feed skeleton.
 
-Current shared `index.html` navigation:
-- **Recent artwork** card -> `#gallery`.
-- **Latest posts** card -> `#latest` (preserved six-post preview with image thumbnails where available).
-- **Trevorion Zine** card -> `https://zine.trevorion.io/` (replaces the old GitHub code-project card).
-- Footer **Bluesky feed**, **Feed JSON**, **Zine RSS**, and **Status** remain.
-- Footer **Trevorion Zine** -> `https://zine.trevorion.io/` (replaces the old GitHub code link).
-- **No Zine News, Zine Articles, or Zine Archive links**.
+Post text uses `textContent`; thumbnails are restricted to validated Bluesky CDN URLs. The Node-served homepage sets a Content Security Policy. GitHub Pages response headers are controlled by its hosting platform.
 
-Only the two former public GitHub links have been replaced with the Zine homepage. The underlying `feed.json`, `animeai-home.js`, generator, DID and native Bluesky feed remain unchanged.
+Navigation preserves Recent artwork, Latest posts, and the Trevorion Zine homepage. Zine, Feeder, Sitemap and RSS are independent projects.
 
-Latest homepage tests: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39694262155
-Independent production verification of the corrected links, identical HTML/JS on both domains, and preserved Bluesky generator: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39694285227
+## Recovery evidence and cleanup
 
-## Conservative cleanup, 2026-10-23
+The October 2026 repair retained the original feed URI and restored the native service:
 
-- Removed the obsolete createRecord publisher and its manual workflow, and the unreferenced `server/storage.py` helper.
-- Rejected-post diagnostics remain local and ignored; the scheduled collector commits only `feed.json`. Removed the tracked debug dump from the current branch. Earlier public commits still contain it.
-- Push credentials are passed through step environment variables rather than interpolated into shell source. Existing credentials, schedules and publishing destinations are preserved.
-- Homepage, generator, feed selection, registered identity and active Python import dependencies are unchanged.
+- [Original record repair](https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39686550248).
+- [Bluesky AppView verification](https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39686703284).
+- [Shared website verification](https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39694285227).
+
+[Cleanup commit](https://github.com/PhantomBlackOP/AnimeAI/commit/7abb207e75e900e266380aefcdfac34b6377e9d1) removed the obsolete createRecord publisher and its manual workflow, the unreferenced storage helper, and the tracked rejected-post dump. It preserved the active feed selection, schedules, homepage, generator and identity. Three Node tests and Python compilation passed. Common credential patterns were not found in the 54 current files reviewed; this was not an exhaustive historical-secret or dependency-vulnerability audit.
