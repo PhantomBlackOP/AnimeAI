@@ -46,7 +46,7 @@ Status as of 2026-10-22 (Malta time): **REPAIRED, VERIFIED END TO END, LIVE ON P
   - `https://animeai.trevorion.io/.well-known/did.json`
   - `https://github.com/PhantomBlackOP/AnimeAI/actions`
 - **Permanent hostname:** `bsky.trevorion.io` points to SiteGround Site IP `34.1.230.193` using a Squarespace DNS A record. The original temporary SiteGround hostname has been retired from the public service DID.
-- The old `server/` Python/Flask files and original broken `scripts/publish_feed.py` are not part of the live Node generator. Do **not** run the old publish script as it uses `createRecord` and the account DID incorrectly.
+- The old Python/Flask service is not part of the live Node generator. The collector still imports `server.discovery` and `server.algos.animeai`, so retain their import dependencies. The obsolete `scripts/publish_feed.py` and its workflow were removed on 2026-10-23; use the guarded repair workflow for the existing registration.
 - For any future record change, use the manual-only `repair_feed_registration.yml` workflow with validation and explicit approval.
 
 ## User-facing Bluesky feed
@@ -109,3 +109,10 @@ Only the two former public GitHub links have been replaced with the Zine homepag
 
 Latest homepage tests: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39694262155
 Independent production verification of the corrected links, identical HTML/JS on both domains, and preserved Bluesky generator: https://github.com/PhantomBlackOP/AnimeAI/actions/runs/39694285227
+
+## Conservative cleanup, 2026-10-23
+
+- Removed the obsolete createRecord publisher and its manual workflow, and the unreferenced `server/storage.py` helper.
+- Rejected-post diagnostics remain local and ignored; the scheduled collector commits only `feed.json`. Removed the tracked debug dump from the current branch. Earlier public commits still contain it.
+- Push credentials are passed through step environment variables rather than interpolated into shell source. Existing credentials, schedules and publishing destinations are preserved.
+- Homepage, generator, feed selection, registered identity and active Python import dependencies are unchanged.

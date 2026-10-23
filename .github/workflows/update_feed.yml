@@ -34,10 +34,12 @@ jobs:
       - name: 🔮 Generate feed and reject log
         run: python -m scripts.generate_feed
 
-      - name: 🤖 Commit & Push feed and rejected log
+      - name: 🤖 Commit & Push feed
+        env:
+          GH_PUSH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "AnimeAI Bot"
           git config user.email "bot@trevorion.io"
-          git add feed.json rejected_debug.json
-          git commit -m "🔄 Auto-update feed + reject log"
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/PhantomBlackOP/AnimeAI.git HEAD:main
+          git add feed.json
+          git commit -m "🔄 Auto-update feed"
+          git push "https://x-access-token:${GH_PUSH_TOKEN}@github.com/PhantomBlackOP/AnimeAI.git" HEAD:main
