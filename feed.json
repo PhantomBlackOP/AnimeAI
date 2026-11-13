@@ -1,6 +1,164 @@
 [
   {
     "author": "waifusportqueens.bsky.social",
+    "cid": "bafyreieqrugteuftrvwl2fso37f4e3nndiu5lkzvn5rodtevhd5evcoba4",
+    "indexed_at": "2026-11-13T01:02:08.577Z",
+    "record": {
+      "created_at": "2026-11-13T01:02:07.556571542Z",
+      "text": "\ud83d\udd25\ud83d\udeb4\u200d\u2640\ufe0f EPISODE 36: EMBER WHEELS \u2014 TAKE THE LEAP! \ud83d\udc51\n\nNo brakes. No fear. No limits! \ud83d\udd25\nMeet Ember Wheels, the BMX Queen who turns gravity into her playground! Can anyone match her fearless style? \ud83d\udc51\n\n#WaifuSportQueens #AIAnime #Anime #BMX #Waifu",
+      "embed": {
+        "images": [
+          {
+            "alt": "",
+            "image": {
+              "mime_type": "image/jpeg",
+              "size": 199106,
+              "ref": {
+                "link": "bafkreihxt7kfot5tp6uyhlzllif4k2cbfvbvdailayq5telfntd5iddvk4"
+              },
+              "py_type": "blob"
+            },
+            "aspect_ratio": {
+              "height": 836,
+              "width": 627,
+              "py_type": "app.bsky.embed.defs#aspectRatio"
+            },
+            "py_type": "app.bsky.embed.images#image"
+          }
+        ],
+        "py_type": "app.bsky.embed.images"
+      },
+      "entities": null,
+      "facets": [
+        {
+          "features": [
+            {
+              "tag": "WaifuSportQueens",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 236,
+            "byte_start": 219,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "AIAnime",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 245,
+            "byte_start": 237,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "Anime",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 252,
+            "byte_start": 246,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "BMX",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 257,
+            "byte_start": 253,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        },
+        {
+          "features": [
+            {
+              "tag": "Waifu",
+              "py_type": "app.bsky.richtext.facet#tag"
+            }
+          ],
+          "index": {
+            "byte_end": 264,
+            "byte_start": 258,
+            "py_type": "app.bsky.richtext.facet#byteSlice"
+          },
+          "py_type": "app.bsky.richtext.facet"
+        }
+      ],
+      "labels": null,
+      "langs": null,
+      "reply": null,
+      "tags": null,
+      "py_type": "app.bsky.feed.post"
+    },
+    "uri": "at://did:plc:frgfts5emqs32vvu44tt5p5j/app.bsky.feed.post/3n25rx4tjrj2q",
+    "embed": {
+      "images": [
+        {
+          "alt": "",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:frgfts5emqs32vvu44tt5p5j/bafkreihxt7kfot5tp6uyhlzllif4k2cbfvbvdailayq5telfntd5iddvk4",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:frgfts5emqs32vvu44tt5p5j/bafkreihxt7kfot5tp6uyhlzllif4k2cbfvbvdailayq5telfntd5iddvk4",
+          "aspect_ratio": {
+            "height": 836,
+            "width": 627,
+            "py_type": "app.bsky.embed.defs#aspectRatio"
+          },
+          "py_type": "app.bsky.embed.images#viewImage"
+        }
+      ],
+      "py_type": "app.bsky.embed.images#view"
+    },
+    "labels": [],
+    "like_count": 0,
+    "quote_count": 0,
+    "reply_count": 0,
+    "repost_count": 0,
+    "threadgate": null,
+    "viewer": {
+      "embedding_disabled": false,
+      "like": null,
+      "pinned": null,
+      "reply_disabled": null,
+      "repost": null,
+      "thread_muted": false,
+      "py_type": "app.bsky.feed.defs#viewerState",
+      "bookmarked": false
+    },
+    "py_type": "app.bsky.feed.defs#postView",
+    "bookmarkCount": 0,
+    "tags": [
+      "#aianime",
+      "#aianime",
+      "#aianime",
+      "#aianime",
+      "#aianime",
+      "#aianime",
+      "#aianime",
+      "#aianime",
+      "#aianime",
+      "#aianime",
+      "#aianime",
+      "#aianime"
+    ]
+  },
+  {
+    "author": "waifusportqueens.bsky.social",
     "cid": "bafyreidmjbtpvn4if6ud3gvf2c4qaziloiunxw556daoauip64xt67g6ue",
     "indexed_at": "2026-11-12T20:01:22.678Z",
     "record": {
@@ -139,6 +297,7 @@
       "#aianime",
       "#aianime",
       "#aianime",
+      "#aianime",
       "#aianime"
     ]
   },
@@ -265,167 +424,6 @@
     "bookmarkCount": 0,
     "tags": [
       "#aianime",
-      "#aianime",
-      "#aianime",
-      "#aianime",
-      "#aianime",
-      "#aianime",
-      "#aianime",
-      "#aianime",
-      "#aianime",
-      "#aianime",
-      "#aianime"
-    ]
-  },
-  {
-    "author": "waifusportqueens.bsky.social",
-    "cid": "bafyreif4kbmebefgwow53tdhhikvnhtoxn7mr4dhnitxreajbpd44kwoom",
-    "indexed_at": "2026-11-12T04:02:06.575Z",
-    "record": {
-      "created_at": "2026-11-12T04:02:04.531024349Z",
-      "text": "\ud83c\udf19\ud83d\udc0e\ud83d\udc51 Sweet Dreams from the Stables \u2014 Autumn Valor \u2764\ufe0f\n\nThunderheart is resting, the reins are hung, and our equestrian Queen is ready for bed. \u2728\n\nGood night, Champions! Dream of golden sunsets and open trails. \ud83c\udf42\ud83d\udc95\n\n#WaifuSportQueens #AIAnime #Anime #Waifu #GoodNight",
-      "embed": {
-        "video": {
-          "mime_type": "video/mp4",
-          "size": 6295407,
-          "ref": {
-            "link": "bafkreibcjmg4eisbssvwr6e67ihgdfhakn6am7yq22aeceiyeskst7gjy4"
-          },
-          "py_type": "blob"
-        },
-        "alt": null,
-        "aspect_ratio": {
-          "height": 1104,
-          "width": 816,
-          "py_type": "app.bsky.embed.defs#aspectRatio"
-        },
-        "captions": null,
-        "py_type": "app.bsky.embed.video"
-      },
-      "entities": null,
-      "facets": [
-        {
-          "features": [
-            {
-              "tag": "WaifuSportQueens",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 252,
-            "byte_start": 235,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "AIAnime",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 261,
-            "byte_start": 253,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "Anime",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 268,
-            "byte_start": 262,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "Waifu",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 275,
-            "byte_start": 269,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        },
-        {
-          "features": [
-            {
-              "tag": "GoodNight",
-              "py_type": "app.bsky.richtext.facet#tag"
-            }
-          ],
-          "index": {
-            "byte_end": 286,
-            "byte_start": 276,
-            "py_type": "app.bsky.richtext.facet#byteSlice"
-          },
-          "py_type": "app.bsky.richtext.facet"
-        }
-      ],
-      "labels": null,
-      "langs": null,
-      "reply": null,
-      "tags": null,
-      "py_type": "app.bsky.feed.post"
-    },
-    "uri": "at://did:plc:frgfts5emqs32vvu44tt5p5j/app.bsky.feed.post/3n23ljy6jvg2z",
-    "embed": {
-      "cid": "bafkreibcjmg4eisbssvwr6e67ihgdfhakn6am7yq22aeceiyeskst7gjy4",
-      "playlist": "https://video.bsky.app/watch/did%3Aplc%3Afrgfts5emqs32vvu44tt5p5j/bafkreibcjmg4eisbssvwr6e67ihgdfhakn6am7yq22aeceiyeskst7gjy4/playlist.m3u8",
-      "alt": null,
-      "aspect_ratio": {
-        "height": 1104,
-        "width": 816,
-        "py_type": "app.bsky.embed.defs#aspectRatio"
-      },
-      "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Afrgfts5emqs32vvu44tt5p5j/bafkreibcjmg4eisbssvwr6e67ihgdfhakn6am7yq22aeceiyeskst7gjy4/thumbnail.jpg",
-      "py_type": "app.bsky.embed.video#view"
-    },
-    "labels": [
-      {
-        "cts": "2026-11-12T04:02:06.922Z",
-        "src": "did:plc:ar7c4by46qjdydhdevvrndac",
-        "uri": "at://did:plc:frgfts5emqs32vvu44tt5p5j/app.bsky.feed.post/3n23ljy6jvg2z",
-        "val": "sexual",
-        "cid": "bafkreibcjmg4eisbssvwr6e67ihgdfhakn6am7yq22aeceiyeskst7gjy4",
-        "exp": null,
-        "neg": null,
-        "sig": null,
-        "ver": 1,
-        "py_type": "com.atproto.label.defs#label"
-      }
-    ],
-    "like_count": 1,
-    "quote_count": 0,
-    "reply_count": 0,
-    "repost_count": 0,
-    "threadgate": null,
-    "viewer": {
-      "embedding_disabled": false,
-      "like": null,
-      "pinned": null,
-      "reply_disabled": null,
-      "repost": null,
-      "thread_muted": false,
-      "py_type": "app.bsky.feed.defs#viewerState",
-      "bookmarked": false
-    },
-    "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
-    "tags": [
       "#aianime",
       "#aianime",
       "#aianime",
@@ -1176,7 +1174,7 @@
         "py_type": "com.atproto.label.defs#label"
       }
     ],
-    "like_count": 7,
+    "like_count": 8,
     "quote_count": 0,
     "reply_count": 1,
     "repost_count": 2,
@@ -1495,10 +1493,10 @@
       "py_type": "app.bsky.embed.images#view"
     },
     "labels": [],
-    "like_count": 4,
+    "like_count": 5,
     "quote_count": 0,
     "reply_count": 0,
-    "repost_count": 1,
+    "repost_count": 2,
     "threadgate": null,
     "viewer": {
       "embedding_disabled": false,
@@ -2051,7 +2049,7 @@
         "py_type": "com.atproto.label.defs#label"
       }
     ],
-    "like_count": 19,
+    "like_count": 21,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 1,
@@ -2367,7 +2365,7 @@
         "py_type": "com.atproto.label.defs#label"
       }
     ],
-    "like_count": 12,
+    "like_count": 13,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 0,
@@ -2597,7 +2595,7 @@
       "presentation": "default"
     },
     "labels": [],
-    "like_count": 1,
+    "like_count": 2,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 0,
@@ -5033,7 +5031,7 @@
         "py_type": "com.atproto.label.defs#label"
       }
     ],
-    "like_count": 4,
+    "like_count": 23,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 0,
@@ -5049,7 +5047,7 @@
       "bookmarked": false
     },
     "py_type": "app.bsky.feed.defs#postView",
-    "bookmarkCount": 0,
+    "bookmarkCount": 2,
     "tags": [
       "#aianime"
     ]
@@ -5334,7 +5332,7 @@
       "py_type": "app.bsky.embed.images#view"
     },
     "labels": [],
-    "like_count": 3,
+    "like_count": 7,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 0,
@@ -5635,7 +5633,7 @@
       "py_type": "app.bsky.embed.images#view"
     },
     "labels": [],
-    "like_count": 13,
+    "like_count": 14,
     "quote_count": 0,
     "reply_count": 0,
     "repost_count": 0,
@@ -5949,7 +5947,6 @@
     "py_type": "app.bsky.feed.defs#postView",
     "bookmarkCount": 0,
     "tags": [
-      "#aianime",
       "#aianime",
       "#aianime",
       "#aianime",
@@ -6328,7 +6325,6 @@
       "#aianime",
       "#aianime",
       "#aianime",
-      "#aianime",
       "#aianime"
     ]
   },
@@ -6583,7 +6579,6 @@
     "py_type": "app.bsky.feed.defs#postView",
     "bookmarkCount": 1,
     "tags": [
-      "#aianime",
       "#aianime",
       "#aianime",
       "#aianime",
